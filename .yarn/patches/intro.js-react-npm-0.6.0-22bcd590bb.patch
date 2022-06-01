@@ -1,0 +1,13 @@
+diff --git a/lib/components/Steps/index.js b/lib/components/Steps/index.js
+index 7107bce22d0c4eb3f562f897a9fb54bd783b2a88..827c2e0a9724ccf8143a4ddeef2db89e5a2c944c 100644
+--- a/lib/components/Steps/index.js
++++ b/lib/components/Steps/index.js
+@@ -307,7 +307,7 @@ _defineProperty(Steps, "propTypes", {
+   enabled: _propTypes["default"].bool,
+   initialStep: _propTypes["default"].number.isRequired,
+   steps: _propTypes["default"].arrayOf(_propTypes["default"].shape({
+-    element: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].instanceOf(Element)]),
++    element: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].element]),
+     intro: _propTypes["default"].node.isRequired,
+     position: introJsPropTypes.tooltipPosition,
+     tooltipClass: _propTypes["default"].string,
