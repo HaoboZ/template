@@ -1,23 +1,27 @@
 name: Update Dependencies
-
 on:
    schedule:
-      -  cron: '0 2 * * *'
+      -  cron: '0 0 * * *'
    workflow_dispatch:
 jobs:
    update:
       runs-on: ubuntu-latest
       steps:
-         -  uses: actions/checkout@v3
-         #            with:
-         #               ref: dev
+         -  name: checkout
+            uses: actions/checkout@v3
          -  name: upgrade
             run: |
                yarn up '*'
                yarn up '@*/*'
-               yarn version patch
+               CHANGED=$(git diff package.json)
+               if [ ! -z "$CHANGED" ]
+               then
+                  echo "changed=true" >> $GITHUB_ENV
+                  yarn version patch
+               fi
          -  name: create pull request
             uses: peter-evans/create-pull-request@v4
+            if: ${{ env.changed }}
             with:
                commit-message: Update all dependencies
                branch: automatic_dependency_updates

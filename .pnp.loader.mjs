@@ -113,7 +113,6 @@ function tryParseURL( str, base ) {
 		return null;
 	}
 }
-
 let entrypointPath = null;
 
 function setEntrypointPath( file ) {
