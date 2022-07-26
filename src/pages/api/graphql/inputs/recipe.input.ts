@@ -3,9 +3,9 @@ import { Recipe } from '../entities/recipe.entity';
 
 @InputType()
 export class RecipeInput implements Partial<Recipe> {
-	@Field( () => String )
+	@Field()
 		title: string;
 	
-	@Field( () => String, { nullable: true } )
+	@Field( { nullable: true } )
 		description?: string;
 }

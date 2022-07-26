@@ -4,7 +4,7 @@ import { RecipeInput } from '../inputs/recipe.input';
 import { createRecipeSamples } from '../seed';
 
 @Resolver( () => Recipe )
-export class RecipeResolver implements ResolverInterface<Recipe> {
+export default class RecipeResolver implements ResolverInterface<Recipe> {
 	private readonly items: Recipe[] = createRecipeSamples();
 	
 	@Query( () => Recipe, { nullable: true } )

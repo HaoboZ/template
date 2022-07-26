@@ -4,7 +4,7 @@ import { runCors } from '../cors';
 import loadSchema from './schema';
 
 const apolloServerPromise = ( async () => {
-	const schema = loadSchema();
+	const schema = await loadSchema();
 	const server = new ApolloServer( { schema } );
 	await server.start();
 	return server;
