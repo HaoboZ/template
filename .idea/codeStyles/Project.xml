@@ -17,7 +17,6 @@
       <option name="RUN_GO_FMT_ON_REFORMAT" value="false" />
     </GoCodeStyleSettings>
     <HTMLCodeStyleSettings>
-      <option name="HTML_ATTRIBUTE_WRAP" value="4" />
       <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="html" />
       <option name="HTML_QUOTE_STYLE" value="Single" />
       <option name="HTML_ENFORCE_QUOTES" value="true" />

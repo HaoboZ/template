@@ -1,5 +1,4 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-import withPlugins from 'next-compose-plugins';
 import withPWA from 'next-pwa';
 
 /**
@@ -23,8 +22,7 @@ const nextConfig = {
 	}
 };
 
-// noinspection JSUnusedGlobalSymbols
-export default withPlugins( [
+const plugins = [
 	bundleAnalyzer( { enabled: process.env.ANALYZE === 'true' } ),
 	withPWA, {
 		pwa: {
@@ -32,4 +30,8 @@ export default withPlugins( [
 			dest   : 'public'
 		}
 	}
-], nextConfig );
+];
+
+// noinspection JSUnusedGlobalSymbols
+export default plugins.reduceRight( ( acc, plugin ) =>
+	typeof plugin === 'function' ? plugin( acc ) : ( { ...nextConfig, ...plugin } ), nextConfig );

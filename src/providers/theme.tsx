@@ -1,6 +1,7 @@
 import {
 	colors,
 	createTheme,
+	CssBaseline,
 	darkScrollbar,
 	PaletteMode,
 	responsiveFontSizes,
@@ -35,19 +36,13 @@ const commonTheme: ThemeOptions = {
 
 const lightTheme = responsiveFontSizes( createTheme(
 	merge( commonTheme, {
-		palette: {
-			mode: 'light'
-			// background: { paper: colors.grey[ '100' ] }
-		}
+		palette: { mode: 'light' }
 	} )
 ) );
 
 const darkTheme = responsiveFontSizes( createTheme(
 	merge( commonTheme, {
-		palette   : {
-			mode: 'dark'
-			// background: { paper: colors.grey[ '900' ] }
-		},
+		palette   : { mode: 'dark' },
 		components: {
 			MuiCssBaseline: {
 				styleOverrides: {
@@ -81,6 +76,7 @@ export default function ThemeProvider( { children } ) {
 	
 	return (
 		<MuiThemeProvider theme={theme}>
+			<CssBaseline/>
 			<Head>
 				<meta key='theme' name='theme-color' content={theme.palette.primary.main}/>
 			</Head>
