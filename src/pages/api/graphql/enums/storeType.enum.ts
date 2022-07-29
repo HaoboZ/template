@@ -2,5 +2,5 @@ export enum StoreType {
 	DELIVERY        = 'DELIVERY',
 	PICKUP          = 'PICKUP',
 	SERVICE         = 'SERVICE',
-	DELIVERY_PICKUP = 'DELIVERY_PICKUP',
+	DELIVERY_PICKUP = 'DELIVERY_PICKUP'
 }

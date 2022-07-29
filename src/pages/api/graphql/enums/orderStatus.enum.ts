@@ -9,5 +9,5 @@ export enum OrderStatus {
 	COMPLETED      = 'COMPLETED',
 	VIEWED         = 'VIEWED',
 	SENT           = 'SENT',
-	DRAFT          = 'DRAFT',
+	DRAFT          = 'DRAFT'
 }

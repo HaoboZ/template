@@ -59,7 +59,8 @@ const apolloServerPromise = ( async () => {
 			const em = orm.em.fork();
 			req.headers._skip = true;
 			return { req, res, em };
-		}
+		},
+		debug  : true
 	} );
 	await server.start();
 	return server;
