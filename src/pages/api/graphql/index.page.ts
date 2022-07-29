@@ -48,12 +48,12 @@ const apolloServerPromise = ( async () => {
 	const orm = await ormPromise;
 	const server = new ApolloServer( {
 		schema,
-		context: async ( { req, res } ) => {
+		context      : async ( { req, res } ) => {
 			const em = orm.em.fork();
 			req.headers._skip = true;
 			return { req, res, em };
 		},
-		debug  : true
+		introspection: true
 	} );
 	await server.start();
 	return server;
