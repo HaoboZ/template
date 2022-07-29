@@ -11,6 +11,7 @@ import { ErrorInterceptor } from './error';
 
 const ormPromise = ( async () => {
 	try {
+		console.log( 'rebuild db' );
 		// const migrator = orm.getMigrator();
 		// const migrations = await migrator.getPendingMigrations();
 		// if ( migrations && migrations.length > 0 )
@@ -33,6 +34,7 @@ const ormPromise = ( async () => {
 	}
 } )();
 
+console.log( 'rebuild schema' );
 for ( const [ name, enumObj ] of Object.entries( enums ) ) {
 	registerEnumType( enumObj, { name } );
 }
@@ -42,11 +44,12 @@ const schema = buildSchemaSync( {
 	authChecker,
 	dateScalarMode   : 'isoDate',
 	globalMiddlewares: [ ErrorInterceptor ],
-	skipCheck        : false
+	skipCheck: true
 } );
 
 const apolloServerPromise = ( async () => {
 	const orm = await ormPromise;
+	console.log( 'rebuild graphql' );
 	const server = new ApolloServer( {
 		schema,
 		context      : async ( { req, res } ) => {
