@@ -11,9 +11,11 @@ import { ErrorInterceptor } from './error';
 
 const ormPromise = ( async () => {
 	try {
-		if ( global.orm ) return global.orm;
-		
-		global.orm = await MikroORM.init( {
+		// const migrator = orm.getMigrator();
+		// const migrations = await migrator.getPendingMigrations();
+		// if ( migrations && migrations.length > 0 )
+		// 	await migrator.up();
+		return await MikroORM.init( {
 			type    : process.env.MIKRO_ORM_TYPE as any,
 			host    : process.env.MIKRO_ORM_HOST,
 			port    : +process.env.MIKRO_ORM_PORT,
@@ -25,11 +27,6 @@ const ormPromise = ( async () => {
 			forceUtcTimezone: true,
 			entities
 		} );
-		// const migrator = orm.getMigrator();
-		// const migrations = await migrator.getPendingMigrations();
-		// if ( migrations && migrations.length > 0 )
-		// 	await migrator.up();
-		return global.orm;
 	} catch ( error ) {
 		console.error( '📌 Could not connect to the database', error );
 		throw Error( error );
@@ -49,8 +46,6 @@ const schema = buildSchemaSync( {
 } );
 
 const apolloServerPromise = ( async () => {
-	if ( global.server ) return global.server;
-	
 	const orm = await ormPromise;
 	const server = new ApolloServer( {
 		schema,
@@ -63,8 +58,7 @@ const apolloServerPromise = ( async () => {
 		introspection: true
 	} );
 	await server.start();
-	global.server = server;
-	return global.server;
+	return server;
 } )();
 
 export const config = {
