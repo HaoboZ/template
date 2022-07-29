@@ -1,7 +1,7 @@
 import { MikroORM } from '@mikro-orm/core';
 import { ApolloServer } from 'apollo-server-micro';
 import 'reflect-metadata';
-import { buildSchema, registerEnumType } from 'type-graphql';
+import { buildSchemaSync, registerEnumType } from 'type-graphql';
 import { runCors } from '../cors';
 import authChecker from './authChecker';
 import { entities } from './entities/entities';
@@ -36,19 +36,19 @@ const ormPromise = ( async () => {
 	}
 } )();
 
+const schema = buildSchemaSync( {
+	resolvers        : resolvers as any,
+	authChecker,
+	dateScalarMode   : 'isoDate',
+	globalMiddlewares: [ ErrorInterceptor ]
+} );
+
 const apolloServerPromise = ( async () => {
 	if ( global.server ) return global.server;
 	
 	for ( const [ name, enumObj ] of Object.entries( enums ) ) {
 		registerEnumType( enumObj, { name } );
 	}
-	
-	const schema = await buildSchema( {
-		resolvers        : resolvers as any,
-		authChecker,
-		dateScalarMode   : 'isoDate',
-		globalMiddlewares: [ ErrorInterceptor ]
-	} );
 	
 	const orm = await ormPromise;
 	const server = new ApolloServer( {

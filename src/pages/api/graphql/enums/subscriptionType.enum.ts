@@ -1,7 +1,7 @@
 export enum SubscriptionType {
-	NONE   = 'NONE',
+	NONE = 'NONE',
 	STRIPE = 'STRIPE',
 	CLOVER = 'CLOVER',
-	APPLE  = 'APPLE',
-	GOOGLE = 'GOOGLE',
+	APPLE = 'APPLE',
+	GOOGLE = 'GOOGLE'
 }
