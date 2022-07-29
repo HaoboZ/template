@@ -129,7 +129,16 @@
 		"@typescript-eslint/comma-spacing"                 : "warn",
 		"@typescript-eslint/dot-notation"                  : "warn",
 		"@typescript-eslint/func-call-spacing"             : "warn",
-		"@typescript-eslint/indent"                        : [ "warn", "tab", { "VariableDeclarator": "first" } ],
+		"@typescript-eslint/indent"                        : [
+			"warn", "tab", {
+				"VariableDeclarator": "first",
+				"ignoredNodes"      : [
+					"FunctionExpression > .params[decorators.length > 0]",
+					"FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+					"ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+				]
+			}
+		],
 		"@typescript-eslint/keyword-spacing"               : "warn",
 		"@typescript-eslint/no-extra-parens"               : [ "warn", "all", { "ignoreJSX": "all" } ],
 		"@typescript-eslint/object-curly-spacing"          : [ "warn", "always" ],

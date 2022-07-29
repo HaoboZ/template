@@ -11,7 +11,9 @@ import { ErrorInterceptor } from './error';
 
 const ormPromise = ( async () => {
 	try {
-		return await MikroORM.init( {
+		if ( global.orm ) return global.orm;
+		
+		global.orm = await MikroORM.init( {
 			type    : process.env.MIKRO_ORM_TYPE as any,
 			host    : process.env.MIKRO_ORM_HOST,
 			port    : +process.env.MIKRO_ORM_PORT,
@@ -27,6 +29,7 @@ const ormPromise = ( async () => {
 		// const migrations = await migrator.getPendingMigrations();
 		// if ( migrations && migrations.length > 0 )
 		// 	await migrator.up();
+		return global.orm;
 	} catch ( error ) {
 		console.error( '📌 Could not connect to the database', error );
 		throw Error( error );
@@ -34,6 +37,8 @@ const ormPromise = ( async () => {
 } )();
 
 const apolloServerPromise = ( async () => {
+	if ( global.server ) return global.server;
+	
 	for ( const [ name, enumObj ] of Object.entries( enums ) ) {
 		registerEnumType( enumObj, { name } );
 	}
@@ -56,7 +61,8 @@ const apolloServerPromise = ( async () => {
 		introspection: true
 	} );
 	await server.start();
-	return server;
+	global.server = server;
+	return global.server;
 } )();
 
 export const config = { api: { bodyParser: false } };
