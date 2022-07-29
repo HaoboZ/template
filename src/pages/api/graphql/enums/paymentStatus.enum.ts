@@ -1,0 +1,9 @@
+export enum PaymentStatus {
+	OPEN               = 'OPEN',
+	PARTIALLY_REFUNDED = 'PARTIALLY_REFUNDED',
+	PAID               = 'PAID',
+	SUCCEEDED          = 'SUCCEEDED',
+	REFUNDED           = 'REFUNDED',
+	CANCELLED          = 'CANCELLED',
+	FAILED             = 'FAILED',
+}

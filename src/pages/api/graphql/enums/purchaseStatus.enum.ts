@@ -1,0 +1,11 @@
+export enum PurchaseStatus {
+	CANCELLED = 'CANCELLED',
+	RECEIVED  = 'RECEIVED',
+	ISSUES    = 'ISSUES',
+	CONFIRMED = 'CONFIRMED',
+	DECLINED  = 'DECLINED',
+	STANDING  = 'STANDING',
+	VIEWED    = 'VIEWED',
+	SENT      = 'SENT',
+	DRAFT     = 'DRAFT',
+}
