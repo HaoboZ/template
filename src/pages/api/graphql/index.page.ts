@@ -1,17 +1,16 @@
 import { MikroORM } from '@mikro-orm/core';
 import { ApolloServer } from 'apollo-server-micro';
-import glob from 'fast-glob';
 import 'reflect-metadata';
 import { buildSchema, registerEnumType } from 'type-graphql';
 import { runCors } from '../cors';
 import authChecker from './authChecker';
+import { entities } from './entities/entities';
+import { resolvers } from './entities/resolvers';
+import { enums } from './enums/enums';
 import { ErrorInterceptor } from './error';
 
 const ormPromise = ( async () => {
 	try {
-		const entityPaths = await glob( `${process.cwd()}/src/pages/api/graphql/**/*.entity.ts` );
-		const entities: any = await Promise.all( entityPaths.map( ( resolverPath ) => import( `.${resolverPath.split( 'graphql' )[ 1 ]}` ) ) );
-		
 		return await MikroORM.init( {
 			type    : process.env.MIKRO_ORM_TYPE as any,
 			host    : process.env.MIKRO_ORM_HOST,
@@ -22,7 +21,7 @@ const ormPromise = ( async () => {
 			// migrations      : { path: process.env.MIKRO_ORM_MIGRATIONS_PATH },
 			// seeder          : { path: process.env.MIKRO_ORM_SEEDER_PATH },
 			forceUtcTimezone: true,
-			entities        : entities.map( ( entity ) => entity.default )
+			entities
 		} );
 		// const migrator = orm.getMigrator();
 		// const migrations = await migrator.getPendingMigrations();
@@ -35,18 +34,12 @@ const ormPromise = ( async () => {
 } )();
 
 const apolloServerPromise = ( async () => {
-	const enumPaths = await glob( `${process.cwd()}/src/pages/api/graphql/**/*.enum.ts` );
-	for ( const enumPath of enumPaths ) {
-		const enumObj = await import( `.${enumPath.split( 'graphql' )[ 1 ]}` );
-		const name = Object.keys( enumObj )[ 0 ];
-		registerEnumType( enumObj[ name ], { name } );
+	for ( const [ name, enumObj ] of Object.entries( enums ) ) {
+		registerEnumType( enumObj, { name } );
 	}
 	
-	const resolverPaths = await glob( `${process.cwd()}/src/pages/api/graphql/**/*.resolver.ts` );
-	const resolvers: any = await Promise.all( resolverPaths.map( ( resolverPath ) => import( `.${resolverPath.split( 'graphql' )[ 1 ]}` ) ) );
-	
 	const schema = await buildSchema( {
-		resolvers        : resolvers.map( ( resolver ) => resolver.default ),
+		resolvers        : resolvers as any,
 		authChecker,
 		dateScalarMode   : 'isoDate',
 		globalMiddlewares: [ ErrorInterceptor ]

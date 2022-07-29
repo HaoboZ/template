@@ -1,6 +1,6 @@
 import { EntityManager } from '@mikro-orm/postgresql';
 import { Arg, Ctx, Query, Resolver } from 'type-graphql';
-import { Context } from '../../context';
+import type { Context } from '../../context';
 import { DatePart } from '../../enums/datePart.enum';
 import Report from './report.base';
 

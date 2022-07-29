@@ -1,8 +1,8 @@
-import { GraphQLResolveInfo } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import { PubSubEngine } from 'graphql-subscriptions';
 import { map } from 'lodash-es';
 import { Arg, Authorized, Ctx, Info, Mutation, PubSub, Resolver } from 'type-graphql';
-import { Context } from '../../context';
+import type { Context } from '../../context';
 import BaseResolver from '../base.resolver';
 import InventoryEntry from './inventoryEntry.entity';
 import InventoryEntryValidator, { InventoryEntryPartialValidator } from './inventoryEntry.validator';

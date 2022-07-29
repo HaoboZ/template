@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { GraphQLResolveInfo } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import { PubSubEngine } from 'graphql-subscriptions';
 import {
 	get,
@@ -18,7 +18,7 @@ import {
 import { SOFT_DELETABLE_FILTER } from 'mikro-orm-soft-delete';
 import fieldsToRelations from '../../fieldsToRelations';
 import ConditionalOptions from '../conditionalOptions';
-import { Context } from '../context';
+import type { Context } from '../context';
 import Log from './log/log.entity';
 
 export default abstract class BaseResolver {

@@ -1,9 +1,9 @@
-import { GraphQLResolveInfo } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import { PubSubEngine } from 'graphql-subscriptions';
 import { map, omit, partition, pick, round, set, sum } from 'lodash-es';
 import { Arg, Authorized, Ctx, Info, Mutation, PubSub, Query, Resolver } from 'type-graphql';
 import ConditionalOptions from '../../conditionalOptions';
-import { Context } from '../../context';
+import type { Context } from '../../context';
 import { PurchaseStatus } from '../../enums/purchaseStatus.enum';
 import { sendNotification } from '../../global/notification.type';
 import JsonScalar from '../../scalars/json.scalar';

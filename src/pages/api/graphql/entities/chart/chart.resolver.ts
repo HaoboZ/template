@@ -1,6 +1,6 @@
 import { EntityManager } from '@mikro-orm/postgresql';
 import { Arg, Ctx, Query, Resolver } from 'type-graphql';
-import { Context } from '../../context';
+import type { Context } from '../../context';
 import Order from '../order/order.entity';
 import Purchase from '../purchase/purchase.entity';
 import ChartBase from './chart.base';

@@ -1,9 +1,9 @@
-import { GraphQLResolveInfo } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import { PubSubEngine } from 'graphql-subscriptions';
 import { map, partition, round, set, sum } from 'lodash-es';
 import { Arg, Authorized, Ctx, Info, Mutation, PubSub, Query, Resolver } from 'type-graphql';
 import ConditionalOptions from '../../conditionalOptions';
-import { Context } from '../../context';
+import type { Context } from '../../context';
 import { CommerceType } from '../../enums/commerceType.enum';
 import { OrderStatus } from '../../enums/orderStatus.enum';
 import { PaymentStatus } from '../../enums/paymentStatus.enum';
