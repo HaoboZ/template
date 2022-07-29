@@ -36,6 +36,10 @@ const ormPromise = ( async () => {
 	}
 } )();
 
+for ( const [ name, enumObj ] of Object.entries( enums ) ) {
+	registerEnumType( enumObj, { name } );
+}
+
 const schema = buildSchemaSync( {
 	resolvers        : resolvers as any,
 	authChecker,
@@ -45,10 +49,6 @@ const schema = buildSchemaSync( {
 
 const apolloServerPromise = ( async () => {
 	if ( global.server ) return global.server;
-	
-	for ( const [ name, enumObj ] of Object.entries( enums ) ) {
-		registerEnumType( enumObj, { name } );
-	}
 	
 	const orm = await ormPromise;
 	const server = new ApolloServer( {
