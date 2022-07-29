@@ -41,8 +41,8 @@ const schema = buildSchemaSync( {
 	resolvers        : resolvers as any,
 	authChecker,
 	dateScalarMode   : 'isoDate',
-	globalMiddlewares: [ ErrorInterceptor ]
-	// skipCheck        : false
+	globalMiddlewares: [ ErrorInterceptor ],
+	skipCheck        : false
 } );
 
 const apolloServerPromise = ( async () => {
@@ -61,10 +61,7 @@ const apolloServerPromise = ( async () => {
 	return server;
 } )();
 
-export const config = {
-	runtime: 'experimental-edge',
-	api    : { bodyParser: false }
-};
+export const config = { api: { bodyParser: false } };
 
 export default async function handler( req, res ) {
 	await runCors( req, res );
