@@ -1,5 +1,6 @@
 import { EventEmitter } from 'events';
-import { createContext, DependencyList, useContext, useState } from 'react';
+import type { DependencyList } from 'react';
+import { createContext, useContext, useState } from 'react';
 import useEventListener from '../hooks/useEventListener';
 
 const EventsContext = createContext<EventEmitter>( null );

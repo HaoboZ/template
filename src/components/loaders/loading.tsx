@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import useLoading from '../../hooks/useLoading';
 
 export default function Loading( { isLoading, delay, children }: {

@@ -1,21 +1,20 @@
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import type { DialogContentProps, DialogProps, SwipeableDrawerProps } from '@mui/material';
 import {
 	Button,
 	Dialog,
 	DialogActions,
 	dialogClasses,
 	DialogContent,
-	DialogContentProps,
-	DialogProps,
 	DialogTitle,
 	Grow,
 	IconButton,
 	SwipeableDrawer,
-	SwipeableDrawerProps,
 	Toolbar,
 	Typography
 } from '@mui/material';
-import { Fragment, ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import { Fragment } from 'react';
 import AsyncLoadingButton from '../../components/asyncLoadingButton';
 import { useWideMedia } from '../../hooks/useWideMedia';
 import { useModalControls } from './index';

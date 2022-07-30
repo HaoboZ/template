@@ -1,5 +1,7 @@
-import { Button, ButtonProps, Menu, MenuProps } from '@mui/material';
-import { Fragment, ReactNode, useState } from 'react';
+import type { ButtonProps, MenuProps } from '@mui/material';
+import { Button, Menu } from '@mui/material';
+import type { ReactNode } from 'react';
+import { Fragment, useState } from 'react';
 
 export default function ButtonMenu( { onClick, menuProps, renderMenu, ...props }: {
 	renderMenu: ( closeMenu: () => void ) => ReactNode,

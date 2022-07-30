@@ -1,4 +1,5 @@
-import { throttle, ThrottleSettings } from 'lodash-es';
+import type { ThrottleSettings } from 'lodash-es';
+import { throttle } from 'lodash-es';
 import { useCallback, useEffect, useState } from 'react';
 
 export default function useThrottle<T extends ( ...args: any ) => any>(

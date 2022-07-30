@@ -1,5 +1,5 @@
-import { EmotionCache } from '@emotion/cache';
-import { ReactNode } from 'react';
+import type { EmotionCache } from '@emotion/cache';
+import type { ReactNode } from 'react';
 import Providers from './providers';
 import RouterProgress from './routerProgress';
 

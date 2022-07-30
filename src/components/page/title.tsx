@@ -1,6 +1,8 @@
-import { ListItem, ListItemProps, ListItemText, ListItemTextProps } from '@mui/material';
-import { ReactChild } from 'react';
-import Actions, { ActionProps } from '../actions';
+import type { ListItemProps, ListItemTextProps } from '@mui/material';
+import { ListItem, ListItemText } from '@mui/material';
+import type { ReactChild } from 'react';
+import type { ActionProps } from '../actions';
+import Actions from '../actions';
 
 export default function PageTitle( { actions, listItemProps, children, max, ...props }: {
 	actions?: ActionProps[] | ReactChild,

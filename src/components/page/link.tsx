@@ -1,7 +1,9 @@
-import { Link as MuiLink, LinkProps as MuiLinkProps, styled, SxProps } from '@mui/material';
-import { LinkProps as NextLinkProps } from 'next/dist/client/link';
+import type { LinkProps as MuiLinkProps, SxProps } from '@mui/material';
+import { Link as MuiLink, styled } from '@mui/material';
+import type { LinkProps as NextLinkProps } from 'next/dist/client/link';
 import NextLink from 'next/link';
-import { AnchorHTMLAttributes, forwardRef } from 'react';
+import type { AnchorHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 
 const Anchor = styled( 'a' )( {} );
 

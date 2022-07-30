@@ -1,11 +1,10 @@
+import type { PaletteMode, ThemeOptions } from '@mui/material';
 import {
 	colors,
 	createTheme,
 	CssBaseline,
 	darkScrollbar,
-	PaletteMode,
 	responsiveFontSizes,
-	ThemeOptions,
 	ThemeProvider as MuiThemeProvider,
 	useMediaQuery
 } from '@mui/material';

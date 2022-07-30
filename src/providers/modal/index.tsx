@@ -1,8 +1,10 @@
 import { CircularProgress } from '@mui/material';
 import { EventEmitter } from 'events';
 import { nanoid } from 'nanoid';
-import { ComponentType, createContext, Suspense, useContext, useState } from 'react';
-import ResponsiveModal, { ResponsiveModalProps } from './responsiveModal';
+import type { ComponentType } from 'react';
+import { createContext, Suspense, useContext, useState } from 'react';
+import type { ResponsiveModalProps } from './responsiveModal';
+import ResponsiveModal from './responsiveModal';
 
 type ModalInfo<T> = {
 	id: string,

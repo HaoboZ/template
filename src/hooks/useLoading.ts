@@ -1,6 +1,6 @@
-import useDebounce from './useDebounce';
+import { useDebouncedValue } from './useDebounce';
 
 export default function useLoading( isLoading?: boolean, delay?: number ) {
-	const isLoadingDebounced = useDebounce( isLoading, delay );
+	const isLoadingDebounced = useDebouncedValue( isLoading, delay );
 	return isLoading && isLoadingDebounced;
 }

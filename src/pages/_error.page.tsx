@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import { NextPageContext } from 'next';
+import type { NextPageContext } from 'next';
 
 // noinspection JSUnusedGlobalSymbols
 export default function Error( { statusCode } ) {

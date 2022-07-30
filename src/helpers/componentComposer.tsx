@@ -1,4 +1,4 @@
-import { ComponentProps, JSXElementConstructor, ReactNode } from 'react';
+import type { ComponentProps, JSXElementConstructor, ReactNode } from 'react';
 
 export function component<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>>(
 	component: T,

@@ -11,7 +11,7 @@ import {
 	REHYDRATE
 } from 'redux-persist';
 import createCompressor from 'redux-persist-transform-compress';
-import { PersistedState } from 'redux-persist/es/types';
+import type { PersistedState } from 'redux-persist/es/types';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import storage from 'redux-persist/lib/storage';
 import { rootReducer } from './reducers';

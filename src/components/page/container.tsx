@@ -1,4 +1,5 @@
-import { Container, ContainerProps } from '@mui/material';
+import type { ContainerProps } from '@mui/material';
+import { Container } from '@mui/material';
 import { useWideMedia } from '../../hooks/useWideMedia';
 import ScrollTop from '../scrollTop';
 

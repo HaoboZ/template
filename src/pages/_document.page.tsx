@@ -2,7 +2,7 @@ import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { Children } from 'react';
-import { PackageJson } from 'type-fest';
+import type { PackageJson } from 'type-fest';
 import _packageJson from '../../package.json';
 
 const packageJson = _packageJson as PackageJson;

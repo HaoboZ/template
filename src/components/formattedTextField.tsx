@@ -1,4 +1,5 @@
-import { TextField, TextFieldProps } from '@mui/material';
+import type { TextFieldProps } from '@mui/material';
+import { TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 export default function FormattedTextField( props: TextFieldProps ) {

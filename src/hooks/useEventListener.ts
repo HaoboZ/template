@@ -1,4 +1,5 @@
-import { DependencyList, useEffect } from 'react';
+import type { DependencyList } from 'react';
+import { useEffect } from 'react';
 
 export default function useEventListener(
 	event: { on: Function, off: Function }

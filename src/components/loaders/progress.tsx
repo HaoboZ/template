@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { useNProgress } from '@tanem/react-nprogress';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import useLoading from '../../hooks/useLoading';
 
 export default function Progress( { isLoading, delay, children }: {

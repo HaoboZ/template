@@ -1,6 +1,8 @@
-import { Box, ListItem, ListItemProps, ListItemText, ListItemTextProps } from '@mui/material';
-import { ReactChild } from 'react';
-import Actions, { ActionProps } from '../actions';
+import type { ListItemProps, ListItemTextProps } from '@mui/material';
+import { Box, ListItem, ListItemText } from '@mui/material';
+import type { ReactChild } from 'react';
+import type { ActionProps } from '../actions';
+import Actions from '../actions';
 
 export default function PageSection( { actions, listItemProps, children, max, ...props }: {
 	actions?: ActionProps[] | ReactChild,

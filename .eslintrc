@@ -113,6 +113,11 @@
 		// typescript types
 		"@typescript-eslint/ban-ts-comment"                : "off",
 		"@typescript-eslint/ban-types"                     : "off",
+		"@typescript-eslint/consistent-type-exports"       : [
+			"warn",
+			{ "fixMixedExportsWithInlineTypeSpecifier": true }
+		],
+		"@typescript-eslint/consistent-type-imports"       : [ "warn", { "prefer": "type-imports" } ],
 		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/member-delimiter-style"        : [
 			"warn", {

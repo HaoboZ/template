@@ -21,16 +21,16 @@ ppath.resolve = ( ...segments ) => {
 	}
 };
 const contains = function ( pathUtils, from, to ) {
-  from = pathUtils.normalize(from);
-  to = pathUtils.normalize(to);
-  if (from === to)
-    return `.`;
-  if (!from.endsWith(pathUtils.sep))
-    from = from + pathUtils.sep;
-  if (to.startsWith(from)) {
-    return to.slice(from.length);
-  } else {
-    return null;
+	from = pathUtils.normalize( from );
+	to = pathUtils.normalize( to );
+	if ( from === to )
+		return `.`;
+	if ( !from.endsWith( pathUtils.sep ) )
+		from = from + pathUtils.sep;
+	if ( to.startsWith( from ) ) {
+		return to.slice( from.length );
+	} else {
+		return null;
   }
 };
 npath.fromPortablePath = fromPortablePath;
@@ -208,16 +208,16 @@ async function resolve$1( originalSpecifier, context, nextResolve ) {
 	let allowLegacyResolve = false;
 	if ( dependencyNameMatch ) {
 		const [ , dependencyName, subPath ] = dependencyNameMatch;
-    if (subPath === ``) {
-      const resolved = pnpapi.resolveToUnqualified(`${dependencyName}/package.json`, issuer);
-      if (resolved) {
-        const content = await tryReadFile(resolved);
-        if (content) {
-          const pkg = JSON.parse(content);
-          allowLegacyResolve = pkg.exports == null;
-        }
-      }
-    }
+		if ( subPath === `` ) {
+			const resolved = pnpapi.resolveToUnqualified( `${dependencyName}/package.json`, issuer );
+			if ( resolved ) {
+				const content = await tryReadFile( resolved );
+				if ( content ) {
+					const pkg = JSON.parse( content );
+					allowLegacyResolve = pkg.exports == null;
+				}
+			}
+		}
   }
   const result = pnpapi.resolveRequest(specifier, issuer, {
     conditions: new Set(conditions),

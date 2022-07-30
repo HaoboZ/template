@@ -1,5 +1,5 @@
-import { EmotionCache } from '@emotion/cache';
-import { AppProps } from 'next/app';
+import type { EmotionCache } from '@emotion/cache';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import DataProvider from '../providers/data';
 import Baseline from './baseline';

@@ -1,9 +1,11 @@
-import createCache, { EmotionCache } from '@emotion/cache';
+import type { EmotionCache } from '@emotion/cache';
+import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { Close as CloseIcon } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import { SnackbarProvider } from 'notistack';
-import { ReactNode, useRef } from 'react';
+import type { ReactNode } from 'react';
+import { useRef } from 'react';
 import { Provider as StoreProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import ComponentComposer, { component } from '../../helpers/componentComposer';
