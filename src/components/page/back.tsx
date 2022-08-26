@@ -1,9 +1,9 @@
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { Breadcrumbs, Button } from '@mui/material';
-import { startCase } from 'lodash-es';
 import { useRouter } from 'next/router';
 import type { MouseEventHandler } from 'react';
 import { useMemo } from 'react';
+import startCase from '../../helpers/startCase';
 import { useWideMedia } from '../../hooks/useWideMedia';
 import PageLink, { PageLinkComponent } from './link';
 
