@@ -13,10 +13,7 @@ export default function _App( { Component, pageProps, emotionCache }: {
 		<DataProvider data={pageProps}>
 			<Head>
 				<title>Template</title>
-				<meta
-					name='viewport'
-					content='width=device-width, initial-scale=1'
-				/>
+				<meta name='viewport' content='width=device-width, initial-scale=1'/>
 			</Head>
 			<Baseline emotionCache={emotionCache}>
 				<Component {...pageProps}/>
