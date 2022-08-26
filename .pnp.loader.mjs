@@ -1,16 +1,16 @@
-import { URL, fileURLToPath, pathToFileURL } from 'url';
 import fs from 'fs';
-import path from 'path';
 import moduleExports, { Module } from 'module';
+import path from 'path';
+import { fileURLToPath, pathToFileURL, URL } from 'url';
 
 var PathType;
-(function(PathType2) {
-  PathType2[PathType2["File"] = 0] = "File";
-  PathType2[PathType2["Portable"] = 1] = "Portable";
-  PathType2[PathType2["Native"] = 2] = "Native";
-})(PathType || (PathType = {}));
-const npath = Object.create(path);
-const ppath = Object.create(path.posix);
+( function ( PathType2 ) {
+	PathType2[ PathType2[ 'File' ] = 0 ] = 'File';
+	PathType2[ PathType2[ 'Portable' ] = 1 ] = 'Portable';
+	PathType2[ PathType2[ 'Native' ] = 2 ] = 'Native';
+} )( PathType || ( PathType = {} ) );
+const npath = Object.create( path );
+const ppath = Object.create( path.posix );
 npath.cwd = () => process.cwd();
 ppath.cwd = () => toPortablePath(process.cwd());
 ppath.resolve = (...segments) => {
@@ -82,24 +82,30 @@ function readPackageScope(checkPath) {
         path: checkPath
       };
     }
-  } while (separatorIndex > rootSeparatorIndex);
-  return false;
-}
-function readPackage(requestPath) {
-  const jsonPath = npath.resolve(requestPath, `package.json`);
-  if (!fs.existsSync(jsonPath))
-    return null;
-  return JSON.parse(fs.readFileSync(jsonPath, `utf8`));
+  } while ( separatorIndex > rootSeparatorIndex );
+	return false;
 }
 
-async function tryReadFile(path2) {
-  try {
-    return await fs.promises.readFile(path2, `utf8`);
-  } catch (error) {
-    if (error.code === `ENOENT`)
-      return null;
-    throw error;
-  }
+function readPackage( requestPath ) {
+	const jsonPath = npath.resolve( requestPath, `package.json` );
+	if ( !fs.existsSync( jsonPath ) )
+		return null;
+	return JSON.parse( fs.readFileSync( jsonPath, `utf8` ) );
+}
+
+const [ major, minor ] = process.versions.node.split( `.` ).map( ( value ) => parseInt( value, 10 ) );
+const HAS_CONSOLIDATED_HOOKS = major > 16 || major === 16 && minor >= 12;
+const HAS_UNFLAGGED_JSON_MODULES = major > 17 || major === 17 && minor >= 5 || major === 16 && minor >= 15;
+const HAS_JSON_IMPORT_ASSERTION_REQUIREMENT = major > 17 || major === 17 && minor >= 1 || major === 16 && minor > 14;
+
+async function tryReadFile( path2 ) {
+	try {
+		return await fs.promises.readFile( path2, `utf8` );
+	} catch ( error ) {
+		if ( error.code === `ENOENT` )
+			return null;
+		throw error;
+	}
 }
 function tryParseURL(str, base) {
   try {
@@ -126,7 +132,9 @@ function getFileFormat(filepath) {
       throw new Error(`Unknown file extension ".wasm" for ${filepath}`);
     }
     case `.json`: {
-      throw new Error(`Unknown file extension ".json" for ${filepath}`);
+	    if ( HAS_UNFLAGGED_JSON_MODULES )
+		    return `json`;
+	    throw new Error( `Unknown file extension ".json" for ${filepath}` );
     }
     case `.js`: {
       const pkg = readPackageScope(filepath);
@@ -170,18 +178,26 @@ async function getSource$1(urlString, context, defaultGetSource) {
 }
 
 async function load$1(urlString, context, nextLoad) {
-  const url = tryParseURL(urlString);
-  if ((url == null ? void 0 : url.protocol) !== `file:`)
-    return nextLoad(urlString, context, nextLoad);
-  const filePath = fileURLToPath(url);
-  const format = getFileFormat(filePath);
-  if (!format)
-    return nextLoad(urlString, context, nextLoad);
-  return {
-    format,
-    source: await fs.promises.readFile(filePath, `utf8`),
-    shortCircuit: true
-  };
+	var _a;
+	const url = tryParseURL( urlString );
+	if ( ( url == null ? void 0 : url.protocol ) !== `file:` )
+		return nextLoad( urlString, context, nextLoad );
+	const filePath = fileURLToPath( url );
+	const format = getFileFormat( filePath );
+	if ( !format )
+		return nextLoad( urlString, context, nextLoad );
+	if ( HAS_JSON_IMPORT_ASSERTION_REQUIREMENT && format === `json` && ( ( _a = context.importAssertions ) == null
+		? void 0
+		: _a.type ) !== `json` ) {
+		const err = new TypeError( `[ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "${urlString}" needs an import assertion of type "json"` );
+		err.code = `ERR_IMPORT_ASSERTION_TYPE_MISSING`;
+		throw err;
+	}
+	return {
+		format,
+		source      : await fs.promises.readFile( filePath, `utf8` ),
+		shortCircuit: true
+	};
 }
 
 const pathRegExp = /^(?![a-zA-Z]:[\\/]|\\\\|\.{0,2}(?:\/|$))((?:node:)?(?:@[^/]+\/)?[^/]+)\/*(.*|)$/;
@@ -229,45 +245,44 @@ async function resolve$1(originalSpecifier, context, nextResolve) {
     resultURL.search = url.search;
     resultURL.hash = url.hash;
   }
-  if (!parentURL)
-    setEntrypointPath(fileURLToPath(resultURL));
-  return {
-    url: resultURL.href,
-    shortCircuit: true
-  };
+	if ( !parentURL )
+		setEntrypointPath( fileURLToPath( resultURL ) );
+	return {
+		url         : resultURL.href,
+		shortCircuit: true
+	};
 }
 
-const binding = process.binding(`fs`);
+const binding = process.binding( `fs` );
 const originalfstat = binding.fstat;
-const ZIP_FD = 2147483648;
-binding.fstat = function(...args) {
-  const [fd, useBigint, req] = args;
-  if ((fd & ZIP_FD) !== 0 && useBigint === false && req === void 0) {
-    try {
-      const stats = fs.fstatSync(fd);
-      return new Float64Array([
-        stats.dev,
-        stats.mode,
-        stats.nlink,
-        stats.uid,
-        stats.gid,
-        stats.rdev,
-        stats.blksize,
+const ZIP_MASK = 4278190080;
+const ZIP_MAGIC = 704643072;
+binding.fstat = function ( ...args ) {
+	const [ fd, useBigint, req ] = args;
+	if ( ( fd & ZIP_MASK ) === ZIP_MAGIC && useBigint === false && req === void 0 ) {
+		try {
+			const stats = fs.fstatSync( fd );
+			return new Float64Array( [
+				stats.dev,
+				stats.mode,
+				stats.nlink,
+				stats.uid,
+				stats.gid,
+				stats.rdev,
+				stats.blksize,
         stats.ino,
-        stats.size,
-        stats.blocks
-      ]);
-    } catch {
-    }
-  }
-  return originalfstat.apply(this, args);
+				stats.size,
+				stats.blocks
+			] );
+		} catch {
+		}
+	}
+	return originalfstat.apply( this, args );
 };
 
-const [major, minor] = process.versions.node.split(`.`).map((value) => parseInt(value, 10));
-const hasConsolidatedHooks = major > 16 || major === 16 && minor >= 12;
 const resolve = resolve$1;
-const getFormat = hasConsolidatedHooks ? void 0 : getFormat$1;
-const getSource = hasConsolidatedHooks ? void 0 : getSource$1;
-const load = hasConsolidatedHooks ? load$1 : void 0;
+const getFormat = HAS_CONSOLIDATED_HOOKS ? void 0 : getFormat$1;
+const getSource = HAS_CONSOLIDATED_HOOKS ? void 0 : getSource$1;
+const load = HAS_CONSOLIDATED_HOOKS ? load$1 : void 0;
 
 export { getFormat, getSource, load, resolve };
