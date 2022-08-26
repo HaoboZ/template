@@ -47,9 +47,9 @@ export default class _Document extends Document {
 					{'keywords' in packageJson && <meta name='keywords' content={packageJson.keywords.join( ', ' )}/>}
 					{'author' in packageJson && <meta name='author' content={packageJson.author as string}/>}
 					{/*pwa*/}
-					<link rel='shortcut icon' href='/favicon.ico'/>
 					<meta name='mobile-web-app-capable' content='yes'/>
 					<link rel='manifest' href='/app.webmanifest'/>
+					<link rel='shortcut icon' href='/favicon.ico'/>
 					{/*ios*/}
 					<meta name='apple-mobile-web-app-capable' content='yes'/>
 					<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'/>
