@@ -24,12 +24,10 @@ const nextConfig = {
 
 const plugins = [
 	bundleAnalyzer( { enabled: process.env.ANALYZE === 'true' } ),
-	withPWA, {
-		pwa: {
-			disable: Boolean( process.env.NEXT_PUBLIC_SERVER_URL ) || process.env.NODE_ENV === 'development',
-			dest   : 'public'
-		}
-	}
+	nextPWA( {
+		disable: Boolean( process.env.NEXT_PUBLIC_SERVER_URL ) || process.env.NODE_ENV === 'development',
+		dest   : 'public'
+	} )
 ];
 
 // noinspection JSUnusedGlobalSymbols

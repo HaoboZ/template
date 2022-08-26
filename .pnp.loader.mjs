@@ -1,36 +1,36 @@
+import { URL, fileURLToPath, pathToFileURL } from 'url';
 import fs from 'fs';
-import moduleExports, { Module } from 'module';
 import path from 'path';
-import { fileURLToPath, pathToFileURL, URL } from 'url';
+import moduleExports, { Module } from 'module';
 
 var PathType;
-( function ( PathType2 ) {
-	PathType2[ PathType2[ 'File' ] = 0 ] = 'File';
-	PathType2[ PathType2[ 'Portable' ] = 1 ] = 'Portable';
-	PathType2[ PathType2[ 'Native' ] = 2 ] = 'Native';
-} )( PathType || ( PathType = {} ) );
-const npath = Object.create( path );
-const ppath = Object.create( path.posix );
+(function(PathType2) {
+  PathType2[PathType2["File"] = 0] = "File";
+  PathType2[PathType2["Portable"] = 1] = "Portable";
+  PathType2[PathType2["Native"] = 2] = "Native";
+})(PathType || (PathType = {}));
+const npath = Object.create(path);
+const ppath = Object.create(path.posix);
 npath.cwd = () => process.cwd();
-ppath.cwd = () => toPortablePath( process.cwd() );
-ppath.resolve = ( ...segments ) => {
-	if ( segments.length > 0 && ppath.isAbsolute( segments[ 0 ] ) ) {
-		return path.posix.resolve( ...segments );
-	} else {
-		return path.posix.resolve( ppath.cwd(), ...segments );
-	}
+ppath.cwd = () => toPortablePath(process.cwd());
+ppath.resolve = (...segments) => {
+  if (segments.length > 0 && ppath.isAbsolute(segments[0])) {
+    return path.posix.resolve(...segments);
+  } else {
+    return path.posix.resolve(ppath.cwd(), ...segments);
+  }
 };
-const contains = function ( pathUtils, from, to ) {
-	from = pathUtils.normalize( from );
-	to = pathUtils.normalize( to );
-	if ( from === to )
-		return `.`;
-	if ( !from.endsWith( pathUtils.sep ) )
-		from = from + pathUtils.sep;
-	if ( to.startsWith( from ) ) {
-		return to.slice( from.length );
-	} else {
-		return null;
+const contains = function(pathUtils, from, to) {
+  from = pathUtils.normalize(from);
+  to = pathUtils.normalize(to);
+  if (from === to)
+    return `.`;
+  if (!from.endsWith(pathUtils.sep))
+    from = from + pathUtils.sep;
+  if (to.startsWith(from)) {
+    return to.slice(from.length);
+  } else {
+    return null;
   }
 };
 npath.fromPortablePath = fromPortablePath;
@@ -169,55 +169,54 @@ async function getSource$1(urlString, context, defaultGetSource) {
   };
 }
 
-async function load$1( urlString, context, nextLoad ) {
-	const url = tryParseURL( urlString );
-	if ( ( url == null ? void 0 : url.protocol ) !== `file:` )
-		return nextLoad( urlString, context, nextLoad );
-	const filePath = fileURLToPath( url );
-	const format = getFileFormat( filePath );
-	if ( !format )
-		return nextLoad( urlString, context, nextLoad );
-	return {
-		format,
-		source      : await fs.promises.readFile( filePath, `utf8` ),
-		shortCircuit: true
-	};
+async function load$1(urlString, context, nextLoad) {
+  const url = tryParseURL(urlString);
+  if ((url == null ? void 0 : url.protocol) !== `file:`)
+    return nextLoad(urlString, context, nextLoad);
+  const filePath = fileURLToPath(url);
+  const format = getFileFormat(filePath);
+  if (!format)
+    return nextLoad(urlString, context, nextLoad);
+  return {
+    format,
+    source: await fs.promises.readFile(filePath, `utf8`),
+    shortCircuit: true
+  };
 }
 
 const pathRegExp = /^(?![a-zA-Z]:[\\/]|\\\\|\.{0,2}(?:\/|$))((?:node:)?(?:@[^/]+\/)?[^/]+)\/*(.*|)$/;
 const isRelativeRegexp = /^\.{0,2}\//;
-
-async function resolve$1( originalSpecifier, context, nextResolve ) {
-	var _a;
-	const { findPnpApi } = moduleExports;
-	if ( !findPnpApi || isBuiltinModule( originalSpecifier ) )
-		return nextResolve( originalSpecifier, context, nextResolve );
-	let specifier = originalSpecifier;
-	const url = tryParseURL( specifier, isRelativeRegexp.test( specifier ) ? context.parentURL : void 0 );
-	if ( url ) {
-		if ( url.protocol !== `file:` )
-			return nextResolve( originalSpecifier, context, nextResolve );
-		specifier = fileURLToPath( url );
-	}
-	const { parentURL, conditions = [] } = context;
-	const issuer = parentURL ? fileURLToPath( parentURL ) : process.cwd();
-	const pnpapi = ( _a = findPnpApi( issuer ) ) != null ? _a : url ? findPnpApi( specifier ) : null;
-	if ( !pnpapi )
-		return nextResolve( originalSpecifier, context, nextResolve );
-	const dependencyNameMatch = specifier.match( pathRegExp );
-	let allowLegacyResolve = false;
-	if ( dependencyNameMatch ) {
-		const [ , dependencyName, subPath ] = dependencyNameMatch;
-		if ( subPath === `` ) {
-			const resolved = pnpapi.resolveToUnqualified( `${dependencyName}/package.json`, issuer );
-			if ( resolved ) {
-				const content = await tryReadFile( resolved );
-				if ( content ) {
-					const pkg = JSON.parse( content );
-					allowLegacyResolve = pkg.exports == null;
-				}
-			}
-		}
+async function resolve$1(originalSpecifier, context, nextResolve) {
+  var _a;
+  const {findPnpApi} = moduleExports;
+  if (!findPnpApi || isBuiltinModule(originalSpecifier))
+    return nextResolve(originalSpecifier, context, nextResolve);
+  let specifier = originalSpecifier;
+  const url = tryParseURL(specifier, isRelativeRegexp.test(specifier) ? context.parentURL : void 0);
+  if (url) {
+    if (url.protocol !== `file:`)
+      return nextResolve(originalSpecifier, context, nextResolve);
+    specifier = fileURLToPath(url);
+  }
+  const {parentURL, conditions = []} = context;
+  const issuer = parentURL ? fileURLToPath(parentURL) : process.cwd();
+  const pnpapi = (_a = findPnpApi(issuer)) != null ? _a : url ? findPnpApi(specifier) : null;
+  if (!pnpapi)
+    return nextResolve(originalSpecifier, context, nextResolve);
+  const dependencyNameMatch = specifier.match(pathRegExp);
+  let allowLegacyResolve = false;
+  if (dependencyNameMatch) {
+    const [, dependencyName, subPath] = dependencyNameMatch;
+    if (subPath === ``) {
+      const resolved = pnpapi.resolveToUnqualified(`${dependencyName}/package.json`, issuer);
+      if (resolved) {
+        const content = await tryReadFile(resolved);
+        if (content) {
+          const pkg = JSON.parse(content);
+          allowLegacyResolve = pkg.exports == null;
+        }
+      }
+    }
   }
   const result = pnpapi.resolveRequest(specifier, issuer, {
     conditions: new Set(conditions),
@@ -233,8 +232,8 @@ async function resolve$1( originalSpecifier, context, nextResolve ) {
   if (!parentURL)
     setEntrypointPath(fileURLToPath(resultURL));
   return {
-	  url         : resultURL.href,
-	  shortCircuit: true
+    url: resultURL.href,
+    shortCircuit: true
   };
 }
 
