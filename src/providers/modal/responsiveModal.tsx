@@ -143,7 +143,8 @@ export function ResponsiveModalContainer( {
 							onClick={async () => {
 								await onSave();
 								!keepOpenOnSave && onClose();
-							}}>Save
+							}}>
+							Save
 						</AsyncLoadingButton>
 					) : undefined}
 				</Toolbar>

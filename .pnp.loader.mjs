@@ -21,68 +21,71 @@ ppath.resolve = ( ...segments ) => {
 	}
 };
 const contains = function ( pathUtils, from, to ) {
-  from = pathUtils.normalize(from);
-  to = pathUtils.normalize(to);
-  if (from === to)
-    return `.`;
-  if (!from.endsWith(pathUtils.sep))
-    from = from + pathUtils.sep;
-  if (to.startsWith(from)) {
-    return to.slice(from.length);
-  } else {
-    return null;
-  }
+	from = pathUtils.normalize( from );
+	to = pathUtils.normalize( to );
+	if ( from === to )
+		return `.`;
+	if ( !from.endsWith( pathUtils.sep ) )
+		from = from + pathUtils.sep;
+	if ( to.startsWith( from ) ) {
+		return to.slice( from.length );
+	} else {
+		return null;
+	}
 };
 npath.fromPortablePath = fromPortablePath;
 npath.toPortablePath = toPortablePath;
-npath.contains = (from, to) => contains(npath, from, to);
-ppath.contains = (from, to) => contains(ppath, from, to);
+npath.contains = ( from, to ) => contains( npath, from, to );
+ppath.contains = ( from, to ) => contains( ppath, from, to );
 const WINDOWS_PATH_REGEXP = /^([a-zA-Z]:.*)$/;
 const UNC_WINDOWS_PATH_REGEXP = /^\/\/(\.\/)?(.*)$/;
 const PORTABLE_PATH_REGEXP = /^\/([a-zA-Z]:.*)$/;
 const UNC_PORTABLE_PATH_REGEXP = /^\/unc\/(\.dot\/)?(.*)$/;
-function fromPortablePath(p) {
-  if (process.platform !== `win32`)
-    return p;
-  let portablePathMatch, uncPortablePathMatch;
-  if (portablePathMatch = p.match(PORTABLE_PATH_REGEXP))
-    p = portablePathMatch[1];
-  else if (uncPortablePathMatch = p.match(UNC_PORTABLE_PATH_REGEXP))
-    p = `\\\\${uncPortablePathMatch[1] ? `.\\` : ``}${uncPortablePathMatch[2]}`;
-  else
-    return p;
-  return p.replace(/\//g, `\\`);
-}
-function toPortablePath(p) {
-  if (process.platform !== `win32`)
-    return p;
-  p = p.replace(/\\/g, `/`);
-  let windowsPathMatch, uncWindowsPathMatch;
-  if (windowsPathMatch = p.match(WINDOWS_PATH_REGEXP))
-    p = `/${windowsPathMatch[1]}`;
-  else if (uncWindowsPathMatch = p.match(UNC_WINDOWS_PATH_REGEXP))
-    p = `/unc/${uncWindowsPathMatch[1] ? `.dot/` : ``}${uncWindowsPathMatch[2]}`;
-  return p;
+
+function fromPortablePath( p ) {
+	if ( process.platform !== `win32` )
+		return p;
+	let portablePathMatch, uncPortablePathMatch;
+	if ( portablePathMatch = p.match( PORTABLE_PATH_REGEXP ) )
+		p = portablePathMatch[ 1 ];
+	else if ( uncPortablePathMatch = p.match( UNC_PORTABLE_PATH_REGEXP ) )
+		p = `\\\\${uncPortablePathMatch[ 1 ] ? `.\\` : ``}${uncPortablePathMatch[ 2 ]}`;
+	else
+		return p;
+	return p.replace( /\//g, `\\` );
 }
 
-const builtinModules = new Set(Module.builtinModules || Object.keys(process.binding(`natives`)));
-const isBuiltinModule = (request) => request.startsWith(`node:`) || builtinModules.has(request);
-function readPackageScope(checkPath) {
-  const rootSeparatorIndex = checkPath.indexOf(npath.sep);
-  let separatorIndex;
-  do {
-    separatorIndex = checkPath.lastIndexOf(npath.sep);
-	  checkPath = checkPath.slice( 0, separatorIndex );
-	  if ( checkPath.endsWith( `${npath.sep}node_modules` ) )
-		  return false;
-	  const pjson = readPackage( checkPath + npath.sep );
-	  if ( pjson ) {
-		  return {
-			  data: pjson,
-			  path: checkPath
-		  };
-	  }
-  } while ( separatorIndex > rootSeparatorIndex );
+function toPortablePath( p ) {
+	if ( process.platform !== `win32` )
+		return p;
+	p = p.replace( /\\/g, `/` );
+	let windowsPathMatch, uncWindowsPathMatch;
+	if ( windowsPathMatch = p.match( WINDOWS_PATH_REGEXP ) )
+		p = `/${windowsPathMatch[ 1 ]}`;
+	else if ( uncWindowsPathMatch = p.match( UNC_WINDOWS_PATH_REGEXP ) )
+		p = `/unc/${uncWindowsPathMatch[ 1 ] ? `.dot/` : ``}${uncWindowsPathMatch[ 2 ]}`;
+	return p;
+}
+
+const builtinModules = new Set( Module.builtinModules || Object.keys( process.binding( `natives` ) ) );
+const isBuiltinModule = ( request ) => request.startsWith( `node:` ) || builtinModules.has( request );
+
+function readPackageScope( checkPath ) {
+	const rootSeparatorIndex = checkPath.indexOf( npath.sep );
+	let separatorIndex;
+	do {
+		separatorIndex = checkPath.lastIndexOf( npath.sep );
+		checkPath = checkPath.slice( 0, separatorIndex );
+		if ( checkPath.endsWith( `${npath.sep}node_modules` ) )
+			return false;
+		const pjson = readPackage( checkPath + npath.sep );
+		if ( pjson ) {
+			return {
+				data: pjson,
+				path: checkPath
+			};
+		}
+	} while ( separatorIndex > rootSeparatorIndex );
 	return false;
 }
 
@@ -115,70 +118,73 @@ function tryParseURL( str, base ) {
 		return null;
 	}
 }
+
 let entrypointPath = null;
-function setEntrypointPath(file) {
-  entrypointPath = file;
-}
-function getFileFormat(filepath) {
-  var _a, _b;
-  const ext = path.extname(filepath);
-  switch (ext) {
-    case `.mjs`: {
-      return `module`;
-    }
-    case `.cjs`: {
-      return `commonjs`;
-    }
-    case `.wasm`: {
-      throw new Error(`Unknown file extension ".wasm" for ${filepath}`);
-    }
-    case `.json`: {
-	    if ( HAS_UNFLAGGED_JSON_MODULES )
-		    return `json`;
-	    throw new Error( `Unknown file extension ".json" for ${filepath}` );
-    }
-    case `.js`: {
-      const pkg = readPackageScope(filepath);
-      if (!pkg)
-        return `commonjs`;
-      return (_a = pkg.data.type) != null ? _a : `commonjs`;
-    }
-    default: {
-      if (entrypointPath !== filepath)
-        return null;
-      const pkg = readPackageScope(filepath);
-      if (!pkg)
-        return `commonjs`;
-      if (pkg.data.type === `module`)
-        return null;
-      return (_b = pkg.data.type) != null ? _b : `commonjs`;
-    }
-  }
+
+function setEntrypointPath( file ) {
+	entrypointPath = file;
 }
 
-async function getFormat$1(resolved, context, defaultGetFormat) {
-  const url = tryParseURL(resolved);
-  if ((url == null ? void 0 : url.protocol) !== `file:`)
-    return defaultGetFormat(resolved, context, defaultGetFormat);
-  const format = getFileFormat(fileURLToPath(url));
-  if (format) {
-    return {
-      format
-    };
-  }
-  return defaultGetFormat(resolved, context, defaultGetFormat);
+function getFileFormat( filepath ) {
+	var _a, _b;
+	const ext = path.extname( filepath );
+	switch ( ext ) {
+	case `.mjs`: {
+		return `module`;
+	}
+	case `.cjs`: {
+		return `commonjs`;
+	}
+	case `.wasm`: {
+		throw new Error( `Unknown file extension ".wasm" for ${filepath}` );
+	}
+	case `.json`: {
+		if ( HAS_UNFLAGGED_JSON_MODULES )
+			return `json`;
+		throw new Error( `Unknown file extension ".json" for ${filepath}` );
+	}
+	case `.js`: {
+		const pkg = readPackageScope( filepath );
+		if ( !pkg )
+			return `commonjs`;
+		return ( _a = pkg.data.type ) != null ? _a : `commonjs`;
+	}
+	default: {
+		if ( entrypointPath !== filepath )
+			return null;
+		const pkg = readPackageScope( filepath );
+		if ( !pkg )
+			return `commonjs`;
+		if ( pkg.data.type === `module` )
+			return null;
+		return ( _b = pkg.data.type ) != null ? _b : `commonjs`;
+	}
+	}
 }
 
-async function getSource$1(urlString, context, defaultGetSource) {
-  const url = tryParseURL(urlString);
-  if ((url == null ? void 0 : url.protocol) !== `file:`)
-    return defaultGetSource(urlString, context, defaultGetSource);
-  return {
-    source: await fs.promises.readFile(fileURLToPath(url), `utf8`)
-  };
+async function getFormat$1( resolved, context, defaultGetFormat ) {
+	const url = tryParseURL( resolved );
+	if ( ( url == null ? void 0 : url.protocol ) !== `file:` )
+		return defaultGetFormat( resolved, context, defaultGetFormat );
+	const format = getFileFormat( fileURLToPath( url ) );
+	if ( format ) {
+		return {
+			format
+		};
+	}
+	return defaultGetFormat( resolved, context, defaultGetFormat );
 }
 
-async function load$1(urlString, context, nextLoad) {
+async function getSource$1( urlString, context, defaultGetSource ) {
+	const url = tryParseURL( urlString );
+	if ( ( url == null ? void 0 : url.protocol ) !== `file:` )
+		return defaultGetSource( urlString, context, defaultGetSource );
+	return {
+		source: await fs.promises.readFile( fileURLToPath( url ), `utf8` )
+	};
+}
+
+async function load$1( urlString, context, nextLoad ) {
 	var _a;
 	const url = tryParseURL( urlString );
 	if ( ( url == null ? void 0 : url.protocol ) !== `file:` )
@@ -203,42 +209,43 @@ async function load$1(urlString, context, nextLoad) {
 
 const pathRegExp = /^(?![a-zA-Z]:[\\/]|\\\\|\.{0,2}(?:\/|$))((?:node:)?(?:@[^/]+\/)?[^/]+)\/*(.*|)$/;
 const isRelativeRegexp = /^\.{0,2}\//;
-async function resolve$1(originalSpecifier, context, nextResolve) {
-  var _a;
-  const {findPnpApi} = moduleExports;
-  if (!findPnpApi || isBuiltinModule(originalSpecifier))
-    return nextResolve(originalSpecifier, context, nextResolve);
-  let specifier = originalSpecifier;
-  const url = tryParseURL(specifier, isRelativeRegexp.test(specifier) ? context.parentURL : void 0);
-  if (url) {
-    if (url.protocol !== `file:`)
-      return nextResolve(originalSpecifier, context, nextResolve);
-    specifier = fileURLToPath(url);
-  }
-  const {parentURL, conditions = []} = context;
-  const issuer = parentURL ? fileURLToPath(parentURL) : process.cwd();
-  const pnpapi = (_a = findPnpApi(issuer)) != null ? _a : url ? findPnpApi(specifier) : null;
-  if (!pnpapi)
-    return nextResolve(originalSpecifier, context, nextResolve);
-  const dependencyNameMatch = specifier.match(pathRegExp);
-  let allowLegacyResolve = false;
-  if (dependencyNameMatch) {
-    const [, dependencyName, subPath] = dependencyNameMatch;
-    if (subPath === ``) {
-      const resolved = pnpapi.resolveToUnqualified(`${dependencyName}/package.json`, issuer);
-      if (resolved) {
-        const content = await tryReadFile(resolved);
-        if (content) {
-          const pkg = JSON.parse(content);
-          allowLegacyResolve = pkg.exports == null;
-        }
-      }
-    }
-  }
-  const result = pnpapi.resolveRequest(specifier, issuer, {
-	  conditions: new Set( conditions ),
-	  extensions: allowLegacyResolve ? void 0 : []
-  } );
+
+async function resolve$1( originalSpecifier, context, nextResolve ) {
+	var _a;
+	const { findPnpApi } = moduleExports;
+	if ( !findPnpApi || isBuiltinModule( originalSpecifier ) )
+		return nextResolve( originalSpecifier, context, nextResolve );
+	let specifier = originalSpecifier;
+	const url = tryParseURL( specifier, isRelativeRegexp.test( specifier ) ? context.parentURL : void 0 );
+	if ( url ) {
+		if ( url.protocol !== `file:` )
+			return nextResolve( originalSpecifier, context, nextResolve );
+		specifier = fileURLToPath( url );
+	}
+	const { parentURL, conditions = [] } = context;
+	const issuer = parentURL ? fileURLToPath( parentURL ) : process.cwd();
+	const pnpapi = ( _a = findPnpApi( issuer ) ) != null ? _a : url ? findPnpApi( specifier ) : null;
+	if ( !pnpapi )
+		return nextResolve( originalSpecifier, context, nextResolve );
+	const dependencyNameMatch = specifier.match( pathRegExp );
+	let allowLegacyResolve = false;
+	if ( dependencyNameMatch ) {
+		const [ , dependencyName, subPath ] = dependencyNameMatch;
+		if ( subPath === `` ) {
+			const resolved = pnpapi.resolveToUnqualified( `${dependencyName}/package.json`, issuer );
+			if ( resolved ) {
+				const content = await tryReadFile( resolved );
+				if ( content ) {
+					const pkg = JSON.parse( content );
+					allowLegacyResolve = pkg.exports == null;
+				}
+			}
+		}
+	}
+	const result = pnpapi.resolveRequest( specifier, issuer, {
+		conditions: new Set( conditions ),
+		extensions: allowLegacyResolve ? void 0 : []
+	} );
 	if ( !result )
 		throw new Error( `Resolving '${specifier}' from '${issuer}' failed` );
 	const resultURL = pathToFileURL( result );
