@@ -50,7 +50,7 @@
 		"@types/react-dom"                : "^18.0.6",
 		"@types/react-redux"              : "^7.1.24",
 		"@types/sass"                     : "^1.43.1",
-		"@types/underscore"               : "^1",
+		"@types/underscore"               : "^1.11.4",
 		"@typescript-eslint/eslint-plugin": "^5.35.1",
 		"@typescript-eslint/parser"       : "^5.35.1",
 		"cross-env"                       : "^7.0.3",
