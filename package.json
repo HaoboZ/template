@@ -2,7 +2,7 @@
 	"name"           : "template",
 	"description"    : "template",
 	"author"         : "Haobo Zhang <haobozhang9081@gmail.com>",
-	"version"        : "1.2.1",
+	"version"        : "1.2.2",
 	"private"        : true,
 	"scripts"        : {
 		"dev"    : "next dev",
@@ -36,6 +36,7 @@
 		"redux"                           : "^4.2.0",
 		"redux-persist"                   : "^6.0.0",
 		"redux-persist-transform-compress": "^4.2.0",
+		"rooks"                           : "^6.4.3",
 		"sass"                            : "^1.54.5",
 		"type-fest"                       : "^2.19.0"
 	},
