@@ -12,15 +12,15 @@ var PathType;
 const npath = Object.create( path );
 const ppath = Object.create( path.posix );
 npath.cwd = () => process.cwd();
-ppath.cwd = () => toPortablePath(process.cwd());
-ppath.resolve = (...segments) => {
-  if (segments.length > 0 && ppath.isAbsolute(segments[0])) {
-    return path.posix.resolve(...segments);
-  } else {
-    return path.posix.resolve(ppath.cwd(), ...segments);
-  }
+ppath.cwd = () => toPortablePath( process.cwd() );
+ppath.resolve = ( ...segments ) => {
+	if ( segments.length > 0 && ppath.isAbsolute( segments[ 0 ] ) ) {
+		return path.posix.resolve( ...segments );
+	} else {
+		return path.posix.resolve( ppath.cwd(), ...segments );
+	}
 };
-const contains = function(pathUtils, from, to) {
+const contains = function ( pathUtils, from, to ) {
   from = pathUtils.normalize(from);
   to = pathUtils.normalize(to);
   if (from === to)
@@ -72,16 +72,16 @@ function readPackageScope(checkPath) {
   let separatorIndex;
   do {
     separatorIndex = checkPath.lastIndexOf(npath.sep);
-    checkPath = checkPath.slice(0, separatorIndex);
-    if (checkPath.endsWith(`${npath.sep}node_modules`))
-      return false;
-    const pjson = readPackage(checkPath + npath.sep);
-    if (pjson) {
-      return {
-        data: pjson,
-        path: checkPath
-      };
-    }
+	  checkPath = checkPath.slice( 0, separatorIndex );
+	  if ( checkPath.endsWith( `${npath.sep}node_modules` ) )
+		  return false;
+	  const pjson = readPackage( checkPath + npath.sep );
+	  if ( pjson ) {
+		  return {
+			  data: pjson,
+			  path: checkPath
+		  };
+	  }
   } while ( separatorIndex > rootSeparatorIndex );
 	return false;
 }
@@ -107,12 +107,13 @@ async function tryReadFile( path2 ) {
 		throw error;
 	}
 }
-function tryParseURL(str, base) {
-  try {
-    return new URL(str, base);
-  } catch {
-    return null;
-  }
+
+function tryParseURL( str, base ) {
+	try {
+		return new URL( str, base );
+	} catch {
+		return null;
+	}
 }
 let entrypointPath = null;
 function setEntrypointPath(file) {
@@ -235,16 +236,16 @@ async function resolve$1(originalSpecifier, context, nextResolve) {
     }
   }
   const result = pnpapi.resolveRequest(specifier, issuer, {
-    conditions: new Set(conditions),
-    extensions: allowLegacyResolve ? void 0 : []
-  });
-  if (!result)
-    throw new Error(`Resolving '${specifier}' from '${issuer}' failed`);
-  const resultURL = pathToFileURL(result);
-  if (url) {
-    resultURL.search = url.search;
-    resultURL.hash = url.hash;
-  }
+	  conditions: new Set( conditions ),
+	  extensions: allowLegacyResolve ? void 0 : []
+  } );
+	if ( !result )
+		throw new Error( `Resolving '${specifier}' from '${issuer}' failed` );
+	const resultURL = pathToFileURL( result );
+	if ( url ) {
+		resultURL.search = url.search;
+		resultURL.hash = url.hash;
+	}
 	if ( !parentURL )
 		setEntrypointPath( fileURLToPath( resultURL ) );
 	return {
@@ -270,7 +271,7 @@ binding.fstat = function ( ...args ) {
 				stats.gid,
 				stats.rdev,
 				stats.blksize,
-        stats.ino,
+				stats.ino,
 				stats.size,
 				stats.blocks
 			] );

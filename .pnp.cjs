@@ -860,14 +860,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:0.0.29"\
       ],\
       [\
-        "@types/lodash",\
-        "npm:4.14.178"\
-      ],\
-      [\
-        "@types/lodash-es",\
-        "npm:4.17.6"\
-      ],\
-      [\
         "@types/minimatch",\
         "npm:3.0.5"\
       ],\
@@ -926,6 +918,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "@types/trusted-types",\
         "npm:2.0.2"\
+      ],\
+      [\
+        "@types/underscore",\
+        "npm:1.11.4"\
       ],\
       [\
         "@types/use-sync-external-store",\
@@ -2100,10 +2096,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:4.17.21"\
       ],\
       [\
-        "lodash-es",\
-        "npm:4.17.21"\
-      ],\
-      [\
         "lodash.debounce",\
         "npm:4.0.8"\
       ],\
@@ -2856,6 +2848,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.0.1"\
       ],\
       [\
+        "underscore",\
+        "npm:1.13.4"\
+      ],\
+      [\
         "unicode-canonical-property-names-ecmascript",\
         "npm:2.0.0"\
       ],\
@@ -3086,12 +3082,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", "npm:8.4.6"],\
             ["@types/events", "npm:3.0.0"],\
             ["@types/jest", "npm:28.1.8"],\
-            ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/react-redux", "npm:7.1.24"],\
             ["@types/sass", "npm:1.43.1"],\
+            ["@types/underscore", "npm:1.11.4"],\
             ["@typescript-eslint/eslint-plugin", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.35.1"],\
             ["@typescript-eslint/parser", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.35.1"],\
             ["axios", "npm:0.27.2"],\
@@ -3101,7 +3097,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:12.2.5"],\
             ["events", "npm:3.3.0"],\
             ["jest", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.0.1"],\
-            ["lodash-es", "npm:4.17.21"],\
             ["nanoid", "npm:4.0.0"],\
             ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:12.2.5"],\
             ["next-pwa", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.6.0"],\
@@ -3116,7 +3111,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.54.5"],\
             ["ts-node", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:10.9.1"],\
             ["type-fest", "npm:2.19.0"],\
-            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"]\
+            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
+            ["underscore", "npm:1.13.4"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -7458,25 +7454,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/lodash", [\
-        ["npm:4.14.178", {\
-          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.178-5433b9ed68-a69a04a60b.zip/node_modules/@types/lodash/",\
-          "packageDependencies": [\
-            ["@types/lodash", "npm:4.14.178"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@types/lodash-es", [\
-        ["npm:4.17.6", {\
-          "packageLocation": "./.yarn/cache/@types-lodash-es-npm-4.17.6-fd5abbdc74-9bd239dd52.zip/node_modules/@types/lodash-es/",\
-          "packageDependencies": [\
-            ["@types/lodash-es", "npm:4.17.6"],\
-            ["@types/lodash", "npm:4.14.178"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@types/minimatch", [\
         ["npm:3.0.5", {\
           "packageLocation": "./.yarn/cache/@types-minimatch-npm-3.0.5-802bb0797f-c41d136f67.zip/node_modules/@types/minimatch/",\
@@ -7644,6 +7621,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-trusted-types-npm-2.0.2-035cb17c5e-3371eef5f1.zip/node_modules/@types/trusted-types/",\
           "packageDependencies": [\
             ["@types/trusted-types", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/underscore", [\
+        ["npm:1.11.4", {\
+          "packageLocation": "./.yarn/cache/@types-underscore-npm-1.11.4-20333ba8c0-db9f8486bc.zip/node_modules/@types/underscore/",\
+          "packageDependencies": [\
+            ["@types/underscore", "npm:1.11.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12080,15 +12066,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["lodash-es", [\
-        ["npm:4.17.21", {\
-          "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-05cbffad6e.zip/node_modules/lodash-es/",\
-          "packageDependencies": [\
-            ["lodash-es", "npm:4.17.21"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["lodash.debounce", [\
         ["npm:4.0.8", {\
           "packageLocation": "./.yarn/cache/lodash.debounce-npm-4.0.8-f1d6e09799-a3f527d22c.zip/node_modules/lodash.debounce/",\
@@ -14397,12 +14374,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", "npm:8.4.6"],\
             ["@types/events", "npm:3.0.0"],\
             ["@types/jest", "npm:28.1.8"],\
-            ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/react-redux", "npm:7.1.24"],\
             ["@types/sass", "npm:1.43.1"],\
+            ["@types/underscore", "npm:1.11.4"],\
             ["@typescript-eslint/eslint-plugin", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.35.1"],\
             ["@typescript-eslint/parser", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.35.1"],\
             ["axios", "npm:0.27.2"],\
@@ -14412,7 +14389,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:12.2.5"],\
             ["events", "npm:3.3.0"],\
             ["jest", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.0.1"],\
-            ["lodash-es", "npm:4.17.21"],\
             ["nanoid", "npm:4.0.0"],\
             ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:12.2.5"],\
             ["next-pwa", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.6.0"],\
@@ -14427,7 +14403,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.54.5"],\
             ["ts-node", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:10.9.1"],\
             ["type-fest", "npm:2.19.0"],\
-            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"]\
+            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
+            ["underscore", "npm:1.13.4"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -14785,6 +14762,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["has-bigints", "npm:1.0.1"],\
             ["has-symbols", "npm:1.0.2"],\
             ["which-boxed-primitive", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["underscore", [\
+        ["npm:1.13.4", {\
+          "packageLocation": "./.yarn/cache/underscore-npm-1.13.4-9195880774-6b04f66cd4.zip/node_modules/underscore/",\
+          "packageDependencies": [\
+            ["underscore", "npm:1.13.4"]\
           ],\
           "linkType": "HARD"\
         }]\
