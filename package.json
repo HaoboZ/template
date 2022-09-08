@@ -27,7 +27,7 @@
 		"date-fns"                        : "^2.29.2",
 		"events"                          : "^3.3.0",
 		"nanoid"                          : "^4.0.0",
-		"next"                            : "^12.2.5",
+		"next"                            : "^12.3.0",
 		"notistack"                       : "^2.0.5",
 		"react"                           : "^18.2.0",
 		"react-dom"                       : "^18.2.0",
@@ -36,18 +36,17 @@
 		"redux-persist"                   : "^6.0.0",
 		"redux-persist-transform-compress": "^4.2.0",
 		"rooks"                           : "^7.1.1",
-		"sass"                            : "^1.54.8",
+		"sass"                            : "^1.54.9",
 		"type-fest"                       : "^2.19.0",
 		"underscore"                      : "^1.13.4"
 	},
 	"devDependencies": {
-		"@next/bundle-analyzer"           : "^12.2.5",
+		"@next/bundle-analyzer"           : "^12.3.0",
 		"@types/eslint"                   : "^8.4.6",
 		"@types/events"                   : "^3.0.0",
 		"@types/jest"                     : "^29.0.0",
-		"@types/node"                     : "^18.7.15",
+		"@types/node"                     : "^18.7.16",
 		"@types/react"                    : "^18.0.18",
-		"@types/react-dom"                : "^18.0.6",
 		"@types/react-redux"              : "^7.1.24",
 		"@types/sass"                     : "^1.43.1",
 		"@types/underscore"               : "^1.11.4",
@@ -55,9 +54,9 @@
 		"@typescript-eslint/parser"       : "^5.36.2",
 		"cross-env"                       : "^7.0.3",
 		"eslint"                          : "^8.23.0",
-		"eslint-config-next"              : "^12.2.5",
+		"eslint-config-next"              : "^12.3.0",
 		"jest"                            : "^29.0.2",
 		"next-pwa"                        : "^5.6.0",
-		"typescript"                      : "^4.8.2"
+		"typescript"                      : "^4.8.3"
 	}
 }

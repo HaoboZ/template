@@ -12,12 +12,13 @@ const nextConfig = {
 		source : '/api/:path*',
 		headers: [ { key: 'Access-Control-Allow-Origin', value: '*' } ]
 	} ],
+	images        : {
+		unoptimized: Boolean( process.env.NEXT_PUBLIC_SERVER_URL )
+	},
+	swcMinify     : true,
 	experimental  : {
 		modularizeImports: {
 			'@mui/icons-material': { transform: '@mui/icons-material/{{member}}' }
-		},
-		images           : {
-			unoptimized: Boolean( process.env.NEXT_PUBLIC_SERVER_URL )
 		}
 	}
 };
@@ -31,5 +32,4 @@ const plugins = [
 ];
 
 // noinspection JSUnusedGlobalSymbols
-export default plugins.reduceRight( ( acc, plugin ) =>
-	typeof plugin === 'function' ? plugin( acc ) : ( { ...nextConfig, ...plugin } ), nextConfig );
+export default plugins.reduceRight( ( acc, plugin ) => plugin( acc ), nextConfig );
