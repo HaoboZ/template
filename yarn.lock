@@ -2588,7 +2588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:*":
+"@types/lodash@npm:*, @types/lodash@npm:^4.14.185":
   version: 4.14.185
   resolution: "@types/lodash@npm:4.14.185"
   checksum: f81d13da5ecab110ca9c5c7cc2bedc3c9802a6acf668576aecd1b8f4b134ed81d06c15f1e600fb08f05975098280a0d97d30cddfc2cb39ec1c6b56e971ca53b3
@@ -8187,6 +8187,7 @@ __metadata:
     "@types/eslint": ^8.4.6
     "@types/events": ^3.0.0
     "@types/jest": ^29.0.3
+    "@types/lodash": ^4.14.185
     "@types/lodash-es": ^4.17.6
     "@types/node": ^18.7.18
     "@types/react": ^18.0.20
