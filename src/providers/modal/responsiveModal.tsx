@@ -16,7 +16,7 @@ import {
 import type { ReactNode } from 'react';
 import { Fragment } from 'react';
 import AsyncLoadingButton from '../../components/asyncLoadingButton';
-import { useWideMedia } from '../../hooks/useWideMedia';
+import useWideMedia from '../../hooks/useWideMedia';
 import { useModalControls } from './index';
 
 export type ModalVariant = 'adaptive' | 'modal' | 'drawer';

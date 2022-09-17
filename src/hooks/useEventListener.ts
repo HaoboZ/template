@@ -1,5 +1,5 @@
-import type { DependencyList } from 'react';
 import { useEffect } from 'react';
+import { useFreshTick } from 'rooks';
 
 export default function useEventListener(
 	event: { on: Function, off: Function }
@@ -7,21 +7,20 @@ export default function useEventListener(
 	| { addEventListener: Function, removeEventListener: Function },
 	name: string | symbol | keyof WindowEventMap,
 	listener: ( ...args: any[] ) => void,
-	options?: {
-		callOnce?: boolean,
-		dependencies?: DependencyList
-	}
+	callOnce?: boolean
 ) {
+	const tick = useFreshTick( listener );
+	
 	useEffect( () => {
 		// @ts-ignore
 		const add = event.on || event.addListener || event.addEventListener;
 		// @ts-ignore
 		const remove = event.off || event.removeListener || event.removeEventListener;
 		
-		if ( options?.callOnce ) listener();
-		add.bind( event )( name, listener );
+		if ( callOnce ) tick();
+		add.bind( event )( name, tick );
 		return () => {
-			remove.bind( event )( name, listener );
+			remove.bind( event )( name, tick );
 		};
-	}, options?.dependencies || [] );
+	}, [] );
 }

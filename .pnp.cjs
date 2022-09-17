@@ -3106,7 +3106,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", "npm:8.4.6"],\
             ["@types/events", "npm:3.0.0"],\
             ["@types/jest", "npm:29.0.3"],\
-            ["@types/lodash", "npm:4.14.185"],\
             ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:18.7.18"],\
             ["@types/react", "npm:18.0.20"],\
@@ -13976,7 +13975,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", "npm:8.4.6"],\
             ["@types/events", "npm:3.0.0"],\
             ["@types/jest", "npm:29.0.3"],\
-            ["@types/lodash", "npm:4.14.185"],\
             ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:18.7.18"],\
             ["@types/react", "npm:18.0.20"],\

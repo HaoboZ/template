@@ -1,9 +1,21 @@
-import { Box } from '@mui/material';
+import { Box, CircularProgress } from '@mui/material';
 import { useNProgress } from '@tanem/react-nprogress';
 import type { ReactNode } from 'react';
 import useLoading from '../../hooks/useLoading';
 
-export default function Progress( { isLoading, delay, children }: {
+export default function Progress( {
+	isLoading,
+	delay,
+	children = ( progress ) => (
+		<Box sx={{
+			display       : 'flex',
+			justifyContent: 'center',
+			pt            : 5
+		}}>
+			<CircularProgress value={progress}/>
+		</Box>
+	)
+}: {
 	isLoading: boolean,
 	delay?: number,
 	children: ( progress ) => ReactNode

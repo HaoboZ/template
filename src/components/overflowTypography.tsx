@@ -13,10 +13,7 @@ export default function OverflowTypography( { tooltipProps, ...props }: {
 	useEventListener( window, 'resize', () => {
 		if ( !contentRef.current ) return;
 		setOverFlowed( contentRef.current.scrollWidth > contentRef.current.clientWidth );
-	}, {
-		callOnce    : true,
-		dependencies: [ contentRef.current ]
-	} );
+	}, true );
 	
 	return (
 		<Tooltip arrow title={props.children} disableHoverListener={!overFlowed} {...tooltipProps}>

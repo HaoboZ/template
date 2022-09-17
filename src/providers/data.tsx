@@ -11,7 +11,7 @@ export default function DataProvider( { children, data } ) {
 	);
 }
 
-export function useData<T>() {
+export function useData<T = any>() {
 	return useContext<T>( DataContext );
 }
 

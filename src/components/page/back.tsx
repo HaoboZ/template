@@ -4,11 +4,11 @@ import { useRouter } from 'next/router';
 import type { MouseEventHandler } from 'react';
 import { useMemo } from 'react';
 import startCase from '../../helpers/startCase';
-import { useWideMedia } from '../../hooks/useWideMedia';
+import useWideMedia from '../../hooks/useWideMedia';
 import PageLink, { PageLinkComponent } from './link';
 
-export default function PageBack( { confirmBack, onClick, back }: {
-	confirmBack?: boolean,
+export default function PageBack( { confirm: confirmBack, onClick, back }: {
+	confirm?: boolean,
 	onClick?: MouseEventHandler<HTMLButtonElement>,
 	back?: boolean
 } ) {
@@ -39,7 +39,8 @@ export default function PageBack( { confirmBack, onClick, back }: {
 	
 	if ( !back && wide ) {
 		return (
-			<Breadcrumbs>
+			<Breadcrumbs sx={{ pt: 1 }}>
+				<div/>
 				{routes.map( ( { href, name }, index ) => (
 					<PageLink
 						key={index}
