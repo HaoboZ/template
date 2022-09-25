@@ -3,12 +3,9 @@ import { Container } from '@mui/material';
 import useWideMedia from '../../hooks/useWideMedia';
 import ScrollTop from '../scrollTop';
 
-export default function PageContainer( { children, sx, ...props }: ContainerProps ) {
+export default function PageContainer( { children, ...props }: ContainerProps ) {
 	return (
-		<Container
-			disableGutters={!useWideMedia()}
-			sx={{ overflowX: 'hidden', ...sx }}
-			{...props}>
+		<Container disableGutters={!useWideMedia()} {...props}>
 			<ScrollTop/>
 			{children}
 		</Container>

@@ -32,10 +32,7 @@ export default class _Document extends Document<{ emotionStyleTags: JSX.Element[
 			/>
 		) );
 		
-		return {
-			...initialProps,
-			emotionStyleTags
-		};
+		return { ...initialProps, emotionStyleTags };
 	}
 	
 	render() {

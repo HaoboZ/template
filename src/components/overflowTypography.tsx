@@ -16,7 +16,7 @@ export default function OverflowTypography( { tooltipProps, ...props }: {
 	}, true );
 	
 	return (
-		<Tooltip arrow title={props.children} disableHoverListener={!overFlowed} {...tooltipProps}>
+		<Tooltip arrow title={props.children ?? ''} disableHoverListener={!overFlowed} {...tooltipProps}>
 			<Typography ref={contentRef} noWrap {...props}/>
 		</Tooltip>
 	);

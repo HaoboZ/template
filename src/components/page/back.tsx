@@ -55,13 +55,15 @@ export default function PageBack( { confirm: confirmBack, onClick, back }: {
 		);
 	} else {
 		const path = routes.at( -1 );
+		if ( !path ) return null;
+		
 		return (
 			<Button
-				component={PageLinkComponent}
-				href={back ? undefined : path?.href}
+				component={back ? undefined : PageLinkComponent}
+				href={back ? undefined : path.href}
 				startIcon={<ArrowBackIcon/>}
 				onClick={clickListener}>
-				{back ? 'Back' : path?.name}
+				{back ? 'Back' : path.name}
 			</Button>
 		);
 	}
