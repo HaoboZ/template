@@ -31,6 +31,7 @@ export default function RouterProgress( { showOnShallow = true }: {
 		<Progress isLoading={isActive}>
 			{( progress ) => (
 				<LinearProgress
+					aria-label='progress'
 					variant='determinate'
 					color='secondary'
 					value={progress * 100}
