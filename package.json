@@ -23,7 +23,7 @@
 		"@mui/material"                   : "5.10.8",
 		"@reduxjs/toolkit"                : "1.8.5",
 		"@tanem/react-nprogress"          : "5.0.14",
-		"axios"                           : "0.27.2",
+		"axios"                           : "1.0.0",
 		"date-fns"                        : "2.29.3",
 		"events"                          : "3.3.0",
 		"lodash-es"                       : "4.17.21",
