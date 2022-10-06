@@ -4,6 +4,7 @@
 		"config:base",
 		"schedule:weekly"
 	],
+	"bumpVersion" : "patch",
 	"packageRules": [
 		{
 			"matchPackagePatterns": [ "*" ],
