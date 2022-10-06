@@ -1,18 +1,17 @@
 {
-	"$schema"            : "https://docs.renovatebot.com/renovate-schema.json",
-	"extends"            : [
-		"config:base"
+	"$schema"     : "https://docs.renovatebot.com/renovate-schema.json",
+	"extends"     : [
+		"config:base",
+		"schedule:weekly"
 	],
-	"packageRules"       : [
+	"packageRules": [
 		{
-			"matchUpdateTypes": [ "minor", "patch", "pin", "digest" ],
-			"automerge"       : true,
-			"automergeType"   : "branch"
+			"matchPackagePatterns": [ "*" ],
+			"matchUpdateTypes"    : [ "minor", "patch", "lockFileMaintenance" ],
+			"groupName"           : "all non-major dependencies",
+			"groupSlug"           : "all-minor-patch",
+			"automerge"           : true,
+			"automergeType"       : "branch"
 		}
-	],
-	"lockFileMaintenance": {
-		"enabled"      : true,
-		"automerge"    : true,
-		"automergeType": "branch"
-	}
+	]
 }
