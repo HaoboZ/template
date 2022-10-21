@@ -8,9 +8,9 @@ import ButtonMenu from './buttonMenu';
 export type ActionProps = {
 	name: ReactNode,
 	onClick?: MouseEventHandler,
-	buttonProps?: ButtonProps,
-	menuItemProps?: MenuItemProps
-};
+	buttonProps?: ButtonProps<any>,
+	menuItemProps?: MenuItemProps<any>
+} & Record<string, any>;
 
 export default function Actions( { items, max }: {
 	items: ActionProps[],
@@ -28,12 +28,13 @@ export default function Actions( { items, max }: {
 	
 	return (
 		<ButtonGroup>
-			{buttons.map( ( { name, onClick, buttonProps }, index ) => (
+			{buttons.map( ( { name, onClick, buttonProps, ...props }, index ) => (
 				<Button
 					key={index}
 					variant='outlined'
 					onClick={onClick}
-					{...buttonProps}>
+					{...buttonProps}
+					{...props}>
 					{name}
 				</Button>
 			) )}
@@ -42,14 +43,15 @@ export default function Actions( { items, max }: {
 					variant='outlined'
 					renderMenu={( closeMenu ) => (
 						<MenuList>
-							{menu.map( ( { name, onClick, menuItemProps }, index ) => (
+							{menu.map( ( { name, onClick, menuItemProps, ...props }, index ) => (
 								<MenuItem
 									key={index}
 									onClick={( e ) => {
 										onClick( e );
 										closeMenu();
 									}}
-									{...menuItemProps}>
+									{...menuItemProps}
+									{...props}>
 									{name}
 								</MenuItem>
 							) )}
