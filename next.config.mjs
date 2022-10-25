@@ -15,8 +15,8 @@ const nextConfig = {
 	images        : {
 		unoptimized: Boolean( process.env.NEXT_PUBLIC_SERVER_URL )
 	},
-	swcMinify     : true,
 	experimental  : {
+		// appDir           : true,
 		modularizeImports: {
 			'@mui/icons-material': { transform: '@mui/icons-material/{{member}}' }
 		}
