@@ -2,8 +2,8 @@ import type { EmotionCache } from '@emotion/cache';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import DataProvider from '../providers/data';
-import Baseline from './baseline';
-import './baseline/style.scss';
+import Layout from './layout';
+import './layout/style.scss';
 
 // noinspection JSUnusedGlobalSymbols
 export default function _App( { Component, pageProps, emotionCache }: {
@@ -15,9 +15,9 @@ export default function _App( { Component, pageProps, emotionCache }: {
 				<title>Template</title>
 				<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'/>
 			</Head>
-			<Baseline emotionCache={emotionCache}>
+			<Layout emotionCache={emotionCache}>
 				<Component {...pageProps}/>
-			</Baseline>
+			</Layout>
 		</DataProvider>
 	);
 }

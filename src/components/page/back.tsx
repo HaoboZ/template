@@ -19,20 +19,21 @@ export default function PageBack( { confirm: confirmBack, onClick, pathMap, back
 	const wide = useWideMedia();
 	
 	const routes = useMemo( () => {
-		let href = '';
-		const names = router.pathname.split( '/' );
-		const paths = router.route.split( '/' );
+		if ( router.pathname === '/' ) return [];
 		
-		return paths.reduce<{ name: string, href: string }[]>( ( arr, path, index ) => {
-			if ( index === paths.length - 1 ) return arr;
-			if ( names[ index ] ) href += `/${names[ index ]}`;
-			path = path.replace( /[\[\]]+/g, '' ) || 'home';
-			if ( pathMap?.[ path ] !== undefined ) path = pathMap[ path ] as string;
-			if ( path ) arr.push( { name: startCase( path ), href: href || '/' } );
+		let href = '';
+		const paths = router.asPath.split( '/' );
+		const names = router.route.split( '/' );
+		
+		return names.reduce<{ name: string, href: string }[]>( ( arr, name, index ) => {
+			if ( index === names.length - 1 ) return arr;
+			if ( paths[ index ] ) href += `/${paths[ index ]}`;
+			name = name.replace( /[\[\]]+/g, '' ) || 'home';
+			if ( pathMap?.[ name ] !== undefined ) name = pathMap[ name ] as string;
+			if ( name ) arr.push( { name: startCase( name ), href: href || '/' } );
 			return arr;
 		}, [] );
 	}, [ router.asPath ] );
-	console.log( routes );
 	
 	const clickListener = async ( e ) => {
 		if ( confirmBack && !confirm( 'Are you sure you want to leave?' ) )
