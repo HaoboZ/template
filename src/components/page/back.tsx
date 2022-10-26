@@ -1,5 +1,5 @@
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
-import { Breadcrumbs, Button } from '@mui/material';
+import { Breadcrumbs, Button, Typography } from '@mui/material';
 import { startCase } from 'lodash-es';
 import { useRouter } from 'next/router';
 import type { MouseEventHandler } from 'react';
@@ -26,7 +26,6 @@ export default function PageBack( { confirm: confirmBack, onClick, pathMap, back
 		const names = router.route.split( '/' );
 		
 		return names.reduce<{ name: string, href: string }[]>( ( arr, name, index ) => {
-			if ( index === names.length - 1 ) return arr;
 			if ( paths[ index ] ) href += `/${paths[ index ]}`;
 			name = name.replace( /[\[\]]+/g, '' ) || 'home';
 			if ( pathMap?.[ name ] !== undefined ) name = pathMap[ name ] as string;
@@ -47,20 +46,26 @@ export default function PageBack( { confirm: confirmBack, onClick, pathMap, back
 		return (
 			<Breadcrumbs sx={{ pt: 1 }}>
 				<div/>
-				{routes.map( ( { href, name }, index ) => (
-					<PageLink
-						key={index}
-						underline='none'
-						color='primary'
-						href={href}
-						onClick={clickListener}>
-						{name}
-					</PageLink>
-				) )}
+				{routes.map( ( { href, name }, index ) => {
+					if ( routes.length - 1 === index ) {
+						return <Typography key={index}>{name}</Typography>;
+					} else {
+						return (
+							<PageLink
+								key={index}
+								underline='none'
+								color='primary'
+								href={href}
+								onClick={clickListener}>
+								{name}
+							</PageLink>
+						);
+					}
+				} )}
 			</Breadcrumbs>
 		);
 	} else {
-		const path = routes.at( -1 );
+		const path = routes.at( -2 );
 		if ( !path ) return null;
 		
 		return (
