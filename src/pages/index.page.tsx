@@ -1,10 +1,12 @@
 import { Typography } from '@mui/material';
-import Page from '../components/page';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 export default function Main() {
-	return (
-		<Page>
-			<Typography>Hello World</Typography>
-		</Page>
-	);
+	const { data } = useQuery( [ 'helloWorld' ], async () => {
+		const { data } = await axios.get( '/api/helloWorld' );
+		return data;
+	} );
+	
+	return <Typography>{data}</Typography>;
 }

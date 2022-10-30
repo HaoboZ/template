@@ -18,7 +18,7 @@ export default function Page( { title, titleBar, titleProps, hideBack, backProps
 		<PageContainer>
 			<Head><title>{titleBar ?? title ? `${titleBar || title} | ` : ''}Template</title></Head>
 			{!hideBack && <PageBack {...backProps}/>}
-			<PageTitle {...titleProps}>{title}</PageTitle>
+			{title && <PageTitle {...titleProps}>{title}</PageTitle>}
 			{children}
 		</PageContainer>
 	);
