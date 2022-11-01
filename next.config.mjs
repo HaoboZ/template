@@ -5,18 +5,17 @@ import nextPWA from 'next-pwa';
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-	pageExtensions: [ 'page.js', 'page.jsx', 'page.ts', 'page.tsx' ],
-	typescript    : { ignoreBuildErrors: true },
-	headers       : async () => [ {
+	typescript  : { ignoreBuildErrors: true },
+	headers     : async () => [ {
 		// matching all API routes
 		source : '/api/:path*',
 		headers: [ { key: 'Access-Control-Allow-Origin', value: '*' } ]
 	} ],
-	images        : {
-		unoptimized: Boolean( process.env.NEXT_PUBLIC_SERVER_URL )
-	},
-	experimental  : {
-		// appDir           : true,
+	experimental: {
+		appDir           : true,
+		fontLoaders      : [
+			{ loader: '@next/font/google', options: { subsets: [ 'latin' ] } }
+		],
 		modularizeImports: {
 			'@mui/icons-material': { transform: '@mui/icons-material/{{member}}' }
 		}
@@ -26,7 +25,7 @@ const nextConfig = {
 const plugins = [
 	bundleAnalyzer( { enabled: process.env.ANALYZE === 'true' } ),
 	nextPWA( {
-		disable: Boolean( process.env.NEXT_PUBLIC_SERVER_URL ) || process.env.NODE_ENV === 'development',
+		disable: !process.env.NEXT_PUBLIC_VERCEL_ENV,
 		dest   : 'public'
 	} )
 ];
