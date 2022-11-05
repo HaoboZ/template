@@ -1,5 +1,4 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-import nextPWA from 'next-pwa';
 
 /**
  * @type {import('next').NextConfig}
@@ -23,11 +22,7 @@ const nextConfig = {
 };
 
 const plugins = [
-	bundleAnalyzer( { enabled: process.env.ANALYZE === 'true' } ),
-	nextPWA( {
-		disable: !process.env.NEXT_PUBLIC_VERCEL_ENV,
-		dest   : 'public'
-	} )
+	bundleAnalyzer( { enabled: process.env.ANALYZE === 'true' } )
 ];
 
 // noinspection JSUnusedGlobalSymbols
