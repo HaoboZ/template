@@ -20,7 +20,13 @@
 		"jsx"                             : "preserve",
 		"plugins"                         : [
 			{ "name": "next" }
-		]
+		],
+		"paths"                           : {
+			"@/src/*"       : [ "./src/*" ],
+			"@/components/*": [ "./src/components/*" ],
+			"@/app/*"       : [ "./app/*" ],
+			"@/api/*"       : [ "./pages/api/*" ]
+		}
 	},
 	"include"        : [
 		"next-env.d.ts",

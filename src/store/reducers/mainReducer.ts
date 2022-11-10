@@ -21,4 +21,6 @@ const mainSlice = createSlice( {
 
 export default mainSlice.reducer;
 export const
-	setTheme = mainSlice.actions.setTheme;
+	{
+		setTheme
+	} = mainSlice.actions;
