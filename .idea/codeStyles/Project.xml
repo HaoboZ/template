@@ -58,6 +58,7 @@
       <option name="SPACES_WITHIN_IMPORTS" value="true" />
       <option name="SPACE_WITHIN_TYPE_ASSERTION" value="true" />
       <option name="IMPORT_SORT_MODULE_NAME" value="true" />
+      <option name="USE_PATH_MAPPING" value="DIFFERENT_PATHS" />
     </TypeScriptCodeStyleSettings>
     <codeStyleSettings language="CSS">
       <indentOptions>
