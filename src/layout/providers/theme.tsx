@@ -66,10 +66,8 @@ export default function ThemeProvider( { children } ) {
 		}
 	}, [ themeMode, dark ] );
 	
-	const theme = mode === 'dark' ? darkTheme : lightTheme;
-	
 	return (
-		<MuiThemeProvider theme={theme}>
+		<MuiThemeProvider theme={mode === 'dark' ? darkTheme : lightTheme}>
 			<CssBaseline/>
 			{children}
 		</MuiThemeProvider>

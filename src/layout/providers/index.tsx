@@ -9,7 +9,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import ComponentComposer, { component } from '../../helpers/componentComposer';
 import { persistor, store } from '../../store';
 import EventsProvider from './events';
-import IndicatorProvider from './indicator';
 import ModalProvider from './modal';
 import ThemeProvider from './theme';
 
@@ -34,7 +33,6 @@ export default function Providers( { children }: { children: ReactNode } ) {
 					</IconButton>
 				)
 			} ),
-			component( IndicatorProvider ),
 			component( ModalProvider )
 		]}>
 			{children}
