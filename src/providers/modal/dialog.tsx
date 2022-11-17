@@ -5,7 +5,8 @@ import type { ReactNode } from 'react';
 import { Fragment } from 'react';
 import { useModalControls } from './index';
 
-export default function ModalDialog( { title, children, contentProps, actions, onSave, ...props }: {
+export default function ModalDialog( { autoSize, title, children, contentProps, actions, onSave, ...props }: {
+	autoSize?: boolean,
 	title?: ReactNode,
 	children: ReactNode,
 	contentProps?: DialogContentProps,
@@ -16,9 +17,9 @@ export default function ModalDialog( { title, children, contentProps, actions, o
 	
 	return (
 		<Dialog
-			fullWidth
 			disablePortal
 			closeAfterTransition
+			fullWidth={!autoSize}
 			open={modalStatus.open}
 			maxWidth='md'
 			TransitionComponent={Grow}
