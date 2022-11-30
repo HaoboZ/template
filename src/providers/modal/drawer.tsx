@@ -35,7 +35,7 @@ export default function ModalDrawer( { autoSize, title, children, contentProps, 
 				}
 			}}
 			onOpen={() => null}
-			onClose={closeModal}
+			onClose={() => closeModal()}
 			{...props}>
 			<Toolbar>
 				<IconButton edge='start' color='inherit' onClick={closeModal}>

@@ -31,7 +31,7 @@ export default function ModalDialog( { autoSize, title, children, contentProps, 
 					mb: 'env(safe-area-inset-bottom)'
 				}
 			}}
-			onClose={closeModal}
+			onClose={() => closeModal()}
 			{...props}>
 			{title && <DialogTitle>{title}</DialogTitle>}
 			<DialogContent {...contentProps}>{children}</DialogContent>
