@@ -1,25 +1,19 @@
-import type { ListItemProps, ListItemTextProps } from '@mui/material';
-import { ListItem, ListItemText } from '@mui/material';
+import type { TypographyProps } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import type { ReactNode } from 'react';
 import type { ActionProps } from '../actions';
 import Actions from '../actions';
 
 export type PageTitleProps = {
 	actions?: ActionProps[] | ReactNode,
-	max?: number,
-	listItemProps?: ListItemProps<'div'>
-} & ListItemTextProps;
+	max?: number
+} & TypographyProps;
 
-export default function PageTitle( { actions, listItemProps, children, max, ...props }: PageTitleProps ) {
+export default function PageTitle( { actions, max, ...props }: PageTitleProps ) {
 	return (
-		<ListItem component='div' {...listItemProps}>
-			<ListItemText
-				primaryTypographyProps={{ variant: 'h1' }}
-				primary={children}
-				secondaryTypographyProps={{ variant: 'subtitle1' }}
-				{...props}
-			/>
+		<Box display='flex' justifyContent='space-between' alignItems='center'>
+			<Typography variant='h1' py={1} {...props}/>
 			{Array.isArray( actions ) ? <Actions items={actions} max={max}/> : actions}
-		</ListItem>
+		</Box>
 	);
 }

@@ -1,4 +1,4 @@
-import AsyncLoadingButton from '@/components/asyncLoadingButton';
+import AsyncButton from '@/components/loaders/asyncButton';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import type { DialogContentProps, SwipeableDrawerProps } from '@mui/material';
 import { DialogContent, IconButton, SwipeableDrawer, Toolbar, Typography } from '@mui/material';
@@ -45,14 +45,14 @@ export default function ModalDrawer( { autoSize, title, children, contentProps, 
 					{title}
 				</Typography>
 				{onSave ? (
-					<AsyncLoadingButton
+					<AsyncButton
 						variant='contained'
 						onClick={async () => {
 							await onSave();
 							closeModal();
 						}}>
 						Save
-					</AsyncLoadingButton>
+					</AsyncButton>
 				) : undefined}
 			</Toolbar>
 			<DialogContent onTouchStart={( e ) => e.stopPropagation()} {...contentProps}>{children}</DialogContent>

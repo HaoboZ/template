@@ -3,7 +3,7 @@ import { LoadingButton } from '@mui/lab';
 import { useSnackbar } from 'notistack';
 import { useState } from 'react';
 
-export default function AsyncLoadingButton( { onClick, ...props }: LoadingButtonProps ) {
+export default function AsyncButton( { onClick, ...props }: LoadingButtonProps ) {
 	const { enqueueSnackbar } = useSnackbar();
 	
 	const [ loading, setLoading ] = useState( false );

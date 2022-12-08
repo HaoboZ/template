@@ -1,9 +1,11 @@
 import { MoreHoriz as MoreHorizIcon } from '@mui/icons-material';
-import type { ButtonProps, MenuItemProps } from '@mui/material';
-import { Button, ButtonGroup, MenuItem, MenuList } from '@mui/material';
-import type { MouseEventHandler, ReactNode } from 'react';
+import type{ ButtonProps, MenuItemProps } from '@mui/material';
+import { ButtonGroup, MenuList } from '@mui/material';
+import type{ MouseEventHandler, ReactNode } from 'react';
 import { useMemo } from 'react';
 import ButtonMenu from './buttonMenu';
+import AsyncButton from './loaders/asyncButton';
+import AsyncMenuItem from './loaders/asyncMenuItem';
 
 export type ActionProps = {
 	name: ReactNode,
@@ -29,14 +31,14 @@ export default function Actions( { items, max }: {
 	return (
 		<ButtonGroup>
 			{buttons.map( ( { name, onClick, buttonProps, ...props }, index ) => (
-				<Button
+				<AsyncButton
 					key={index}
 					variant='outlined'
 					onClick={onClick}
 					{...buttonProps}
 					{...props}>
 					{name}
-				</Button>
+				</AsyncButton>
 			) )}
 			{Boolean( menu.length ) && (
 				<ButtonMenu
@@ -44,16 +46,16 @@ export default function Actions( { items, max }: {
 					renderMenu={( closeMenu ) => (
 						<MenuList>
 							{menu.map( ( { name, onClick, menuItemProps, ...props }, index ) => (
-								<MenuItem
+								<AsyncMenuItem
 									key={index}
-									onClick={( e ) => {
-										onClick( e );
+									onClick={async ( e ) => {
+										await onClick( e );
 										closeMenu();
 									}}
 									{...menuItemProps}
 									{...props}>
 									{name}
-								</MenuItem>
+								</AsyncMenuItem>
 							) )}
 						</MenuList>
 					)}>

@@ -1,4 +1,4 @@
-import AsyncLoadingButton from '@/components/asyncLoadingButton';
+import AsyncButton from '@/components/loaders/asyncButton';
 import type { DialogContentProps, DialogProps } from '@mui/material';
 import { Button, Dialog, DialogActions, dialogClasses, DialogContent, DialogTitle, Grow } from '@mui/material';
 import type { ReactNode } from 'react';
@@ -39,14 +39,14 @@ export default function ModalDialog( { autoSize, title, children, contentProps, 
 				{actions || (
 					<Fragment>
 						{onSave ? (
-							<AsyncLoadingButton
+							<AsyncButton
 								variant='contained'
 								onClick={async () => {
 									await onSave();
 									closeModal();
 								}}>
 								Save
-							</AsyncLoadingButton>
+							</AsyncButton>
 						) : undefined}
 						<Button variant='contained' color='error' onClick={closeModal}>
 							{onSave ? 'Cancel' : 'Close'}
