@@ -4,20 +4,21 @@ import bundleAnalyzer from '@next/bundle-analyzer';
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-	typescript  : { ignoreBuildErrors: true },
-	headers     : async () => [ {
+	typescript       : { ignoreBuildErrors: true },
+	modularizeImports: {
+		'lodash'             : { transform: 'lodash/{{member}}' },
+		'@mui/icons-material': { transform: '@mui/icons-material/{{member}}' }
+	},
+	headers          : async () => [ {
 		// matching all API routes
 		source : '/api/:path*',
 		headers: [ { key: 'Access-Control-Allow-Origin', value: '*' } ]
 	} ],
-	experimental: {
-		appDir           : true,
-		fontLoaders      : [
-			{ loader: '@next/font/google', options: { subsets: [ 'latin' ] } }
-		],
-		modularizeImports: {
-			'@mui/icons-material': { transform: '@mui/icons-material/{{member}}' }
-		}
+	experimental     : {
+		appDir     : true,
+		fontLoaders: [ {
+			loader: '@next/font/google', options: { subsets: [ 'latin' ] }
+		} ]
 	}
 };
 
