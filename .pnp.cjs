@@ -1291,6 +1291,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:0.1.2"\
       ],\
       [\
+        "goober",\
+        "virtual:1ade05117277dbc7deac4af054a8c78d3d15eeaf6ac1a4953b3ee501b009b37f166fe82ce37822b8a7a76edcc99b5bbbda38ccb0df9ad82300e0e26b28e20a6e#npm:2.1.12"\
+      ],\
+      [\
         "graceful-fs",\
         "npm:4.2.10"\
       ],\
@@ -1864,7 +1868,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "notistack",\
-        "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:2.0.8"\
+        "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"\
       ],\
       [\
         "npm-run-path",\
@@ -2495,7 +2499,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],\
             ["nanoid", "npm:4.0.1"],\
             ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:13.2.4"],\
-            ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:2.0.8"],\
+            ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:18.2.0"],\
             ["react-redux", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:8.0.5"],\
@@ -7497,6 +7501,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["goober", [\
+        ["npm:2.1.12", {\
+          "packageLocation": "./.yarn/cache/goober-npm-2.1.12-834a198dbb-5945cbe924.zip/node_modules/goober/",\
+          "packageDependencies": [\
+            ["goober", "npm:2.1.12"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1ade05117277dbc7deac4af054a8c78d3d15eeaf6ac1a4953b3ee501b009b37f166fe82ce37822b8a7a76edcc99b5bbbda38ccb0df9ad82300e0e26b28e20a6e#npm:2.1.12", {\
+          "packageLocation": "./.yarn/__virtual__/goober-virtual-133e5d0173/0/cache/goober-npm-2.1.12-834a198dbb-5945cbe924.zip/node_modules/goober/",\
+          "packageDependencies": [\
+            ["goober", "virtual:1ade05117277dbc7deac4af054a8c78d3d15eeaf6ac1a4953b3ee501b009b37f166fe82ce37822b8a7a76edcc99b5bbbda38ccb0df9ad82300e0e26b28e20a6e#npm:2.1.12"],\
+            ["@types/csstype", null],\
+            ["csstype", null]\
+          ],\
+          "packagePeers": [\
+            "@types/csstype",\
+            "csstype"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["graceful-fs", [\
         ["npm:4.2.10", {\
           "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.10-79c70989ca-3f109d70ae.zip/node_modules/graceful-fs/",\
@@ -9384,37 +9410,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["notistack", [\
-        ["npm:2.0.8", {\
-          "packageLocation": "./.yarn/cache/notistack-npm-2.0.8-0c62fcab60-f95952ea72.zip/node_modules/notistack/",\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/notistack-npm-3.0.1-2b0e3bf24a-421c970308.zip/node_modules/notistack/",\
           "packageDependencies": [\
-            ["notistack", "npm:2.0.8"]\
+            ["notistack", "npm:3.0.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:2.0.8", {\
-          "packageLocation": "./.yarn/__virtual__/notistack-virtual-63766caf65/0/cache/notistack-npm-2.0.8-0c62fcab60-f95952ea72.zip/node_modules/notistack/",\
+        ["virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/notistack-virtual-1ade051172/0/cache/notistack-npm-3.0.1-2b0e3bf24a-421c970308.zip/node_modules/notistack/",\
           "packageDependencies": [\
-            ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:2.0.8"],\
-            ["@emotion/react", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:11.10.6"],\
-            ["@emotion/styled", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:11.10.6"],\
-            ["@mui/material", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:5.11.13"],\
-            ["@types/emotion__react", null],\
-            ["@types/emotion__styled", null],\
-            ["@types/mui__material", null],\
+            ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", null],\
             ["clsx", "npm:1.2.1"],\
-            ["hoist-non-react-statics", "npm:3.3.2"],\
+            ["goober", "virtual:1ade05117277dbc7deac4af054a8c78d3d15eeaf6ac1a4953b3ee501b009b37f166fe82ce37822b8a7a76edcc99b5bbbda38ccb0df9ad82300e0e26b28e20a6e#npm:2.1.12"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:18.2.0"]\
           ],\
           "packagePeers": [\
-            "@emotion/react",\
-            "@emotion/styled",\
-            "@mui/material",\
-            "@types/emotion__react",\
-            "@types/emotion__styled",\
-            "@types/mui__material",\
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
@@ -10884,7 +10898,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],\
             ["nanoid", "npm:4.0.1"],\
             ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:13.2.4"],\
-            ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:2.0.8"],\
+            ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:18.2.0"],\
             ["react-redux", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:8.0.5"],\
