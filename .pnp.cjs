@@ -2356,7 +2356,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "typescript",\
-        "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"\
+        "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"\
       ],\
       [\
         "unbox-primitive",\
@@ -2505,7 +2505,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.8.1"],\
             ["sass", "npm:1.59.3"],\
             ["type-fest", "npm:3.6.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5046,7 +5046,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["natural-compare-lite", "npm:1.4.0"],\
             ["semver", "npm:7.3.8"],\
             ["tsutils", "virtual:4315699eeee61b99beb74f93bae80152a2a1285c8f2b0a8968c347c72bf612f5aaaccbc64d45f27e4ca8943ec162dfff902517e4a0a375f28ab896fbb409871c#npm:3.21.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
@@ -5085,7 +5085,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/typescript-estree", "virtual:5bf724a38331a8970657f33e714b79e18893bf2b3c929b0862551151259d748a1135bb744efeff79b48e85e173a9a19fed3b2371f14a4267906ab9461d6e68f7#npm:5.42.1"],\
             ["debug", "virtual:a51f526c2adeba537acab82695794a9d1b157226503eb6a4b845884ae37134eb991f7fe73ca28a4380b8fcf50c4baf959f57e6800dc81e7afb4b90477e3f77d2#npm:4.3.4"],\
             ["eslint", "npm:8.36.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
@@ -5106,7 +5106,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/typescript-estree", "virtual:0ba83fde94ee847aac206e3797612301b794e00d7033d6326240a9a8be4b1b0ab6eaaf6d7c6f56ffb0438e84cddbc859bb0590ed5beaf7f5f09633f0d8a88a37#npm:5.55.0"],\
             ["debug", "virtual:a51f526c2adeba537acab82695794a9d1b157226503eb6a4b845884ae37134eb991f7fe73ca28a4380b8fcf50c4baf959f57e6800dc81e7afb4b90477e3f77d2#npm:4.3.4"],\
             ["eslint", "npm:8.36.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
@@ -5156,7 +5156,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:a51f526c2adeba537acab82695794a9d1b157226503eb6a4b845884ae37134eb991f7fe73ca28a4380b8fcf50c4baf959f57e6800dc81e7afb4b90477e3f77d2#npm:4.3.4"],\
             ["eslint", "npm:8.36.0"],\
             ["tsutils", "virtual:4315699eeee61b99beb74f93bae80152a2a1285c8f2b0a8968c347c72bf612f5aaaccbc64d45f27e4ca8943ec162dfff902517e4a0a375f28ab896fbb409871c#npm:3.21.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
@@ -5210,7 +5210,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.3"],\
             ["semver", "npm:7.3.8"],\
             ["tsutils", "virtual:4315699eeee61b99beb74f93bae80152a2a1285c8f2b0a8968c347c72bf612f5aaaccbc64d45f27e4ca8943ec162dfff902517e4a0a375f28ab896fbb409871c#npm:3.21.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/typescript",\
@@ -5230,7 +5230,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.3"],\
             ["semver", "npm:7.3.8"],\
             ["tsutils", "virtual:4315699eeee61b99beb74f93bae80152a2a1285c8f2b0a8968c347c72bf612f5aaaccbc64d45f27e4ca8943ec162dfff902517e4a0a375f28ab896fbb409871c#npm:3.21.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/typescript",\
@@ -6685,7 +6685,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jsx-a11y", "virtual:a15a1f8ba4a38f373b0e9800961564ae5da3453e288c31188bb220e8831d0a12a517ce9ffc4efc05106facdad74ea06b50dea3225a960f7c4fc7272a8aacaf8c#npm:6.6.1"],\
             ["eslint-plugin-react", "virtual:a15a1f8ba4a38f373b0e9800961564ae5da3453e288c31188bb220e8831d0a12a517ce9ffc4efc05106facdad74ea06b50dea3225a960f7c4fc7272a8aacaf8c#npm:7.31.8"],\
             ["eslint-plugin-react-hooks", "virtual:a15a1f8ba4a38f373b0e9800961564ae5da3453e288c31188bb220e8831d0a12a517ce9ffc4efc05106facdad74ea06b50dea3225a960f7c4fc7272a8aacaf8c#npm:4.6.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
@@ -10894,7 +10894,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.8.1"],\
             ["sass", "npm:1.59.3"],\
             ["type-fest", "npm:3.6.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -11031,7 +11031,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tsutils", "virtual:4315699eeee61b99beb74f93bae80152a2a1285c8f2b0a8968c347c72bf612f5aaaccbc64d45f27e4ca8943ec162dfff902517e4a0a375f28ab896fbb409871c#npm:3.21.0"],\
             ["@types/typescript", null],\
             ["tslib", "npm:1.14.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "packagePeers": [\
             "@types/typescript",\
@@ -11097,10 +11097,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["typescript", [\
-        ["patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76", {\
-          "packageLocation": "./.yarn/cache/typescript-patch-72dc6f164f-ab417a2f39.zip/node_modules/typescript/",\
+        ["patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-772e75d75e-b63cb742fb.zip/node_modules/typescript/",\
           "packageDependencies": [\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "linkType": "HARD"\
         }]\
