@@ -21,6 +21,7 @@
 		"plugins"                         : [
 			{ "name": "next" }
 		],
+		"strictNullChecks"                : false,
 		"paths"                           : {
 			"@/src/*"       : [ "./src/*" ],
 			"@/components/*": [ "./src/components/*" ],
