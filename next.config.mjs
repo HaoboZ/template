@@ -14,12 +14,7 @@ const nextConfig = {
 		source : '/api/:path*',
 		headers: [ { key: 'Access-Control-Allow-Origin', value: '*' } ]
 	} ],
-	experimental     : {
-		appDir     : true,
-		fontLoaders: [ {
-			loader: '@next/font/google', options: { subsets: [ 'latin' ] }
-		} ]
-	}
+	experimental: { appDir: true }
 };
 
 const plugins = [

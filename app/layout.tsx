@@ -1,6 +1,6 @@
 import '@/src/layout/style.scss';
 import Providers from '@/src/providers';
-import { Roboto } from '@next/font/google';
+import { Roboto } from 'next/font/google';
 import type { ReactNode } from 'react';
 import type { PackageJson } from 'type-fest';
 import _packageJson from '../package.json';
