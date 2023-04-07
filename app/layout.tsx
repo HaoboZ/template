@@ -8,7 +8,8 @@ import _packageJson from '../package.json';
 const packageJson = _packageJson as PackageJson;
 
 const roboto = Roboto( {
-	weight: [ '300', '400', '500', '700' ]
+	subsets: [ 'latin' ],
+	weight : [ '300', '400', '500', '700' ]
 } );
 
 export default function RootLayout( { children }: { children: ReactNode } ) {
