@@ -18,10 +18,10 @@
 		"@emotion/react"                  : "11.11.1",
 		"@emotion/server"                 : "11.11.0",
 		"@emotion/styled"                 : "11.11.0",
-		"@mui/icons-material"             : "5.11.16",
-		"@mui/lab"                        : "5.0.0-alpha.134",
-		"@mui/material"                   : "5.13.6",
-		"@next/font"                      : "13.4.7",
+		"@mui/icons-material"             : "5.13.7",
+		"@mui/lab"                        : "5.0.0-alpha.135",
+		"@mui/material"                   : "5.13.7",
+		"@next/font"                      : "13.4.9",
 		"@reduxjs/toolkit"                : "1.9.5",
 		"@tanem/react-nprogress"          : "5.0.44",
 		"axios"                           : "1.4.0",
@@ -29,7 +29,7 @@
 		"events"                          : "3.3.0",
 		"lodash"                          : "4.17.21",
 		"nanoid"                          : "4.0.2",
-		"next"                            : "13.4.7",
+		"next"                            : "13.4.9",
 		"notistack"                       : "3.0.1",
 		"react"                           : "18.2.0",
 		"react-dom"                       : "18.2.0",
@@ -39,11 +39,11 @@
 		"redux-persist-transform-compress": "4.2.0",
 		"rooks"                           : "7.14.1",
 		"sass"                            : "1.63.6",
-		"type-fest"                       : "3.12.0"
+		"type-fest"                       : "3.13.0"
 	},
 	"devDependencies" : {
-		"@next/bundle-analyzer"           : "13.4.7",
-		"@types/eslint"                   : "8.40.2",
+		"@next/bundle-analyzer"           : "13.4.9",
+		"@types/eslint"                   : "8.44.0",
 		"@types/events"                   : "3.0.0",
 		"@types/jest"                     : "29.5.2",
 		"@types/lodash"                   : "4.14.195",
@@ -51,16 +51,16 @@
 		"@types/react"                    : "18.2.14",
 		"@types/react-redux"              : "7.1.25",
 		"@types/sass"                     : "1.43.1",
-		"@typescript-eslint/eslint-plugin": "5.60.1",
-		"@typescript-eslint/parser"       : "5.60.1",
+		"@typescript-eslint/eslint-plugin": "5.61.0",
+		"@typescript-eslint/parser"       : "5.61.0",
 		"cross-env"                       : "7.0.3",
 		"eslint"                          : "8.44.0",
-		"eslint-config-next"              : "13.4.7",
-		"jest"                            : "29.5.0",
+		"eslint-config-next"              : "13.4.9",
+		"jest"                            : "29.6.1",
 		"typescript"                      : "5.1.6"
 	},
 	"dependenciesMeta": {
-		"next@13.4.7": {
+		"next@13.4.9": {
 			"unplugged": true
 		}
 	}
