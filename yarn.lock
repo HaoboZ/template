@@ -405,6 +405,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.22.6":
+  version: 7.22.6
+  resolution: "@babel/runtime@npm:7.22.6"
+  dependencies:
+    regenerator-runtime: "npm:^0.13.11"
+  checksum: 5a273e7d66586582041c68332028db5376d754d483422541fdc904e10474a6f8aef14dd3a5aabcbcb6daea87b64531cc4be993d2943557ede4a2613f5328a981
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.18.10, @babel/template@npm:^7.3.3":
   version: 7.18.10
   resolution: "@babel/template@npm:7.18.10"
@@ -1033,14 +1042,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/base@npm:5.0.0-beta.7":
-  version: 5.0.0-beta.7
-  resolution: "@mui/base@npm:5.0.0-beta.7"
+"@mui/base@npm:5.0.0-beta.8":
+  version: 5.0.0-beta.8
+  resolution: "@mui/base@npm:5.0.0-beta.8"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
+    "@babel/runtime": "npm:^7.22.6"
     "@emotion/is-prop-valid": "npm:^1.2.1"
     "@mui/types": "npm:^7.2.4"
-    "@mui/utils": "npm:^5.13.7"
+    "@mui/utils": "npm:^5.14.1"
     "@popperjs/core": "npm:^2.11.8"
     clsx: "npm:^1.2.1"
     prop-types: "npm:^15.8.1"
@@ -1052,22 +1061,22 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 31e0f319bedc6f89a57d1e8b82ba7a5138edeeabda8d9fac32ba68b0011dda4f05031a4fc8585e87bfbed35607d98a16e5aa0a99ec44bff0112a4ad33429c3e1
+  checksum: 05274f58ca4ea78b7ca9bf7170d6333010a0ce4cd96c9d4ed7f0741e0c1e72b90327babd8a976af97bc1415beb37064a2fe38b7da8dd74cfddebf478cb3386bf
   languageName: node
   linkType: hard
 
-"@mui/core-downloads-tracker@npm:^5.14.0":
-  version: 5.14.0
-  resolution: "@mui/core-downloads-tracker@npm:5.14.0"
-  checksum: b25ca47667a45075d0ba5838e1be46f2f9768ed43154a815d922871f936a513284877637fdfaa44d0f2a1c8d7bc1af63002c27f5a6310eae217705f0004bb6ac
+"@mui/core-downloads-tracker@npm:^5.14.1":
+  version: 5.14.1
+  resolution: "@mui/core-downloads-tracker@npm:5.14.1"
+  checksum: 59e30e15c81bfdf5401b45bc899402dda68e9b042e3e39c85e23635d59592d0552d0a4714c3b23014767a9fdb3fd7d171203a777a39400b6a8f70131b3d6114e
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:5.14.0":
-  version: 5.14.0
-  resolution: "@mui/icons-material@npm:5.14.0"
+"@mui/icons-material@npm:5.14.1":
+  version: 5.14.1
+  resolution: "@mui/icons-material@npm:5.14.1"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
+    "@babel/runtime": "npm:^7.22.6"
   peerDependencies:
     "@mui/material": ^5.0.0
     "@types/react": ^17.0.0 || ^18.0.0
@@ -1075,19 +1084,19 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: bb82a34b318f1106dec039ccf9ed9d16a7b2d97ef2b87fa7e02acd0118a43573405568d75f78b1833fbbcf21f1ff3108ee7b4582092971335a60560d977279e5
+  checksum: 5a7bf10bf2b1cf2e73e8857e95d3252936c8a1a25c7797240cc378e37bf842ab3f5dae070f410a228798a6740d84c14f7ee6dad8cd6871cb56d1f1c6b51ce217
   languageName: node
   linkType: hard
 
-"@mui/lab@npm:5.0.0-alpha.136":
-  version: 5.0.0-alpha.136
-  resolution: "@mui/lab@npm:5.0.0-alpha.136"
+"@mui/lab@npm:5.0.0-alpha.137":
+  version: 5.0.0-alpha.137
+  resolution: "@mui/lab@npm:5.0.0-alpha.137"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
-    "@mui/base": "npm:5.0.0-beta.7"
-    "@mui/system": "npm:^5.14.0"
+    "@babel/runtime": "npm:^7.22.6"
+    "@mui/base": "npm:5.0.0-beta.8"
+    "@mui/system": "npm:^5.14.1"
     "@mui/types": "npm:^7.2.4"
-    "@mui/utils": "npm:^5.13.7"
+    "@mui/utils": "npm:^5.14.1"
     clsx: "npm:^1.2.1"
     prop-types: "npm:^15.8.1"
     react-is: "npm:^18.2.0"
@@ -1105,20 +1114,20 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: af2a117e591d92f3b3b3f6b936c41fb7db48c405e7fff4a0c0b065103a63df5c9b726049fc1bb967650a2e958770de666c8f248521bd0cf11bc0e220a3d8d4bf
+  checksum: a105e9e2064cf4236b10cbaa7a0babaa47029073814bfc5ff81266e406d3da7e2549153b068b4ee3ca036169148a46d6371ff839fa79edb940377e6751f8e703
   languageName: node
   linkType: hard
 
-"@mui/material@npm:5.14.0":
-  version: 5.14.0
-  resolution: "@mui/material@npm:5.14.0"
+"@mui/material@npm:5.14.1":
+  version: 5.14.1
+  resolution: "@mui/material@npm:5.14.1"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
-    "@mui/base": "npm:5.0.0-beta.7"
-    "@mui/core-downloads-tracker": "npm:^5.14.0"
-    "@mui/system": "npm:^5.14.0"
+    "@babel/runtime": "npm:^7.22.6"
+    "@mui/base": "npm:5.0.0-beta.8"
+    "@mui/core-downloads-tracker": "npm:^5.14.1"
+    "@mui/system": "npm:^5.14.1"
     "@mui/types": "npm:^7.2.4"
-    "@mui/utils": "npm:^5.13.7"
+    "@mui/utils": "npm:^5.14.1"
     "@types/react-transition-group": "npm:^4.4.6"
     clsx: "npm:^1.2.1"
     csstype: "npm:^3.1.2"
@@ -1138,7 +1147,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 54d87a27c7ab36fc499d37f65556b469e545c50d0fa9ab15a5c10bfab4402ccd4a47e300d749205248fd712540b5fcae5ac0d6b4a00c92f931aba68f501228ea
+  checksum: 1033116ff4321ebda4d3463dd386d9414bee1f700b1c86b38d009b55212a5079e92db6dbd262f795f004e02a0de3d97897f6c5c58d178cd1588ee8e0430b875e
   languageName: node
   linkType: hard
 
@@ -1180,15 +1189,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/system@npm:^5.14.0":
-  version: 5.14.0
-  resolution: "@mui/system@npm:5.14.0"
+"@mui/system@npm:^5.14.1":
+  version: 5.14.1
+  resolution: "@mui/system@npm:5.14.1"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
+    "@babel/runtime": "npm:^7.22.6"
     "@mui/private-theming": "npm:^5.13.7"
     "@mui/styled-engine": "npm:^5.13.2"
     "@mui/types": "npm:^7.2.4"
-    "@mui/utils": "npm:^5.13.7"
+    "@mui/utils": "npm:^5.14.1"
     clsx: "npm:^1.2.1"
     csstype: "npm:^3.1.2"
     prop-types: "npm:^15.8.1"
@@ -1204,7 +1213,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: df44fc84f52148109c216b5390d5bdc6bcdf84ad0c2e148bda8bf40b04823146eaaaab270c38801eea366677050360bb892ec2b8e2e84b02a98842feff1077f1
+  checksum: f0ee733311a5320a45e3a6a017dc25d0e8a5c33b3cd2bb726fdd9caee05a712704613d9ad35362fbc2e072ede4c0d633a1219e2b807f2febba0d7ea13ea1d0e4
   languageName: node
   linkType: hard
 
@@ -1235,97 +1244,112 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/bundle-analyzer@npm:13.4.10"
+"@mui/utils@npm:^5.14.1":
+  version: 5.14.1
+  resolution: "@mui/utils@npm:5.14.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.22.6"
+    "@types/prop-types": "npm:^15.7.5"
+    "@types/react-is": "npm:^18.2.1"
+    prop-types: "npm:^15.8.1"
+    react-is: "npm:^18.2.0"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0
+  checksum: fb156bce01309affc313417fe1c8d6d486da1b76de11a6b233b8e422a757265d48981696701c098b4a8f30e11fdf4af2cde0cfda9f38ccd8cac7c4be5b5aeaaa
+  languageName: node
+  linkType: hard
+
+"@next/bundle-analyzer@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/bundle-analyzer@npm:13.4.12"
   dependencies:
     webpack-bundle-analyzer: "npm:4.7.0"
-  checksum: 54a928f0e883dde3f890368188bdf845708f0e7a9515532ef8d2ade3d02246403b3682cf847f394770879a7f86383b8495c53e280927dd1a3dd3d6b754975198
+  checksum: eac530c62f7a6425501668a20d784134b5dbc8d8a02e4419f5bbe89d4f9dd1a6ebab8de731b93957372e9633aeae635cb15ffd70e4c327af4a01710a5ccf3ec2
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/env@npm:13.4.10"
-  checksum: dbb86ba0b8afdab6d7d590dd8b47dab5a6284f7845b8a55be876a3f3b2f3d5732355a44c9813289c1f4af0465d8322b557384c0a58c9a62338904e591c60ad2e
+"@next/env@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/env@npm:13.4.12"
+  checksum: 751368260c72514ca2b64af8f938c1da4ca80bc888fa20333a585934edb3cbf9fcdaef84a4d4482bb2d893bbcb48cbc30ae92ffecc0b60cee5c38a2cc06ab971
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/eslint-plugin-next@npm:13.4.10"
+"@next/eslint-plugin-next@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/eslint-plugin-next@npm:13.4.12"
   dependencies:
     glob: "npm:7.1.7"
-  checksum: 90e06a7a221c21c555852a71845fd851cc0ffeb196ed5a83327d605d11e9bdf340b4ca40b112c73fc9eae8a0a9b1f01c8e233b2b0c87b74c4216ea62dad4bed5
+  checksum: fc353985cb3c1c902f7764e10c70a5e8d06578223335cabcfcb58e81b352810fb4c6b8796b2a60506e88b00fa9afc06032f3276aabf5a4b309581b3d8d6065af
   languageName: node
   linkType: hard
 
-"@next/font@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/font@npm:13.4.10"
-  checksum: 43ed5f1400f5e28e30f8dfc29e39ae7136084ec929e9ce877659023d60716c9b1bd3b7a4e91ab2b4b2c5756a9fecc4db9a23de10e494bb43de059b373610e3f5
+"@next/font@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/font@npm:13.4.12"
+  checksum: 9b75a53ca4ba8c852f3dec896ae3b01a631ae2b9ed02c291759e5d72974af8200e1d4c308196db38076fe59e2985b76b9b44bd27a9568ac4bc6b92ec37bcbf92
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-darwin-arm64@npm:13.4.10"
+"@next/swc-darwin-arm64@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-darwin-arm64@npm:13.4.12"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-darwin-x64@npm:13.4.10"
+"@next/swc-darwin-x64@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-darwin-x64@npm:13.4.12"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.4.10"
+"@next/swc-linux-arm64-gnu@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.4.12"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-linux-arm64-musl@npm:13.4.10"
+"@next/swc-linux-arm64-musl@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-linux-arm64-musl@npm:13.4.12"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-linux-x64-gnu@npm:13.4.10"
+"@next/swc-linux-x64-gnu@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-linux-x64-gnu@npm:13.4.12"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-linux-x64-musl@npm:13.4.10"
+"@next/swc-linux-x64-musl@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-linux-x64-musl@npm:13.4.12"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.4.10"
+"@next/swc-win32-arm64-msvc@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.4.12"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.4.10"
+"@next/swc-win32-ia32-msvc@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.4.12"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/swc-win32-x64-msvc@npm:13.4.10"
+"@next/swc-win32-x64-msvc@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/swc-win32-x64-msvc@npm:13.4.12"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1473,16 +1497,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanem/react-nprogress@npm:5.0.44":
-  version: 5.0.44
-  resolution: "@tanem/react-nprogress@npm:5.0.44"
+"@tanem/react-nprogress@npm:5.0.45":
+  version: 5.0.45
+  resolution: "@tanem/react-nprogress@npm:5.0.45"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
+    "@babel/runtime": "npm:^7.22.6"
     hoist-non-react-statics: "npm:^3.3.2"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: c88bfd77b366a2f0dfa007546d35cba7d89cfeb735fd7d3c5df76586ef6e0b6e929eb04804eeccb929fa4037b2cdb4d2eab534193cada31342a6497f880663a8
+  checksum: a0327571aec8fe062ae28e2c05a8aa37bdaa0b413798e3d01c7d122924b2098cac3fc78281f9641d68c8b81392956fbd114835ff5041aae9a226e12c3fa04ef6
   languageName: node
   linkType: hard
 
@@ -1640,10 +1664,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.16.19":
-  version: 18.16.19
-  resolution: "@types/node@npm:18.16.19"
-  checksum: 322aaf3c04dcbbae619c7e8d40ed70e4ae41894e88776267d87bf3719a71b9a21ecde903d9f67cec3a663cf608d2822056ab739b48dada75433db38fadac2514
+"@types/node@npm:18.17.0":
+  version: 18.17.0
+  resolution: "@types/node@npm:18.17.0"
+  checksum: 3b53b2517261bcefd8f13c16dfe0bf49f2e0fdbee3dad2e1f81f30e9a762c39ffe8d601b466b9c98a9c0f99eed7bdad167d2e8222864d9458e93d78c6744c17f
   languageName: node
   linkType: hard
 
@@ -3049,11 +3073,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:13.4.10":
-  version: 13.4.10
-  resolution: "eslint-config-next@npm:13.4.10"
+"eslint-config-next@npm:13.4.12":
+  version: 13.4.12
+  resolution: "eslint-config-next@npm:13.4.12"
   dependencies:
-    "@next/eslint-plugin-next": "npm:13.4.10"
+    "@next/eslint-plugin-next": "npm:13.4.12"
     "@rushstack/eslint-patch": "npm:^1.1.3"
     "@typescript-eslint/parser": "npm:^5.42.0"
     eslint-import-resolver-node: "npm:^0.3.6"
@@ -3068,7 +3092,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: ee583807df89bae26cab9aa9b786e80494c0ec083924c9e26c4f1c87f0e3661a5103e14e90c691e507862f02a706c8871245ef3a3bc462c1e2296e47bb7fee44
+  checksum: 5f4b7202fc9dc2fef361465b394ecd262fe8096c0ee37c1b51e86cfa7b2ebbb526ed54050955c3b43d47eead8bff6dc78fd2068c211e24636c48a88b55ba81c1
   languageName: node
   linkType: hard
 
@@ -5336,20 +5360,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.4.10":
-  version: 13.4.10
-  resolution: "next@npm:13.4.10"
+"next@npm:13.4.12":
+  version: 13.4.12
+  resolution: "next@npm:13.4.12"
   dependencies:
-    "@next/env": "npm:13.4.10"
-    "@next/swc-darwin-arm64": "npm:13.4.10"
-    "@next/swc-darwin-x64": "npm:13.4.10"
-    "@next/swc-linux-arm64-gnu": "npm:13.4.10"
-    "@next/swc-linux-arm64-musl": "npm:13.4.10"
-    "@next/swc-linux-x64-gnu": "npm:13.4.10"
-    "@next/swc-linux-x64-musl": "npm:13.4.10"
-    "@next/swc-win32-arm64-msvc": "npm:13.4.10"
-    "@next/swc-win32-ia32-msvc": "npm:13.4.10"
-    "@next/swc-win32-x64-msvc": "npm:13.4.10"
+    "@next/env": "npm:13.4.12"
+    "@next/swc-darwin-arm64": "npm:13.4.12"
+    "@next/swc-darwin-x64": "npm:13.4.12"
+    "@next/swc-linux-arm64-gnu": "npm:13.4.12"
+    "@next/swc-linux-arm64-musl": "npm:13.4.12"
+    "@next/swc-linux-x64-gnu": "npm:13.4.12"
+    "@next/swc-linux-x64-musl": "npm:13.4.12"
+    "@next/swc-win32-arm64-msvc": "npm:13.4.12"
+    "@next/swc-win32-ia32-msvc": "npm:13.4.12"
+    "@next/swc-win32-x64-msvc": "npm:13.4.12"
     "@swc/helpers": "npm:0.5.1"
     busboy: "npm:1.6.0"
     caniuse-lite: "npm:^1.0.30001406"
@@ -5391,7 +5415,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: d560ad073a4d70dc77b0bdccabf1385342d206490a1ff1668c750d1cdbcf0083f7d1e570f66c73f7786abbe69cfbd0b1fbe0f0df878f9ba5596569f36a2c23f5
+  checksum: 8957092182c98f154d48cc3fc5fbadf07a691dded067e54274225b0d1f75c16f5a7c148361035629dcda5e8e10b9b9b0953d15438477d489bbe1a7ecdb664677
   languageName: node
   linkType: hard
 
@@ -6262,16 +6286,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.63.6":
-  version: 1.63.6
-  resolution: "sass@npm:1.63.6"
+"sass@npm:1.64.1":
+  version: 1.64.1
+  resolution: "sass@npm:1.64.1"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 32e3245634f133e4e103f5c2adaaa85d7563fa17781db123c63b18b3501aeef51e60b97d97ffbf487b39ee4078e2914ba3ede3cee0567b04f1e3b0b45cef0b46
+  checksum: 47fc8cd65b24f71ac6f107b250f3f3bf5ea1ba631c70211a8f99716ad25b6f42c2dde3ea606ec2394bc156e3c7136ea4cc2539beff082a3cbee127febc41a20e
   languageName: node
   linkType: hard
 
@@ -6696,18 +6720,18 @@ __metadata:
     "@emotion/react": "npm:11.11.1"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.11.0"
-    "@mui/icons-material": "npm:5.14.0"
-    "@mui/lab": "npm:5.0.0-alpha.136"
-    "@mui/material": "npm:5.14.0"
-    "@next/bundle-analyzer": "npm:13.4.10"
-    "@next/font": "npm:13.4.10"
+    "@mui/icons-material": "npm:5.14.1"
+    "@mui/lab": "npm:5.0.0-alpha.137"
+    "@mui/material": "npm:5.14.1"
+    "@next/bundle-analyzer": "npm:13.4.12"
+    "@next/font": "npm:13.4.12"
     "@reduxjs/toolkit": "npm:1.9.5"
-    "@tanem/react-nprogress": "npm:5.0.44"
+    "@tanem/react-nprogress": "npm:5.0.45"
     "@types/eslint": "npm:8.44.0"
     "@types/events": "npm:3.0.0"
     "@types/jest": "npm:29.5.3"
     "@types/lodash": "npm:4.14.195"
-    "@types/node": "npm:18.16.19"
+    "@types/node": "npm:18.17.0"
     "@types/react": "npm:18.2.15"
     "@types/react-redux": "npm:7.1.25"
     "@types/sass": "npm:1.43.1"
@@ -6717,12 +6741,12 @@ __metadata:
     cross-env: "npm:7.0.3"
     date-fns: "npm:2.30.0"
     eslint: "npm:8.45.0"
-    eslint-config-next: "npm:13.4.10"
+    eslint-config-next: "npm:13.4.12"
     events: "npm:3.3.0"
     jest: "npm:29.6.1"
     lodash: "npm:4.17.21"
     nanoid: "npm:4.0.2"
-    next: "npm:13.4.10"
+    next: "npm:13.4.12"
     notistack: "npm:3.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -6731,11 +6755,11 @@ __metadata:
     redux-persist: "npm:6.0.0"
     redux-persist-transform-compress: "npm:4.2.0"
     rooks: "npm:7.14.1"
-    sass: "npm:1.63.6"
+    sass: "npm:1.64.1"
     type-fest: "npm:3.13.1"
     typescript: "npm:5.1.6"
   dependenciesMeta:
-    next@13.4.10:
+    next@13.4.12:
       unplugged: true
   languageName: unknown
   linkType: soft
