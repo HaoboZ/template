@@ -2370,7 +2370,7 @@ const RAW_RUNTIME_STATE =
     ],\
     [\
       "type-fest",\
-      "npm:3.13.1"\
+      "npm:4.3.1"\
     ],\
     [\
       "typescript",\
@@ -2526,7 +2526,7 @@ const RAW_RUNTIME_STATE =
           ["redux-persist-transform-compress", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:4.2.0"],\
           ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.14.1"],\
           ["sass", "npm:1.66.1"],\
-          ["type-fest", "npm:3.13.1"],\
+          ["type-fest", "npm:4.3.1"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -11071,7 +11071,7 @@ const RAW_RUNTIME_STATE =
           ["redux-persist-transform-compress", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:4.2.0"],\
           ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.14.1"],\
           ["sass", "npm:1.66.1"],\
-          ["type-fest", "npm:3.13.1"],\
+          ["type-fest", "npm:4.3.1"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -11288,10 +11288,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:3.13.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/type-fest-npm-3.13.1-4bd562882d-10c0.zip/node_modules/type-fest/",\
+      ["npm:4.3.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/type-fest-npm-4.3.1-1c94513498-10c0.zip/node_modules/type-fest/",\
         "packageDependencies": [\
-          ["type-fest", "npm:3.13.1"]\
+          ["type-fest", "npm:4.3.1"]\
         ],\
         "linkType": "HARD"\
       }]\

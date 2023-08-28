@@ -39,7 +39,7 @@
 		"redux-persist-transform-compress": "4.2.0",
 		"rooks"                           : "7.14.1",
 		"sass"                            : "1.66.1",
-		"type-fest"                       : "3.13.1"
+		"type-fest"                       : "4.3.1"
 	},
 	"devDependencies" : {
 		"@next/bundle-analyzer"           : "13.4.19",
