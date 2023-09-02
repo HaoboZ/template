@@ -2,25 +2,22 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
 type State = {
-	theme: string
+	theme: string;
 };
 
 const initialState: State = {
-	theme: 'default'
+	theme: 'default',
 };
 
-const mainSlice = createSlice( {
-	name    : 'main',
+const mainSlice = createSlice({
+	name: 'main',
 	initialState,
 	reducers: {
-		setTheme( state, { payload }: PayloadAction<string> ) {
+		setTheme(state, { payload }: PayloadAction<string>) {
 			state.theme = payload;
-		}
-	}
-} );
+		},
+	},
+});
 
 export default mainSlice.reducer;
-export const
-	{
-		setTheme
-	} = mainSlice.actions;
+export const { actions: mainActions } = mainSlice;

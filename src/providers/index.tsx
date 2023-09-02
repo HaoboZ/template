@@ -10,22 +10,23 @@ import ModalProvider from './modal';
 import SnackbarAction from './snackbar/action';
 import ThemeProvider from './theme';
 
-export default function Providers( { children }: { children: ReactNode } ) {
+export default function Providers({ children }: { children: ReactNode }) {
 	return (
-		<ComponentComposer components={[
-			// data
-			component( StoreProvider, { store } ),
-			component( PersistGate, { loading: null, persistor } ),
-			component( EventsProvider ),
-			// styling
-			component( ThemeProvider ),
-			// visual
-			component( SnackbarProvider, {
-				preventDuplicate: true,
-				action: SnackbarAction
-			} ),
-			component( ModalProvider )
-		]}>
+		<ComponentComposer
+			components={[
+				// data
+				component(StoreProvider, { store }),
+				component(PersistGate, { loading: null, persistor }),
+				component(EventsProvider),
+				// styling
+				component(ThemeProvider),
+				// visual
+				component(SnackbarProvider, {
+					preventDuplicate: true,
+					action: SnackbarAction,
+				}),
+				component(ModalProvider),
+			]}>
 			{children}
 		</ComponentComposer>
 	);

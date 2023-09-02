@@ -2,30 +2,30 @@ import type { TextFieldProps } from '@mui/material';
 import { TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-export default function FormattedTextField( props: TextFieldProps ) {
-	const [ text, setText ] = useState( props.value );
-	const [ focused, setFocused ] = useState( false );
-	
-	useEffect( () => {
-		if ( !focused ) setText( props.value );
-	}, [ focused, props.value ] );
-	
+export default function FormattedTextField(props: TextFieldProps) {
+	const [text, setText] = useState(props.value);
+	const [focused, setFocused] = useState(false);
+
+	useEffect(() => {
+		if (!focused) setText(props.value);
+	}, [focused, props.value]);
+
 	return (
 		<TextField
 			{...props}
 			value={text}
-			onFocus={( e ) => {
-				setFocused( true );
-				props.onFocus?.( e );
+			onFocus={(e) => {
+				setFocused(true);
+				props.onFocus?.(e);
 			}}
-			onChange={( e ) => {
-				setText( e.target.value );
-				props.onChange?.( e );
+			onChange={(e) => {
+				setText(e.target.value);
+				props.onChange?.(e);
 			}}
-			onBlur={( e ) => {
-				setText( props.value );
-				setFocused( false );
-				props.onBlur?.( e );
+			onBlur={(e) => {
+				setText(props.value);
+				setFocused(false);
+				props.onBlur?.(e);
 			}}
 		/>
 	);

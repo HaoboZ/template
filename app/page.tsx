@@ -6,13 +6,13 @@ import { useState } from 'react';
 import { useAsyncEffect } from 'rooks';
 
 export default function Main() {
-	const [ data, setData ] = useState( 'Loading...' );
-	
-	useAsyncEffect( async () => {
-		const { data } = await axios.get( 'api/helloWorld' );
-		setData( data );
-	}, [] );
-	
+	const [data, setData] = useState('Loading...');
+
+	useAsyncEffect(async () => {
+		const { data } = await axios.get('api/helloWorld');
+		setData(data);
+	}, []);
+
 	return (
 		<Page>
 			<Typography>{data}</Typography>

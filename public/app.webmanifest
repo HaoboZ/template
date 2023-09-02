@@ -2,7 +2,9 @@
 	"name"            : "Template",
 	"short_name"      : "Template",
 	"description"     : "template",
-	"categories"      : [ "template" ],
+	"categories"      : [
+		"template"
+	],
 	"scope"           : "/",
 	"start_url"       : "/",
 	"display"         : "standalone",
