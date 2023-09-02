@@ -6818,7 +6818,7 @@ __metadata:
     redux-persist-transform-compress: "npm:4.2.0"
     rooks: "npm:7.14.1"
     sass: "npm:1.66.1"
-    type-fest: "npm:3.13.1"
+    type-fest: "npm:4.3.1"
     typescript: "npm:5.2.2"
   dependenciesMeta:
     next@13.4.19:
@@ -6963,10 +6963,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:3.13.1":
-  version: 3.13.1
-  resolution: "type-fest@npm:3.13.1"
-  checksum: 547d22186f73a8c04590b70dcf63baff390078c75ea8acd366bbd510fd0646e348bd1970e47ecf795b7cff0b41d26e9c475c1fedd6ef5c45c82075fbf916b629
+"type-fest@npm:4.3.1":
+  version: 4.3.1
+  resolution: "type-fest@npm:4.3.1"
+  checksum: 2ba0a0f5faf15d029d39a6350745b89ebd06bda45dbebff1b4a68b7590f79bfcf60ad62684993252d87e82e5483449c4c93782f23bc668eb2615adc1cb2aab9e
   languageName: node
   linkType: hard
 
