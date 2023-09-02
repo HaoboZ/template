@@ -1,11 +1,11 @@
 import type { ListItemProps, ListItemTextProps } from '@mui/material';
 import { Box, ListItem, ListItemText } from '@mui/material';
-import type { ReactChild } from 'react';
+import type { ReactNode } from 'react';
 import type { ActionProps } from '../actions';
 import Actions from '../actions';
 
 export default function PageSection( { actions, listItemProps, children, max, ...props }: {
-	actions?: ActionProps[] | ReactChild,
+	actions?: ActionProps[] | ReactNode,
 	max?: number,
 	listItemProps?: ListItemProps<'div'>
 } & ListItemTextProps ) {

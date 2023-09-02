@@ -1,7 +1,7 @@
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { Breadcrumbs, Button, Typography } from '@mui/material';
 import { startCase } from 'lodash';
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 import type { MouseEventHandler } from 'react';
 import { useMemo } from 'react';
 import useWideMedia from '../../hooks/useWideMedia';
@@ -10,29 +10,28 @@ import PageLink, { PageLinkComponent } from './link';
 export type PageBackProps = {
 	confirm?: boolean,
 	onClick?: MouseEventHandler<HTMLButtonElement>,
-	pathMap?: Record<string, boolean | string>,
+	pathMap?: Record<number, boolean | string>,
 	backButton?: boolean
 };
 
 export default function PageBack( { confirm: confirmBack, onClick, pathMap, backButton }: PageBackProps ) {
 	const router = useRouter();
+	const pathname = usePathname();
 	const wide = useWideMedia();
 	
 	const routes = useMemo( () => {
-		if ( router.pathname === '/' ) return [];
+		if ( pathname === '/' ) return [];
 		
 		let href = '';
-		const paths = router.asPath.split( '/' );
-		const names = router.route.split( '/' );
+		const paths = pathname.split( '/' );
 		
-		return names.reduce<{ name: string, href: string }[]>( ( arr, name, index ) => {
+		return paths.reduce<{ name: string, href: string }[]>( ( arr, name, index ) => {
 			if ( paths[ index ] ) href += `/${paths[ index ]}`;
-			name = name.replace( /[\[\]]+/g, '' ) || 'home';
-			if ( pathMap?.[ name ] !== undefined ) name = pathMap[ name ] as string;
+			if ( pathMap?.[ index ] !== undefined ) name = pathMap[ index ] as string;
 			if ( name ) arr.push( { name: startCase( name ), href: href || '/' } );
 			return arr;
 		}, [] );
-	}, [ router.asPath ] );
+	}, [ pathname ] );
 	
 	const clickListener = async ( e ) => {
 		if ( confirmBack && !confirm( 'Are you sure you want to leave?' ) )

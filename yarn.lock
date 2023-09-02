@@ -1317,13 +1317,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:13.4.19":
-  version: 13.4.19
-  resolution: "@next/font@npm:13.4.19"
-  checksum: 205635676572c285b87273d455d0eacf7445558e9d41f33cf79149f7961e231a05ea34769be904401f0ad1570de3a5c1da03e473ab5e6a8039edbdea9288a095
-  languageName: node
-  linkType: hard
-
 "@next/swc-darwin-arm64@npm:13.4.19":
   version: 13.4.19
   resolution: "@next/swc-darwin-arm64@npm:13.4.19"
@@ -6788,7 +6781,6 @@ __metadata:
     "@mui/lab": "npm:5.0.0-alpha.141"
     "@mui/material": "npm:5.14.6"
     "@next/bundle-analyzer": "npm:13.4.19"
-    "@next/font": "npm:13.4.19"
     "@reduxjs/toolkit": "npm:1.9.5"
     "@tanem/react-nprogress": "npm:5.0.48"
     "@types/eslint": "npm:8.44.2"
@@ -6822,9 +6814,6 @@ __metadata:
     sass: "npm:1.66.1"
     type-fest: "npm:4.3.1"
     typescript: "npm:5.2.2"
-  dependenciesMeta:
-    next@13.4.19:
-      unplugged: true
   languageName: unknown
   linkType: soft
 

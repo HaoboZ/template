@@ -18,15 +18,13 @@
 		"resolveJsonModule"               : true,
 		"isolatedModules"                 : true,
 		"jsx"                             : "preserve",
-		"plugins"                         : [
-			{ "name": "next" }
-		],
+		"plugins"                         : [ { "name": "next" } ],
 		"strictNullChecks"                : false,
 		"paths"                           : {
 			"@/src/*"       : [ "./src/*" ],
 			"@/components/*": [ "./src/components/*" ],
 			"@/app/*"       : [ "./app/*" ],
-			"@/api/*"       : [ "./pages/api/*" ]
+			"@/public/*"    : [ "./public/*" ]
 		}
 	},
 	"include"        : [

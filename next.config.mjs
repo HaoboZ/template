@@ -13,8 +13,7 @@ const nextConfig = {
 		// matching all API routes
 		source : '/api/:path*',
 		headers: [ { key: 'Access-Control-Allow-Origin', value: '*' } ]
-	} ],
-	experimental: { appDir: true }
+	} ]
 };
 
 const plugins = [

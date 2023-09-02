@@ -13,26 +13,24 @@ export type PageLinkComponentProps =
 	& Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>;
 
 export const PageLinkComponent = forwardRef<HTMLAnchorElement, PageLinkComponentProps>(
-	function ( { onClick, ...props }, ref ) {
-		return (
-			<StyledNextLink
-				ref={ref}
-				onClick={onClick ? async ( e ) => {
-					try {
-						await onClick( e );
-					} catch {
-						e.preventDefault();
-					}
-				} : undefined}
-				{...props}
-			/>
-		);
-	}
+	( { onClick, ...props }, ref ) => (
+		<StyledNextLink
+			ref={ref}
+			onClick={onClick ? async ( e ) => {
+				try {
+					await onClick( e );
+				} catch {
+					e.preventDefault();
+				}
+			} : undefined}
+			{...props}
+		/>
+	)
 );
 
 export type PageLinkProps = PageLinkComponentProps & Omit<MuiLinkProps, 'href'>;
 
-const PageLink = forwardRef<HTMLAnchorElement, PageLinkProps>( function ( props, ref ) {
-	return <MuiLink ref={ref} component={PageLinkComponent} {...props}/>;
-} );
+const PageLink = forwardRef<HTMLAnchorElement, PageLinkProps>( ( props, ref ) =>
+	<MuiLink ref={ref} component={PageLinkComponent} {...props}/>
+);
 export default PageLink;
