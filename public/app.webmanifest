@@ -1,14 +1,14 @@
 {
-	"name"            : "Template",
-	"short_name"      : "Template",
-	"description"     : "template",
-	"categories"      : [
+	"name": "Template",
+	"short_name": "Template",
+	"description": "template",
+	"categories": [
 		"template"
 	],
-	"scope"           : "/",
-	"start_url"       : "/",
-	"display"         : "standalone",
-	"orientation"     : "portrait",
-	"theme_color"     : "#039be5",
+	"scope": "/",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait",
+	"theme_color": "#039be5",
 	"background-color": "#ffffff"
 }
