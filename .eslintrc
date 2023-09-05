@@ -32,7 +32,7 @@
 			"warn",
 			{ "namedComponents": "function-declaration", "unnamedComponents": "arrow-function" }
 		],
-		//		"react/no-unescaped-entities"                      : "off",
+		"react/no-unescaped-entities": "off",
 		"react/prop-types": "off",
 		"react/jsx-boolean-value": "warn",
 		"react/jsx-curly-brace-presence": "warn",
