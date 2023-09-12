@@ -2026,6 +2026,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/analytics@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@vercel/analytics@npm:1.0.2"
+  checksum: e73b07cec987067d70449eddd312c28cd2ec83807ed8ac6ddf3540f8ccd63f0de8ec57aac5a6d2616f7c3910573def4d05860796c88e9f83e452e660be933c77
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -6877,6 +6884,7 @@ __metadata:
     "@types/sass": "npm:1.43.1"
     "@typescript-eslint/eslint-plugin": "npm:6.5.0"
     "@typescript-eslint/parser": "npm:6.5.0"
+    "@vercel/analytics": "npm:1.0.2"
     axios: "npm:1.5.0"
     cross-env: "npm:7.0.3"
     date-fns: "npm:2.30.0"

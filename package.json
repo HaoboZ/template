@@ -23,6 +23,7 @@
 		"@mui/material": "5.14.7",
 		"@reduxjs/toolkit": "1.9.5",
 		"@tanem/react-nprogress": "5.0.49",
+		"@vercel/analytics": "1.0.2",
 		"axios": "1.5.0",
 		"date-fns": "2.30.0",
 		"events": "3.3.0",

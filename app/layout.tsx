@@ -1,5 +1,6 @@
 import '@/src/layout/style.scss';
 import Providers from '@/src/providers';
+import { Analytics } from '@vercel/analytics/react';
 import { Roboto } from 'next/font/google';
 import type { ReactNode } from 'react';
 import type { PackageJson } from 'type-fest';
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
 			</head>
 			<body>
+				<Analytics />
 				<Providers>{children}</Providers>
 			</body>
 		</html>
