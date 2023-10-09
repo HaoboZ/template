@@ -1938,7 +1938,7 @@ const RAW_RUNTIME_STATE =
     ],\
     [\
       "nanoid",\
-      "npm:4.0.2"\
+      "npm:5.0.1"\
     ],\
     [\
       "natural-compare",\
@@ -2674,7 +2674,7 @@ const RAW_RUNTIME_STATE =
           ["events", "npm:3.3.0"],\
           ["jest", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.7.0"],\
           ["lodash", "npm:4.17.21"],\
-          ["nanoid", "npm:4.0.2"],\
+          ["nanoid", "npm:5.0.1"],\
           ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:13.5.4"],\
           ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
           ["prettier", "npm:3.0.3"],\
@@ -10112,10 +10112,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:4.0.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/nanoid-npm-4.0.2-ae010cad86-10c0.zip/node_modules/nanoid/",\
+      ["npm:5.0.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/nanoid-npm-5.0.1-3b97be5eee-10c0.zip/node_modules/nanoid/",\
         "packageDependencies": [\
-          ["nanoid", "npm:4.0.2"]\
+          ["nanoid", "npm:5.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11916,7 +11916,7 @@ const RAW_RUNTIME_STATE =
           ["events", "npm:3.3.0"],\
           ["jest", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.7.0"],\
           ["lodash", "npm:4.17.21"],\
-          ["nanoid", "npm:4.0.2"],\
+          ["nanoid", "npm:5.0.1"],\
           ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:13.5.4"],\
           ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
           ["prettier", "npm:3.0.3"],\
