@@ -4,10 +4,6 @@ import bundleAnalyzer from '@next/bundle-analyzer';
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-	modularizeImports: {
-		'lodash': { transform: 'lodash/{{member}}' },
-		'@mui/icons-material': { transform: '@mui/icons-material/{{member}}' },
-	},
 	headers: async () => [
 		{
 			// matching all API routes
