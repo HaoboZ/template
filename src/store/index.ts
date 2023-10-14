@@ -11,11 +11,7 @@ export const store = configureStore({
 	preloadedState: loadState(),
 });
 
-store.subscribe(
-	debounce(() => {
-		saveState(store.getState());
-	}, 500),
-);
+store.subscribe(debounce(() => saveState(store.getState()), 500));
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
