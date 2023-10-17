@@ -15,5 +15,4 @@ const nextConfig = {
 
 const plugins = [bundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })];
 
-// noinspection JSUnusedGlobalSymbols
 export default plugins.reduceRight((acc, plugin) => plugin(acc), nextConfig);

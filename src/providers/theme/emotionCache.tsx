@@ -3,14 +3,12 @@ import type { EmotionCache, Options as OptionsOfCreateCache } from '@emotion/cac
 import createCache from '@emotion/cache';
 import { CacheProvider as DefaultCacheProvider } from '@emotion/react';
 import { useServerInsertedHTML } from 'next/navigation';
-import type { ReactNode } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import { Fragment, useState } from 'react';
 
 export type NextAppDirEmotionCacheProviderProps = {
-	/** This is the options passed to createCache() from 'import createCache from "@emotion/cache"' */
 	options: Omit<OptionsOfCreateCache, 'insertionPoint'>;
-	/** By default <CacheProvider /> from 'import { CacheProvider } from "@emotion/react"' */
-	CacheProvider?: (props: { value: EmotionCache; children: ReactNode }) => JSX.Element | null;
+	CacheProvider?: (props: { value: EmotionCache; children: ReactNode }) => ReactElement | null;
 	children: ReactNode;
 };
 
