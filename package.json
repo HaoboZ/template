@@ -1,7 +1,7 @@
 {
 	"name": "template",
 	"description": "template",
-	"author": "Haobo Zhang <haobozhang9081@gmail.com>",
+	"author": { "name": "Haobo Zhang", "email": "haobozhang9081@gmail.com" },
 	"version": "2.1.5",
 	"private": true,
 	"scripts": {

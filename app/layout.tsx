@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 	title: 'Template',
 	themeColor: '#ffffff',
 	description: packageJson.description,
+	keywords: packageJson.keywords?.join(', '),
+	authors: packageJson.author as any,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
