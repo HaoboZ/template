@@ -1,4 +1,5 @@
-import { CircularProgress } from '@mui/material';
+import type { ModalProps } from '@mui/joy';
+import { CircularProgress, Modal } from '@mui/joy';
 import { EventEmitter } from 'events';
 import { nanoid } from 'nanoid';
 import type { ComponentType, ReactNode } from 'react';
@@ -8,12 +9,16 @@ type ModalStatus<T> = {
 	id: string;
 	open: boolean;
 	Component: ComponentType<T>;
+	modalProps: ModalProps;
 	props: T;
 	controls: ModalControlsType;
 };
 
 type ModalType = {
-	showModal: <T>(Component: ComponentType<T>, args?: { id?: string; props?: T }) => string;
+	showModal: <T>(
+		Component: ComponentType<T>,
+		args?: { id?: string; modalProps?: ModalProps; props?: T },
+	) => string;
 	closeModal: (id?: string) => void;
 	modalStatus: (id: string) => Promise<ModalStatus<any>>;
 };
@@ -49,10 +54,7 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
 					const index = modals.findIndex((modal) => modal.id === id);
 					if (index === -1) return modals;
 					const newModals = [...modals];
-					newModals[index] = {
-						...newModals[index],
-						open: false,
-					};
+					newModals[index] = { ...newModals[index], open: false };
 					newModals[index].controls.events.emit('close', ...args);
 					setTimeout(
 						() => setModals((modals) => modals.filter((modal) => modal.id !== id)),
@@ -67,7 +69,7 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
 	return (
 		<ModalContext.Provider
 			value={{
-				showModal: (Component, { id = nanoid(), props } = {}) => {
+				showModal: (Component, { id = nanoid(), modalProps, props } = {}) => {
 					setModals((modals) => {
 						const index = modals.findIndex((modal) => modal.id === id);
 						const newModals = [...modals];
@@ -76,15 +78,13 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
 								id,
 								open: false,
 								Component,
+								modalProps,
 								props,
 								controls: controls(id),
 							});
 						} else {
 							// found modal with same id
-							newModals[index] = {
-								...newModals[index],
-								props,
-							};
+							newModals[index] = { ...newModals[index], props };
 							if (newModals[index].open) return newModals;
 						}
 						setTimeout(
@@ -94,10 +94,7 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
 									if (index === -1) return modals;
 									const newModals = [...modals];
 									newModals[index].controls.events.emit('open');
-									newModals[index] = {
-										...newModals[index],
-										open: true,
-									};
+									newModals[index] = { ...newModals[index], open: true };
 									return newModals;
 								}),
 							0,
@@ -123,12 +120,14 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
 			{modals.map((modal) => (
 				<ModalControlsContext.Provider
 					key={modal.id}
-					value={{
-						...modal.controls,
-						modalStatus: modal,
-					}}>
+					value={{ ...modal.controls, modalStatus: modal }}>
 					<Suspense fallback={<CircularProgress />}>
-						<modal.Component {...modal.props} />
+						<Modal
+							open={modal.open}
+							onClose={modal.controls.closeModal}
+							{...modal.modalProps}>
+							<modal.Component {...modal.props} />
+						</Modal>
 					</Suspense>
 				</ModalControlsContext.Provider>
 			))}

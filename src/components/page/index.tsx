@@ -1,8 +1,8 @@
 'use client';
+import { Container } from '@mui/joy';
 import type { ReactNode } from 'react';
 import type { PageBackProps } from './back';
 import PageBack from './back';
-import PageContainer from './container';
 import type { PageTitleProps } from './title';
 import PageTitle from './title';
 
@@ -13,17 +13,17 @@ export default function Page({
 	backProps,
 	children,
 }: {
-	title?: string;
+	title?: ReactNode;
 	titleProps?: PageTitleProps;
 	hideBack?: boolean;
 	backProps?: PageBackProps;
 	children?: ReactNode;
 }) {
 	return (
-		<PageContainer>
+		<Container>
 			{!hideBack && <PageBack {...backProps} />}
 			{title && <PageTitle {...titleProps}>{title}</PageTitle>}
 			{children}
-		</PageContainer>
+		</Container>
 	);
 }
