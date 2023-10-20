@@ -1,4 +1,3 @@
-'use client';
 import type { EmotionCache, Options as OptionsOfCreateCache } from '@emotion/cache';
 import createCache from '@emotion/cache';
 import { CacheProvider as DefaultCacheProvider } from '@emotion/react';

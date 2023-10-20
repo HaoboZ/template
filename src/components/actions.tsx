@@ -11,7 +11,7 @@ export type ActionProps = {
 	onClick?: MouseEventHandler;
 	buttonProps?: ButtonProps;
 	menuItemProps?: MenuItemProps;
-} & (ButtonProps | MenuItemProps);
+} & (ButtonProps & MenuItemProps);
 
 export default function Actions({
 	items,
@@ -31,12 +31,7 @@ export default function Actions({
 	}, [items, max]);
 
 	const buttonElements = buttons.map(({ name, onClick, buttonProps, ...props }, index) => (
-		<AsyncButton
-			key={index}
-			variant='outlined'
-			onClick={onClick}
-			{...buttonProps}
-			{...(props as any)}>
+		<AsyncButton key={index} variant='outlined' onClick={onClick} {...buttonProps} {...props}>
 			{name}
 		</AsyncButton>
 	));
@@ -54,7 +49,7 @@ const ButtonMenu = forwardRef<HTMLButtonElement, { menu: ActionProps[] }>(functi
 			</MenuButton>
 			<Menu>
 				{menu.map(({ name, onClick, menuItemProps, ...props }, index) => (
-					<AsyncMenuItem key={index} onClick={onClick} {...menuItemProps} {...(props as any)}>
+					<AsyncMenuItem key={index} onClick={onClick} {...menuItemProps} {...props}>
 						{name}
 					</AsyncMenuItem>
 				))}
