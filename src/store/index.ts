@@ -4,9 +4,7 @@ import { loadState, saveState } from './persist';
 import main from './reducers/mainReducer';
 
 export const store = configureStore({
-	reducer: {
-		main,
-	},
+	reducer: { main },
 	devTools: process.env.NODE_ENV === 'development',
 	preloadedState: loadState(),
 });

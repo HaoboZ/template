@@ -6,9 +6,7 @@ import useEventListener from '../hooks/useEventListener';
 export default function OverflowTypography({
 	tooltipProps,
 	...props
-}: {
-	tooltipProps?: TooltipProps;
-} & TypographyProps) {
+}: { tooltipProps?: TooltipProps } & TypographyProps) {
 	const contentRef = useRef<HTMLElement>();
 
 	const [overFlowed, setOverFlowed] = useState(false);

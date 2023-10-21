@@ -11,16 +11,9 @@ export type ActionProps = {
 	onClick?: MouseEventHandler;
 	buttonProps?: ButtonProps;
 	menuItemProps?: MenuItemProps;
-} & (ButtonProps & MenuItemProps);
+};
 
-export default function Actions({
-	items,
-	max,
-}: {
-	items: ActionProps[];
-	// max number of buttons displayed
-	max?: number;
-}) {
+export default function Actions({ items, max }: { items: ActionProps[]; max?: number }) {
 	const [buttons, menu] = useMemo(() => {
 		const filtered = items.filter(Boolean);
 		if (!max || filtered.length <= max) return [filtered, []];
