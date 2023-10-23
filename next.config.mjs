@@ -12,7 +12,7 @@ const nextConfig = {
 			headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
 		},
 	],
-	experimental: { optimizePackageImports: ['@mui/joy'] },
+	experimental: { optimizePackageImports: ['@mui/joy', 'rambdax'] },
 };
 
 const plugins = [bundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })];
