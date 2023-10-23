@@ -1,5 +1,5 @@
-import { isEmpty } from 'lodash';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { isEmpty } from 'rambdax';
 import { useCallback } from 'react';
 
 export default function useParamState(

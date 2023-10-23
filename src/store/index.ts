@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { debounce } from 'lodash';
+import { debounce } from 'rambdax';
 import { loadState, saveState } from './persist';
 import main from './reducers/mainReducer';
 
