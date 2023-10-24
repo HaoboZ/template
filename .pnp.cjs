@@ -44,11 +44,11 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.8.7"],\
           ["@types/react", "npm:18.2.31"],\
           ["@types/react-redux", "npm:7.1.28"],\
-          ["@types/voca", "npm:1.4.4"],\
           ["@typescript-eslint/eslint-plugin", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:6.8.0"],\
           ["@typescript-eslint/parser", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:6.8.0"],\
           ["@vercel/analytics", "npm:1.1.1"],\
           ["axios", "npm:1.5.1"],\
+          ["change-case", "npm:4.1.2"],\
           ["cross-env", "npm:7.0.3"],\
           ["date-fns", "npm:2.30.0"],\
           ["eslint", "npm:8.52.0"],\
@@ -69,8 +69,7 @@ const RAW_RUNTIME_STATE =
           ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.14.1"],\
           ["sass", "npm:1.69.4"],\
           ["type-fest", "npm:4.5.0"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
-          ["voca", "npm:1.4.1"]\
+          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -2395,15 +2394,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@types/voca", [\
-      ["npm:1.4.4", {\
-        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/@types-voca-npm-1.4.4-71f584d0e1-10c0.zip/node_modules/@types/voca/",\
-        "packageDependencies": [\
-          ["@types/voca", "npm:1.4.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@types/yargs", [\
       ["npm:17.0.29", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/@types-yargs-npm-17.0.29-6860504025-10c0.zip/node_modules/@types/yargs/",\
@@ -3343,6 +3333,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["camel-case", [\
+      ["npm:4.1.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/camel-case-npm-4.1.2-082bf67a9a-10c0.zip/node_modules/camel-case/",\
+        "packageDependencies": [\
+          ["camel-case", "npm:4.1.2"],\
+          ["pascal-case", "npm:3.1.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["camelcase", [\
       ["npm:5.3.1", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/camelcase-npm-5.3.1-5db8af62c5-10c0.zip/node_modules/camelcase/",\
@@ -3368,6 +3369,18 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["capital-case", [\
+      ["npm:1.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/capital-case-npm-1.0.4-90f8a4641d-10c0.zip/node_modules/capital-case/",\
+        "packageDependencies": [\
+          ["capital-case", "npm:1.0.4"],\
+          ["no-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"],\
+          ["upper-case-first", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["chalk", [\
       ["npm:2.4.2", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/chalk-npm-2.4.2-3ea16dd91e-10c0.zip/node_modules/chalk/",\
@@ -3385,6 +3398,27 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:4.1.2"],\
           ["ansi-styles", "npm:4.3.0"],\
           ["supports-color", "npm:7.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["change-case", [\
+      ["npm:4.1.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/change-case-npm-4.1.2-9c42f72b39-10c0.zip/node_modules/change-case/",\
+        "packageDependencies": [\
+          ["change-case", "npm:4.1.2"],\
+          ["camel-case", "npm:4.1.2"],\
+          ["capital-case", "npm:1.0.4"],\
+          ["constant-case", "npm:3.0.4"],\
+          ["dot-case", "npm:3.0.4"],\
+          ["header-case", "npm:2.0.4"],\
+          ["no-case", "npm:3.0.4"],\
+          ["param-case", "npm:3.0.4"],\
+          ["pascal-case", "npm:3.1.2"],\
+          ["path-case", "npm:3.0.4"],\
+          ["sentence-case", "npm:3.0.4"],\
+          ["snake-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3582,6 +3616,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/console-control-strings-npm-1.1.0-e3160e5275-10c0.zip/node_modules/console-control-strings/",\
         "packageDependencies": [\
           ["console-control-strings", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["constant-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/constant-case-npm-3.0.4-118b472e28-10c0.zip/node_modules/constant-case/",\
+        "packageDependencies": [\
+          ["constant-case", "npm:3.0.4"],\
+          ["no-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"],\
+          ["upper-case", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3892,6 +3938,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["doctrine", "npm:3.0.0"],\
           ["esutils", "npm:2.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["dot-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/dot-case-npm-3.0.4-09675b5521-10c0.zip/node_modules/dot-case/",\
+        "packageDependencies": [\
+          ["dot-case", "npm:3.0.4"],\
+          ["no-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5285,6 +5342,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hasown", "npm:2.0.0"],\
           ["function-bind", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["header-case", [\
+      ["npm:2.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/header-case-npm-2.0.4-7d19e19e6d-10c0.zip/node_modules/header-case/",\
+        "packageDependencies": [\
+          ["header-case", "npm:2.0.4"],\
+          ["capital-case", "npm:1.0.4"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6696,6 +6764,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lower-case", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/lower-case-npm-2.0.2-151055f1c2-10c0.zip/node_modules/lower-case/",\
+        "packageDependencies": [\
+          ["lower-case", "npm:2.0.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lru-cache", [\
       ["npm:10.0.1", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/lru-cache-npm-10.0.1-0e1abf4c13-10c0.zip/node_modules/lru-cache/",\
@@ -7069,6 +7147,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["no-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/no-case-npm-3.0.4-12884c3d98-10c0.zip/node_modules/no-case/",\
+        "packageDependencies": [\
+          ["no-case", "npm:3.0.4"],\
+          ["lower-case", "npm:2.0.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["node-gyp", [\
       ["npm:9.4.0", {\
         "packageLocation": "./.yarn/unplugged/node-gyp-npm-9.4.0-ebf5f5573e/node_modules/node-gyp/",\
@@ -7405,6 +7494,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["param-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/param-case-npm-3.0.4-cfb242ad97-10c0.zip/node_modules/param-case/",\
+        "packageDependencies": [\
+          ["param-case", "npm:3.0.4"],\
+          ["dot-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["parent-module", [\
       ["npm:1.0.1", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/parent-module-npm-1.0.1-1fae11b095-10c0.zip/node_modules/parent-module/",\
@@ -7424,6 +7524,28 @@ const RAW_RUNTIME_STATE =
           ["error-ex", "npm:1.3.2"],\
           ["json-parse-even-better-errors", "npm:2.3.1"],\
           ["lines-and-columns", "npm:1.2.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["pascal-case", [\
+      ["npm:3.1.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/pascal-case-npm-3.1.2-35f5b9bff6-10c0.zip/node_modules/pascal-case/",\
+        "packageDependencies": [\
+          ["pascal-case", "npm:3.1.2"],\
+          ["no-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["path-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/path-case-npm-3.0.4-5a1981bc0c-10c0.zip/node_modules/path-case/",\
+        "packageDependencies": [\
+          ["path-case", "npm:3.0.4"],\
+          ["dot-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8102,6 +8224,18 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["sentence-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/sentence-case-npm-3.0.4-ed6888d0bc-10c0.zip/node_modules/sentence-case/",\
+        "packageDependencies": [\
+          ["sentence-case", "npm:3.0.4"],\
+          ["no-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"],\
+          ["upper-case-first", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["server-only", [\
       ["npm:0.0.1", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/server-only-npm-0.0.1-24bf42bde2-10c0.zip/node_modules/server-only/",\
@@ -8227,6 +8361,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/smart-buffer-npm-4.2.0-5ac3f668bb-10c0.zip/node_modules/smart-buffer/",\
         "packageDependencies": [\
           ["smart-buffer", "npm:4.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["snake-case", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/snake-case-npm-3.0.4-67f447c30d-10c0.zip/node_modules/snake-case/",\
+        "packageDependencies": [\
+          ["snake-case", "npm:3.0.4"],\
+          ["dot-case", "npm:3.0.4"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8617,11 +8762,11 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.8.7"],\
           ["@types/react", "npm:18.2.31"],\
           ["@types/react-redux", "npm:7.1.28"],\
-          ["@types/voca", "npm:1.4.4"],\
           ["@typescript-eslint/eslint-plugin", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:6.8.0"],\
           ["@typescript-eslint/parser", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:6.8.0"],\
           ["@vercel/analytics", "npm:1.1.1"],\
           ["axios", "npm:1.5.1"],\
+          ["change-case", "npm:4.1.2"],\
           ["cross-env", "npm:7.0.3"],\
           ["date-fns", "npm:2.30.0"],\
           ["eslint", "npm:8.52.0"],\
@@ -8642,8 +8787,7 @@ const RAW_RUNTIME_STATE =
           ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.14.1"],\
           ["sass", "npm:1.69.4"],\
           ["type-fest", "npm:4.5.0"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
-          ["voca", "npm:1.4.1"]\
+          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -8949,6 +9093,26 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["upper-case", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/upper-case-npm-2.0.2-6cf3bda96c-10c0.zip/node_modules/upper-case/",\
+        "packageDependencies": [\
+          ["upper-case", "npm:2.0.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["upper-case-first", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/upper-case-first-npm-2.0.2-8e0c5a851a-10c0.zip/node_modules/upper-case-first/",\
+        "packageDependencies": [\
+          ["upper-case-first", "npm:2.0.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["uri-js", [\
       ["npm:4.4.1", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/uri-js-npm-4.4.1-66d11cbcaf-10c0.zip/node_modules/uri-js/",\
@@ -8998,15 +9162,6 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["@types/istanbul-lib-coverage", "npm:2.0.5"],\
           ["convert-source-map", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["voca", [\
-      ["npm:1.4.1", {\
-        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/voca-npm-1.4.1-ba0285cf08-10c0.zip/node_modules/voca/",\
-        "packageDependencies": [\
-          ["voca", "npm:1.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\

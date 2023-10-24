@@ -1,11 +1,11 @@
 'use client';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { Breadcrumbs, Button, Typography } from '@mui/joy';
+import { capitalCase } from 'change-case';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import type { MouseEventHandler } from 'react';
 import { useMemo } from 'react';
-import { titleCase } from 'voca';
 import PageLink from './link';
 
 export type PageBackProps = {
@@ -37,7 +37,7 @@ export default function PageBack({
 		return paths.reduce<{ name: string; href: string }[]>((arr, name, index) => {
 			if (paths[index]) href += `/${paths[index]}`;
 			if (pathMap?.[index] !== undefined) name = pathMap[index] as string;
-			if (name) arr.push({ name: titleCase(name), href: href || '/' });
+			if (name) arr.push({ name: capitalCase(name), href: href || '/' });
 			return arr;
 		}, []);
 	}, [pathname]);
