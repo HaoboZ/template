@@ -18,7 +18,7 @@ export default function useParamState(
 			if (isEmpty(obj)) return '';
 			return `?${new URLSearchParams(obj).toString()}`;
 		},
-		[key, searchParams],
+		[key, searchParams, initialState],
 	);
 
 	return [

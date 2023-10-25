@@ -40,6 +40,7 @@ export default function PageBack({
 			if (name) arr.push({ name: capitalCase(name), href: href || '/' });
 			return arr;
 		}, []);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [pathname]);
 
 	const clickListener = async (e) => {

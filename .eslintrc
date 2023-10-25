@@ -61,7 +61,6 @@
 		// typescript extensions
 		"@typescript-eslint/dot-notation": "warn",
 		// others
-		"import/no-anonymous-default-export": "off",
-		"react-hooks/exhaustive-deps": "off"
+		"import/no-anonymous-default-export": "off"
 	}
 }
