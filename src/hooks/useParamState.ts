@@ -1,6 +1,6 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { isEmpty } from 'rambdax';
 import { useCallback } from 'react';
+import { isEmpty } from 'remeda';
 
 export default function useParamState(
 	key: string,

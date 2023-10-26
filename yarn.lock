@@ -5982,13 +5982,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rambdax@npm:10.0.0":
-  version: 10.0.0
-  resolution: "rambdax@npm:10.0.0"
-  checksum: b0912b7814e5f8349a9478999b5c57b3f332c29f42fcc426fa6468909f48b5d0a6214222dd805140af79b5026a894d1006030c460beb4de538e1ad59cdf0d61c
-  languageName: node
-  linkType: hard
-
 "react-dom@npm:18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -6123,6 +6116,13 @@ __metadata:
     define-properties: "npm:^1.2.0"
     set-function-name: "npm:^2.0.0"
   checksum: 1de7d214c0a726c7c874a7023e47b0e27b9f7fdb64175bfe1861189de1704aaeca05c3d26c35aa375432289b99946f3cf86651a92a8f7601b90d8c226a23bcd8
+  languageName: node
+  linkType: hard
+
+"remeda@npm:1.28.0":
+  version: 1.28.0
+  resolution: "remeda@npm:1.28.0"
+  checksum: 36e449c73c85e1457a6931d58695d455bc7833b7d8f35f8039c047a8d6407716a09daf5313b8da4388f8cc16896246f7dddc2f12b22a68b3b667f75f6c79c500
   languageName: node
   linkType: hard
 
@@ -6827,11 +6827,11 @@ __metadata:
     next: "npm:13.5.6"
     notistack: "npm:3.0.1"
     prettier: "npm:3.0.3"
-    rambdax: "npm:10.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-redux: "npm:8.1.3"
     redux: "npm:4.2.1"
+    remeda: "npm:1.28.0"
     rooks: "npm:7.14.1"
     sass: "npm:1.69.4"
     type-fest: "npm:4.5.0"

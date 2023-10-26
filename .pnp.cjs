@@ -60,11 +60,11 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:13.5.6"],\
           ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
           ["prettier", "npm:3.0.3"],\
-          ["rambdax", "npm:10.0.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:18.2.0"],\
           ["react-redux", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:8.1.3"],\
           ["redux", "npm:4.2.1"],\
+          ["remeda", "npm:1.28.0"],\
           ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.14.1"],\
           ["sass", "npm:1.69.4"],\
           ["type-fest", "npm:4.5.0"],\
@@ -7657,15 +7657,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["rambdax", [\
-      ["npm:10.0.0", {\
-        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/rambdax-npm-10.0.0-d89ccb3b31-10c0.zip/node_modules/rambdax/",\
-        "packageDependencies": [\
-          ["rambdax", "npm:10.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["react", [\
       ["npm:18.2.0", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/react-npm-18.2.0-1eae08fee2-10c0.zip/node_modules/react/",\
@@ -7842,6 +7833,15 @@ const RAW_RUNTIME_STATE =
           ["call-bind", "npm:1.0.5"],\
           ["define-properties", "npm:1.2.1"],\
           ["set-function-name", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["remeda", [\
+      ["npm:1.28.0", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/remeda-npm-1.28.0-70f707d643-10c0.zip/node_modules/remeda/",\
+        "packageDependencies": [\
+          ["remeda", "npm:1.28.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8621,11 +8621,11 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:13.5.6"],\
           ["notistack", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:3.0.1"],\
           ["prettier", "npm:3.0.3"],\
-          ["rambdax", "npm:10.0.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:18.2.0"],\
           ["react-redux", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:8.1.3"],\
           ["redux", "npm:4.2.1"],\
+          ["remeda", "npm:1.28.0"],\
           ["rooks", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:7.14.1"],\
           ["sass", "npm:1.69.4"],\
           ["type-fest", "npm:4.5.0"],\

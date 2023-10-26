@@ -1,4 +1,5 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
+import { pipe } from 'remeda';
 
 /**
  * @type {import('next').NextConfig}
@@ -12,9 +13,7 @@ const nextConfig = {
 			headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
 		},
 	],
-	experimental: { optimizePackageImports: ['@mui/joy', 'rambdax'] },
+	experimental: { optimizePackageImports: ['@mui/joy'] },
 };
 
-const plugins = [bundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })];
-
-export default plugins.reduceRight((acc, plugin) => plugin(acc), nextConfig);
+export default pipe(nextConfig, bundleAnalyzer({ enabled: process.env.ANALYZE === 'true' }));
