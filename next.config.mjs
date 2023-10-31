@@ -7,13 +7,9 @@ import { pipe } from 'remeda';
 const nextConfig = {
 	swcMinify: true,
 	headers: async () => [
-		{
-			// matching all API routes
-			source: '/api/:path*',
-			headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
-		},
+		{ source: '/api/:path*', headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }] },
 	],
 	experimental: { optimizePackageImports: ['@mui/joy'] },
 };
 
-export default pipe(nextConfig, bundleAnalyzer({ enabled: process.env.ANALYZE === 'true' }));
+export default pipe(nextConfig, bundleAnalyzer({ enabled: !process.env.VERCEL }));
