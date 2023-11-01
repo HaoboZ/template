@@ -14,7 +14,7 @@
 		"start": "next start",
 		"export": "next export"
 	},
-	"packageManager": "yarn@4.0.0",
+	"packageManager": "yarn@4.0.1",
 	"dependencies": {
 		"@emotion/cache": "11.11.0",
 		"@emotion/react": "11.11.1",
