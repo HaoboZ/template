@@ -1,6 +1,6 @@
 import type { MenuItemProps } from '@mui/joy';
 import { MenuItem } from '@mui/joy';
-import useAsyncLoading from '@/components/loaders/useAsyncLoading';
+import useAsyncLoading from './useAsyncLoading';
 
 export default function AsyncMenuItem({ onClick, ...props }: MenuItemProps) {
 	const [loading, onClickLoading] = useAsyncLoading();
