@@ -11,10 +11,8 @@
 		"moduleResolution": "node",
 		"noEmit": true,
 		"paths": {
-			"@/src/*": ["./src/*"],
-			"@/components/*": ["./src/components/*"],
-			"@/app/*": ["./app/*"],
-			"@/public/*": ["./public/*"]
+			"@/*": ["./*"],
+			"@/components/*": ["./src/components/*"]
 		},
 		"plugins": [
 			{
