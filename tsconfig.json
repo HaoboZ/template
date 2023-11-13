@@ -12,6 +12,7 @@
 		"noEmit": true,
 		"paths": {
 			"@/*": ["./*"],
+			"@/api/*": ["./app/api/*"],
 			"@/components/*": ["./src/components/*"]
 		},
 		"plugins": [
