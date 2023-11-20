@@ -7,6 +7,6 @@
 		"schedule:weekly",
 		"group:allNonMajor"
 	],
-	"lockFileMaintenance": { "enabled": true, "automerge": true, "automergeType": "branch" },
+	"lockFileMaintenance": { "enabled": true },
 	"bumpVersion": "patch"
 }
