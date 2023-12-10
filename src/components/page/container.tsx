@@ -1,3 +1,4 @@
+'use client';
 import type { ContainerProps } from '@mui/joy';
 import { Container } from '@mui/joy';
 
