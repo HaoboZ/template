@@ -3,8 +3,10 @@ import EventsProvider from '@/src/providers/events';
 import ThemeRegistry from '@/src/providers/theme';
 import ModalProvider from '@/src/providers/modal';
 import type { ReactNode } from 'react';
+import { Suspense } from 'react';
 import StoreProvider from '@/src/store/provider';
 import ClientSnackbarProvider from '@/src/providers/snackbar';
+import Loading from './loading';
 
 export default function Providers({ children }: { children: ReactNode }) {
 	return (
@@ -15,6 +17,7 @@ export default function Providers({ children }: { children: ReactNode }) {
 				component(ThemeRegistry),
 				component(StoreProvider),
 				// components
+				component(Suspense, { fallback: <Loading /> }),
 				component(ClientSnackbarProvider),
 				component(ModalProvider),
 			]}>
