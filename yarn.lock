@@ -4279,10 +4279,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remeda@npm:1.61.0":
-  version: 1.61.0
-  resolution: "remeda@npm:1.61.0"
-  checksum: 10c0/dc9995e740adc93cddc31f814d9293f3fe327114fdab7fe9e4ac83d5607d63d05645662dec3280a6d9260105a848acfbc763c37ad8b0636f40805aab0cb4bf7e
+"remeda@npm:2.10.1":
+  version: 2.10.1
+  resolution: "remeda@npm:2.10.1"
+  dependencies:
+    type-fest: "npm:^4.23.0"
+  checksum: 10c0/6601ae5afcc509a8746a5b8b159ffb28e4d4a9dbdd22435e529772dc42c95cb2f233ea7d4403a4aa06ed5d34a4b5f758445068435877d64e95eeef4b1ed7a211
   languageName: node
   linkType: hard
 
@@ -4838,7 +4840,7 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-redux: "npm:9.1.2"
-    remeda: "npm:1.61.0"
+    remeda: "npm:2.10.1"
     rooks: "npm:7.14.1"
     sass: "npm:1.77.8"
     type-fest: "npm:4.23.0"
@@ -4922,7 +4924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:4.23.0":
+"type-fest@npm:4.23.0, type-fest@npm:^4.23.0":
   version: 4.23.0
   resolution: "type-fest@npm:4.23.0"
   checksum: 10c0/c42bb14e99329ab37983d1f188e307bf0cc705a23807d9b2268d8fb2ae781d610ac6e2058dde8f9ea2b1b8ddc77ceb578d157fa81f69f8f70aef1d42fb002996
