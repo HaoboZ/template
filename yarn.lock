@@ -483,9 +483,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:5.16.6":
-  version: 5.16.6
-  resolution: "@mui/icons-material@npm:5.16.6"
+"@mui/icons-material@npm:5.16.7":
+  version: 5.16.7
+  resolution: "@mui/icons-material@npm:5.16.7"
   dependencies:
     "@babel/runtime": "npm:^7.23.9"
   peerDependencies:
@@ -495,7 +495,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/9d24d95e8b4606b5fa2a2e40319255e2e6da52845db50d2d3ca6fd526102be3c498ec1aa9be8d33aad52cf531749b15d490abca5f23af92afc86cf45dc62ce24
+  checksum: 10c0/49bab1754334798acaf93187d27200cf90d7c50b6a019531594aeac9e5ced9168281fec70bb040792dc86c8bc0d3bf9a876f22cfbf86ad07941ca6bc6c564921
   languageName: node
   linkType: hard
 
@@ -4810,7 +4810,7 @@ __metadata:
     "@emotion/cache": "npm:11.13.1"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
-    "@mui/icons-material": "npm:5.16.6"
+    "@mui/icons-material": "npm:5.16.7"
     "@mui/joy": "npm:^5.0.0-beta.28"
     "@mui/material": "npm:@mui/joy@latest"
     "@next/bundle-analyzer": "npm:14.2.5"
@@ -4841,7 +4841,7 @@ __metadata:
     remeda: "npm:1.61.0"
     rooks: "npm:7.14.1"
     sass: "npm:1.77.8"
-    type-fest: "npm:4.23.0"
+    type-fest: "npm:4.24.0"
     typescript: "npm:5.5.4"
   languageName: unknown
   linkType: soft
@@ -4922,10 +4922,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:4.23.0":
-  version: 4.23.0
-  resolution: "type-fest@npm:4.23.0"
-  checksum: 10c0/c42bb14e99329ab37983d1f188e307bf0cc705a23807d9b2268d8fb2ae781d610ac6e2058dde8f9ea2b1b8ddc77ceb578d157fa81f69f8f70aef1d42fb002996
+"type-fest@npm:4.24.0":
+  version: 4.24.0
+  resolution: "type-fest@npm:4.24.0"
+  checksum: 10c0/9770471a397733b17b5a9ce48ee5a4d6c042c84a4858ff4e15abd126f351c61b5fea8b7b5e55bfa34840098a920b915d5ff878db1b3c007a2512a6a9c7f21579
   languageName: node
   linkType: hard
 
