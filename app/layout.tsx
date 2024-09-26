@@ -1,4 +1,3 @@
-import { CssBaseline } from '@mui/material';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
@@ -34,10 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html suppressHydrationWarning lang='en'>
 			<body className={roboto.variable}>
 				{process.env.NEXT_PUBLIC_VERCEL_ENV && <Analytics />}
-				<Providers>
-					<CssBaseline />
-					{children}
-				</Providers>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	);
