@@ -1,18 +1,24 @@
 'use client';
-import { CssBaseline, CssVarsProvider, getInitColorSchemeScript } from '@mui/joy';
-import type { ReactNode } from 'react';
-import NextAppDirEmotionCacheProvider from './emotionCache';
+import { createTheme } from '@mui/material';
 import './style.scss';
-import theme from './theme';
 
-export default function ThemeRegistry({ children }: { children: ReactNode }) {
-	return (
-		<NextAppDirEmotionCacheProvider options={{ key: 'joy' }}>
-			{getInitColorSchemeScript({ defaultMode: 'system' })}
-			<CssVarsProvider theme={theme} defaultMode='system'>
-				<CssBaseline />
-				{children}
-			</CssVarsProvider>
-		</NextAppDirEmotionCacheProvider>
-	);
-}
+export default createTheme({
+	cssVariables: true,
+	colorSchemes: {
+		dark: true,
+	},
+	typography: {
+		h1: { fontSize: 34, fontWeight: 'bold' },
+		h2: { fontSize: 31 },
+		h3: { fontSize: 28 },
+		h4: { fontSize: 25 },
+		h5: { fontSize: 22 },
+		h6: { fontSize: 19 },
+		fontFamily: 'var(--font-roboto)',
+	},
+	components: {
+		MuiTextField: { defaultProps: { size: 'small', fullWidth: true } },
+		MuiTable: { defaultProps: { size: 'small' } },
+		MuiFormControl: { defaultProps: { fullWidth: true } },
+	},
+});

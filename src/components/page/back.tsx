@@ -1,6 +1,6 @@
 'use client';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
-import { Breadcrumbs, Button, Typography } from '@mui/joy';
+import { Breadcrumbs, Button, Typography } from '@mui/material';
 import { capitalCase } from 'change-case';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -40,7 +40,6 @@ export default function PageBack({
 			if (name) arr.push({ name: capitalCase(name), href: href || '/' });
 			return arr;
 		}, []);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [pathname]);
 
 	const clickListener = async (e) => {
@@ -54,7 +53,7 @@ export default function PageBack({
 
 	if (backButton)
 		return (
-			<Button variant='plain' startDecorator={<ArrowBackIcon />} onClick={clickListener}>
+			<Button variant='text' startIcon={<ArrowBackIcon />} onClick={clickListener}>
 				Back
 			</Button>
 		);
@@ -63,8 +62,8 @@ export default function PageBack({
 		const lastRoute = routes[routes.length - 2] ?? { name: homeName, href: '/' };
 		return (
 			<Button
-				variant='plain'
-				startDecorator={<ArrowBackIcon />}
+				variant='text'
+				startIcon={<ArrowBackIcon />}
 				component={Link}
 				href={lastRoute.href}
 				onClick={clickListener}>
