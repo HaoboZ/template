@@ -22,6 +22,5 @@ export default function useEventListener(
 		if (callOnce) tick();
 		add.bind(event)(name, tick);
 		return () => remove.bind(event)(name, tick);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [Boolean(event), name]);
 }
