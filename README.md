@@ -25,7 +25,7 @@ Open [localhost](http://localhost:3000) with your browser to see the result.
 * utility
 	* [Redux](https://redux.js.org)
 	* [Remeda](https://remedajs.com)
-	* [rooks](https://rooks.vercel.app)
+	* [usehooks](https://usehooks.com)
 	* [type-fest](https://github.com/sindresorhus/type-fest)
 
 ## Useful Libraries
