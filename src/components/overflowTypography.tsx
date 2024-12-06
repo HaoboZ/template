@@ -8,7 +8,7 @@ export default function OverflowTypography({
 	tooltipProps,
 	...props
 }: { tooltipProps?: TooltipProps } & TypographyProps) {
-	const contentRef = useRef<HTMLElement>();
+	const contentRef = useRef<HTMLElement>(undefined);
 
 	const [overFlowed, setOverFlowed] = useState(false);
 
