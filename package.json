@@ -5,7 +5,7 @@
 		"name": "Haobo Zhang",
 		"email": "haobozhang9081@gmail.com"
 	},
-	"version": "2.3.5",
+	"version": "2.3.6",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
@@ -14,7 +14,7 @@
 		"start": "next start",
 		"export": "next export"
 	},
-	"packageManager": "yarn@4.5.2",
+	"packageManager": "yarn@4.5.3",
 	"dependencies": {
 		"@emotion/cache": "11.13.5",
 		"@emotion/react": "11.13.5",
