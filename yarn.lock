@@ -5520,9 +5520,6 @@ __metadata:
     type-fest: "npm:5.1.0"
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.46.2"
-  dependenciesMeta:
-    next@16.0.0:
-      unplugged: true
   languageName: unknown
   linkType: soft
 

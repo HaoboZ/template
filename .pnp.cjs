@@ -5343,14 +5343,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["next", [\
       ["npm:16.0.0", {\
-        "packageLocation": "./.yarn/unplugged/next-virtual-cb2870b14a/node_modules/next/",\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/next-npm-16.0.0-62f173390a-10c0.zip/node_modules/next/",\
         "packageDependencies": [\
           ["next", "npm:16.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:16.0.0", {\
-        "packageLocation": "./.yarn/unplugged/next-virtual-cb2870b14a/node_modules/next/",\
+        "packageLocation": "./.yarn/__virtual__/next-virtual-cb2870b14a/3/AppData/Local/Yarn/Berry/cache/next-npm-16.0.0-62f173390a-10c0.zip/node_modules/next/",\
         "packageDependencies": [\
           ["@next/env", "npm:16.0.0"],\
           ["@next/swc-darwin-arm64", "npm:16.0.0"],\
