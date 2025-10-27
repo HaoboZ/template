@@ -12,7 +12,8 @@
 		"build": "next build",
 		"test": "npx tsx --test **/*.test.ts",
 		"start": "next start",
-		"export": "next export"
+		"export": "next export",
+		"prepare": "husky"
 	},
 	"packageManager": "yarn@4.10.3",
 	"dependencies": {
@@ -48,6 +49,8 @@
 		"eslint-config-next": "16.0.0",
 		"eslint-config-prettier": "10.1.8",
 		"globals": "16.4.0",
+		"husky": "9.1.7",
+		"lint-staged": "16.2.6",
 		"prettier": "3.6.2",
 		"sass": "1.93.2",
 		"type-fest": "5.1.0",
