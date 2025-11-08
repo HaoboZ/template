@@ -1,8 +1,16 @@
 'use client';
-import { Button, Menu } from '@mui/material';
-import { Fragment, useState } from 'react';
+import { Button, ButtonProps, Menu } from '@mui/material';
+import { Fragment, ReactNode, useState } from 'react';
 
-export default function Dropdown({ ref, button, children, ...props }) {
+export default function Dropdown({
+	ref,
+	button,
+	children,
+	...props
+}: {
+	button: ReactNode;
+	children: ReactNode | ((closeMenu: () => void) => ReactNode);
+} & Omit<ButtonProps, 'children'>) {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 	const [open, setOpen] = useState<boolean>(false);
 
