@@ -1,4 +1,3 @@
-'use client';
 import { MoreHoriz as MoreHorizIcon } from '@mui/icons-material';
 import type { ButtonProps, MenuItemProps } from '@mui/material';
 import { ButtonGroup } from '@mui/material';
