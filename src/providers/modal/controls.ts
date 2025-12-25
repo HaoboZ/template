@@ -1,6 +1,6 @@
-import { EventEmitter } from 'events';
+import { type EventEmitter } from 'events';
 import { createContext, useContext } from 'react';
-import { ModalState } from '.';
+import { type ModalState } from '.';
 
 export type UseModalControls = {
 	modalState: ModalState;

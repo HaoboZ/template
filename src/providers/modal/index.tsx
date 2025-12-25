@@ -3,7 +3,7 @@ import { EventEmitter } from 'events';
 import { nanoid } from 'nanoid';
 import type { ComponentType, ReactNode } from 'react';
 import { createContext, useContext, useState } from 'react';
-import { ModalControlsContext, UseModalControls } from './controls';
+import { ModalControlsContext, type UseModalControls } from './controls';
 
 export type ModalState<T = any> = {
 	id: string;
