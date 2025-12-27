@@ -3,9 +3,9 @@ import type { ButtonProps, MenuItemProps } from '@mui/material';
 import { ButtonGroup } from '@mui/material';
 import type { MouseEventHandler, ReactNode } from 'react';
 import { useMemo } from 'react';
-import Dropdown from './dropdown';
-import AsyncButton from './loaders/asyncButton';
-import AsyncMenuItem from './loaders/asyncMenuItem';
+import Dropdown from '../dropdown';
+import AsyncButton from '../loaders/asyncButton';
+import AsyncMenuItem from '../loaders/asyncMenuItem';
 
 export type ActionProps = {
 	name: ReactNode;
@@ -14,7 +14,7 @@ export type ActionProps = {
 	menuItemProps?: MenuItemProps;
 };
 
-export default function Actions({ items, max }: { items: ActionProps[]; max?: number }) {
+export default function PageActions({ items, max }: { items: ActionProps[]; max?: number }) {
 	const [buttons, menu] = useMemo(() => {
 		const filtered = items.filter(Boolean);
 		if (!max || filtered.length <= max) return [filtered, []];

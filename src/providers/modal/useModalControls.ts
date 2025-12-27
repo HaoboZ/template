@@ -15,6 +15,6 @@ export const ModalControlsContext = createContext<UseModalControls>({
 });
 ModalControlsContext.displayName = 'ModalControls';
 
-export function useModalControls() {
+export default function useModalControls() {
 	return useContext(ModalControlsContext);
 }

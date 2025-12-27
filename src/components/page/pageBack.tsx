@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import type { MouseEventHandler } from 'react';
 import { useMemo } from 'react';
-import PageLink from './link';
+import PageLink from './pageLink';
 
 export type PageBackProps = {
 	confirm?: boolean;

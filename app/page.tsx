@@ -1,10 +1,9 @@
-import PageContainer from '@/components/page/container';
-import { Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 export default function Main() {
 	return (
-		<PageContainer>
+		<Container>
 			<Typography>Hello World</Typography>
-		</PageContainer>
+		</Container>
 	);
 }
