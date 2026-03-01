@@ -23,7 +23,7 @@
 		"@mui/material": "7.3.8",
 		"@mui/material-nextjs": "7.3.8",
 		"@reduxjs/toolkit": "2.11.2",
-		"@tanem/react-nprogress": "5.0.63",
+		"@tanem/react-nprogress": "6.0.1",
 		"@uidotdev/usehooks": "2.4.1",
 		"@vercel/analytics": "1.6.1",
 		"axios": "1.13.5",
@@ -36,7 +36,8 @@
 		"react-dom": "19.2.4",
 		"react-redux": "9.2.0",
 		"redux": "5.0.1",
-		"remeda": "2.33.6"
+		"remeda": "2.33.6",
+		"rooks": "9.5.0"
 	},
 	"devDependencies": {
 		"@next/bundle-analyzer": "16.1.6",

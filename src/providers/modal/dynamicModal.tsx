@@ -1,7 +1,7 @@
 import { Backdrop, CircularProgress } from '@mui/material';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-import useLoading from '../../hooks/useLoading';
+import { useDebouncedValue } from 'rooks';
 
 export default function dynamicModal(route: () => Promise<any>) {
 	return dynamic(route, {
@@ -12,10 +12,10 @@ export default function dynamicModal(route: () => Promise<any>) {
 				setIsLoading(true);
 			}, []);
 
-			const loading = useLoading(isLoading);
+			const [loading] = useDebouncedValue(isLoading, 250);
 
 			return (
-				<Backdrop open={loading} sx={{ zIndex: ({ zIndex }) => zIndex.modal + 1 }}>
+				<Backdrop open={loading} sx={{ zIndex: 'tooltip' }}>
 					<CircularProgress />
 				</Backdrop>
 			);
