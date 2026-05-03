@@ -9,11 +9,6 @@ export default defineConfig([
 	prettier,
 	globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
 	{
-		languageOptions: {
-			parserOptions: {
-				projectService: true,
-			},
-		},
 		rules: {
 			// react
 			'react/display-name': 'off',
