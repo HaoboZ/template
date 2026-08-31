@@ -12,7 +12,7 @@
         "@mui/material": "9.3.1",
         "@mui/material-nextjs": "9.3.0",
         "@reduxjs/toolkit": "2.12.0",
-        "@tanem/react-nprogress": "6.0.4",
+        "@tanem/react-nprogress": "7.1.3",
         "@uidotdev/usehooks": "2.4.1",
         "@vercel/analytics": "2.0.1",
         "axios": "1.19.0",
@@ -301,7 +301,7 @@
 
     "@swc/helpers": ["@swc/helpers@0.5.23", "", { "dependencies": { "tslib": "^2.8.0" } }, "sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw=="],
 
-    "@tanem/react-nprogress": ["@tanem/react-nprogress@6.0.4", "", { "dependencies": { "@babel/runtime": "^7.28.6", "hoist-non-react-statics": "^3.3.2" }, "peerDependencies": { "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-zYTWQ6G1XuYRJX3/ivTuGpM2Ihdw6doPcIOceDx9KsC5hYaP6huNrre+e75Ux8ouPJ1DcuaPSd0/O1LrlLpA1A=="],
+    "@tanem/react-nprogress": ["@tanem/react-nprogress@7.1.3", "", { "peerDependencies": { "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-uBaI3nWKzpcxwLBQQsMVkoLB5/QW+iI7IwQki5Y9aHrWc5MDO13OG9tzG35RR8dSQkJL4h4SBZ4U6dz+i7RVYQ=="],
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.10.1", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg=="],
 
@@ -1078,8 +1078,6 @@
     "@mui/utils/@babel/runtime": ["@babel/runtime@7.29.7", "", {}, "sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw=="],
 
     "@napi-rs/wasm-runtime/@emnapi/runtime": ["@emnapi/runtime@1.6.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-obtUmAHTMjll499P+D9A3axeJFlhdjOWdKUNs/U6QIGT7V5RjcUW1xToAzjvmgTSQhDbYn/NwfTRoJcQ2rNBxA=="],
-
-    "@tanem/react-nprogress/@babel/runtime": ["@babel/runtime@7.29.2", "", {}, "sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g=="],
 
     "@types/react-redux/@types/react": ["@types/react@19.2.2", "", { "dependencies": { "csstype": "^3.0.2" } }, "sha512-6mDvHUFSjyT2B2yeNx2nUgMxh9LtOWvkhIU3uePn2I2oyNymUAX1NIsdgviM4CH+JSrp2D2hsMvJOkxY+0wNRA=="],
 
