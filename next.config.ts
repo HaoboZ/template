@@ -1,6 +1,6 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-import { pipe } from 'remeda';
 import type { NextConfig } from 'next';
+import { pipe } from 'remeda';
 
 const nextConfig: NextConfig = {
 	headers: async () => [

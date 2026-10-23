@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
 import type { ReactNode } from 'react';
 import type { PackageJson } from 'type-fest';
+
 import _packageJson from '../package.json';
 import Providers from './providers';
 

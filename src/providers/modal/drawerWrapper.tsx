@@ -1,5 +1,6 @@
 import type { DrawerProps } from '@mui/material';
 import { Drawer } from '@mui/material';
+
 import useModalControls from './useModalControls';
 
 export default function DrawerWrapper(props: Omit<DrawerProps, 'open'>) {

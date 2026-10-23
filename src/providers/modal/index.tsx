@@ -1,8 +1,10 @@
 'use client';
 import { EventEmitter } from 'events';
+
 import { nanoid } from 'nanoid';
 import type { ComponentType, ReactNode } from 'react';
 import { createContext, useContext, useState } from 'react';
+
 import { ModalControlsContext, type UseModalControls } from './useModalControls';
 
 export type ModalState<T = any> = {

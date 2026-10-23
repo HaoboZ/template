@@ -1,6 +1,7 @@
 import type { BoxProps, TypographyProps } from '@mui/material';
 import { Box, Divider, Typography } from '@mui/material';
 import type { ReactNode } from 'react';
+
 import type { ActionProps } from './pageActions';
 import PageActions from './pageActions';
 

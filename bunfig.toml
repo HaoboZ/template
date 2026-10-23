@@ -1,0 +1,18 @@
+[fmt]
+bracketSameLine = true
+endOfLine = "auto"
+quoteProps = "consistent"
+singleQuote = true
+jsxSingleQuote = true
+trailingComma = "all"
+sortImports = true
+sortPackageJson = true
+ignorePatterns = [".next", "out", "build", "next-env.d.ts"]
+
+[lint]
+ignorePatterns = [".next", "out", "build", "next-env.d.ts"]
+
+[lint.rules]
+"@typescript-eslint/consistent-type-imports" = ["error", { fixStyle = "inline-type-imports" }]
+"@typescript-eslint/no-explicit-any" = "off"
+"@typescript-eslint/no-unsafe-function-type" = "off"

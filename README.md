@@ -17,8 +17,6 @@ Open [localhost](http://localhost:3000) with your browser to see the result.
 
 - language
    - [TypeScript](https://www.typescriptlang.org)
-   - [ESLint](https://eslint.org)
-   - [Prettier](https://prettier.io)
 - framework
    - [Next.js](https://nextjs.org)
 - component
